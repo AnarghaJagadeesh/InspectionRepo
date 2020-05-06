@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0317A03324631F5E00554E13 /* RollsThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0317A03224631F5E00554E13 /* RollsThirdViewController.swift */; };
 		031D1CF52461C47E0027A17C /* BasicSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031D1CF42461C47E0027A17C /* BasicSecondViewController.swift */; };
 		29C4D29792A12430C4BEBEF3 /* Pods_Inspection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78E6E270F8806E26B74FD2B1 /* Pods_Inspection.framework */; };
 		4713BC652421F2B400BD2BC7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4713BC642421F2B400BD2BC7 /* HomeViewController.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0317A03224631F5E00554E13 /* RollsThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollsThirdViewController.swift; sourceTree = "<group>"; };
 		031D1CF42461C47E0027A17C /* BasicSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicSecondViewController.swift; sourceTree = "<group>"; };
 		4713BC642421F2B400BD2BC7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4713BC6724221F5B00BD2BC7 /* XLPagerTabStrip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = XLPagerTabStrip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,6 +64,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0317A03124631F4600554E13 /* Rolls */ = {
+			isa = PBXGroup;
+			children = (
+				0317A03224631F5E00554E13 /* RollsThirdViewController.swift */,
+			);
+			path = Rolls;
+			sourceTree = "<group>";
+		};
 		031D1CF12461C4040027A17C /* Basic */ = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +101,7 @@
 		471B2BC0241F901E000A902C /* Inspection */ = {
 			isa = PBXGroup;
 			children = (
+				0317A03124631F4600554E13 /* Rolls */,
 				031D1CF12461C4040027A17C /* Basic */,
 				471B2BC1241F901E000A902C /* AppDelegate.swift */,
 				471B2BC3241F901E000A902C /* ViewController.swift */,
@@ -265,6 +276,7 @@
 				4719EC622424DD4500A5508B /* ChecklistViewController.swift in Sources */,
 				4713BC6A242228A500BD2BC7 /* BasicViewController.swift in Sources */,
 				471B2BC2241F901E000A902C /* AppDelegate.swift in Sources */,
+				0317A03324631F5E00554E13 /* RollsThirdViewController.swift in Sources */,
 				4713BC6C2422291E00BD2BC7 /* RollsViewController.swift in Sources */,
 				4713BC652421F2B400BD2BC7 /* HomeViewController.swift in Sources */,
 				471A7EF824231171000169F0 /* SummaryViewController.swift in Sources */,
