@@ -46,7 +46,9 @@ class SummaryFirstViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBAction func onTapNext(_ sender: UIButton) {
+    }
+    
 }
 
 extension SummaryFirstViewController : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="VmI-C3-MIq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="KA8-4y-cXg">
     <device id="ipad9_7" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="kvd-gb-1XO">
             <objects>
-                <viewController id="ega-hU-5wq" customClass="ViewController" customModule="Inspection" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ega-hU-5wq" customClass="LoginViewController" customModule="Inspection" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mvZ-ht-60r"/>
                         <viewControllerLayoutGuide type="bottom" id="UQ1-ke-DEB"/>
@@ -30,6 +30,9 @@
                                 <state key="normal" title="Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="onTapLogin:" destination="ega-hU-5wq" eventType="touchUpInside" id="soa-af-KhJ"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Hvt-jl-gQk">
                                 <rect key="frame" x="67.5" y="200" width="137.5" height="142"/>
@@ -67,6 +70,7 @@
                             <constraint firstItem="MCt-rG-btw" firstAttribute="height" secondItem="ky8-et-4Q4" secondAttribute="height" multiplier="0.105" id="s2L-vX-QCC"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Yhh-PM-yhw"/>
                     <connections>
                         <outlet property="employeeIDTextField" destination="fEu-Se-sDV" id="JfN-7x-TsH"/>
                         <outlet property="languageDropDown" destination="5nL-Mb-u2Z" id="Cnu-fG-KoG"/>
@@ -75,7 +79,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QOg-YQ-B2F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-262.58992805755395" y="124.64028776978418"/>
+            <point key="canvasLocation" x="502.34375" y="124.21874999999999"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="teh-Ly-0hu">
@@ -126,7 +130,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MFf-AB-V7u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1739.5683453237411" y="125.17985611510792"/>
+            <point key="canvasLocation" x="2504.6875" y="124.80468749999999"/>
         </scene>
         <!--Checklist View Controller-->
         <scene sceneID="ig7-mS-lAB">
@@ -255,7 +259,7 @@
         <!--Rolls First View Controller-->
         <scene sceneID="3vI-53-2ci">
             <objects>
-                <viewController id="ls8-io-7vG" customClass="RollsFirstViewController" customModule="Inspection" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="rollFirstVC" id="ls8-io-7vG" customClass="RollsFirstViewController" customModule="Inspection" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Hzw-sq-hzB"/>
                         <viewControllerLayoutGuide type="bottom" id="v7a-El-P3l"/>
@@ -824,6 +828,9 @@
                                     <constraint firstAttribute="height" constant="70" id="ZSJ-lL-oa4"/>
                                 </constraints>
                                 <state key="normal" image="Group 63"/>
+                                <connections>
+                                    <action selector="onTapNext:" destination="ls8-io-7vG" eventType="touchUpInside" id="YKM-Bg-B8p"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -848,12 +855,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qFF-gq-fvB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4784" y="-314"/>
+            <point key="canvasLocation" x="5549.21875" y="-314.0625"/>
         </scene>
-        <!--View Controller-->
+        <!--Basic First View Controller-->
         <scene sceneID="80k-Sm-hDN">
             <objects>
-                <viewController storyboardIdentifier="Basic" id="Qo6-0X-hCg" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="basicFirstVC" id="Qo6-0X-hCg" customClass="BasicFirstViewController" customModule="Inspection" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wIt-vk-nzo"/>
                         <viewControllerLayoutGuide type="bottom" id="Zbv-1N-VrZ"/>
@@ -1019,16 +1026,25 @@
                                                     <constraint firstAttribute="width" constant="300" id="g2j-Wf-AO6"/>
                                                 </constraints>
                                             </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q2E-av-yrH">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q2E-av-yrH">
                                                 <rect key="frame" x="167" y="1086" width="50" height="50"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="26J-6n-K0O"/>
+                                                    <constraint firstAttribute="height" constant="50" id="T8a-pn-k2b"/>
+                                                </constraints>
                                                 <state key="normal" image="Group 63"/>
+                                                <connections>
+                                                    <action selector="onTapNext:" destination="Qo6-0X-hCg" eventType="touchUpInside" id="SBR-ZG-HGm"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstItem="q2E-av-yrH" firstAttribute="top" secondItem="rXz-BU-tV8" secondAttribute="bottom" constant="48" id="0e5-VY-cz3"/>
                                             <constraint firstItem="rXz-BU-tV8" firstAttribute="centerX" secondItem="Qzh-MM-D9P" secondAttribute="centerX" id="L4f-pQ-3EC"/>
                                             <constraint firstItem="rXz-BU-tV8" firstAttribute="top" secondItem="Qzh-MM-D9P" secondAttribute="top" constant="164" id="eRU-iq-1z2"/>
+                                            <constraint firstAttribute="bottom" secondItem="q2E-av-yrH" secondAttribute="bottom" constant="18" id="uWd-Ko-85I"/>
+                                            <constraint firstItem="q2E-av-yrH" firstAttribute="leading" secondItem="Qzh-MM-D9P" secondAttribute="leading" constant="167" id="xBB-io-LCi"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -1054,12 +1070,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RkJ-s4-ya0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2396" y="320"/>
+            <point key="canvasLocation" x="3161.328125" y="319.921875"/>
         </scene>
         <!--Summary First View Controller-->
         <scene sceneID="AnB-bK-gDm">
             <objects>
-                <viewController id="VmI-C3-MIq" customClass="SummaryFirstViewController" customModule="Inspection" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="summaryFirstVC" id="VmI-C3-MIq" customClass="SummaryFirstViewController" customModule="Inspection" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kTZ-yg-Yrf"/>
                         <viewControllerLayoutGuide type="bottom" id="U1R-dj-sNS"/>
@@ -1298,6 +1314,9 @@
                                     <constraint firstAttribute="width" constant="70" id="a3m-Ct-bIC"/>
                                 </constraints>
                                 <state key="normal" image="Group 63"/>
+                                <connections>
+                                    <action selector="onTapNext:" destination="VmI-C3-MIq" eventType="touchUpInside" id="v3k-sD-Zr2"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -1322,7 +1341,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fcH-rJ-mqa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3641.40625" y="-314.0625"/>
+            <point key="canvasLocation" x="4407.03125" y="-314.0625"/>
         </scene>
         <!--Rolls View Controller-->
         <scene sceneID="7m3-yx-dqj">
@@ -1340,7 +1359,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bJ4-4M-t3f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4244" y="298"/>
+            <point key="canvasLocation" x="5009.375" y="297.65625"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bpk-qf-PZU">
@@ -1358,12 +1377,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R88-Tb-uVC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="800.79999999999995" y="125.4872563718141"/>
+            <point key="canvasLocation" x="1566.40625" y="125.39062499999999"/>
         </scene>
         <!--Basic Second View Controller-->
         <scene sceneID="qFS-zM-WGg">
             <objects>
-                <viewController id="2wY-gb-1Mg" customClass="BasicSecondViewController" customModule="Inspection" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="basicSecondVC" id="2wY-gb-1Mg" customClass="BasicSecondViewController" customModule="Inspection" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3Ta-f7-gVJ"/>
                         <viewControllerLayoutGuide type="bottom" id="eBz-Gm-VMy"/>
@@ -2068,7 +2087,7 @@
         <!--Rolls Third View Controller-->
         <scene sceneID="Ozu-Bj-zh9">
             <objects>
-                <viewController storyboardIdentifier="RollsThirdViewController" id="O7e-yk-mny" customClass="RollsThirdViewController" customModule="Inspection" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="rollThirdVC" id="O7e-yk-mny" customClass="RollsThirdViewController" customModule="Inspection" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1ib-0H-7Rt"/>
                         <viewControllerLayoutGuide type="bottom" id="VB7-16-LwW"/>
@@ -2409,6 +2428,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x6n-bz-E7Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="366.40625" y="907.03124999999989"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Wk7-uo-5GV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="KA8-4y-cXg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UPC-Cq-5JV">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ega-hU-5wq" kind="relationship" relationship="rootViewController" id="rH0-Z3-rOj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wXO-98-uf7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-263.28125" y="124.21874999999999"/>
         </scene>
     </scenes>
     <resources>

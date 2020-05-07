@@ -96,6 +96,10 @@ class BasicSecondViewController: UIViewController {
     }
     
     @IBAction func nextBtnPressed(_ sender: Any) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let rollsFirstVC = storyBoard.instantiateViewController(withIdentifier: "rollFirstVC") as! RollsFirstViewController
+        self.navigationController?.pushViewController(rollsFirstVC, animated: true)
+
     }
     
     @IBAction func end2EndShadingPressed(_ sender: UIButton) {
