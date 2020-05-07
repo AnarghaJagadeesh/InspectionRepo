@@ -6,69 +6,101 @@
 	objectVersion = 51;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		0C1885900810601510E0C632060FAF26 /* GooglePlaces */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 2FC2AC47FDB0310285CE777F18CD1532 /* Build configuration list for PBXAggregateTarget "GooglePlaces" */;
+			buildPhases = (
+			);
+			dependencies = (
+				D42315111F400C0605ACCD6B5CAF2178 /* PBXTargetDependency */,
+			);
+			name = GooglePlaces;
+		};
+		E5B4BBC6DD552AC8943C7E22772FC1D3 /* GoogleMaps */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 46921981F609C5BA3CB72EC4EA41299D /* Build configuration list for PBXAggregateTarget "GoogleMaps" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = GoogleMaps;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
-		0348E72A279882575367B52CE6A0C2B1 /* M13CheckboxFlatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642BCADCBF83737355A5BBAA8DD49C76 /* M13CheckboxFlatController.swift */; };
-		0AE252718DB97E22262C12079DD7AA8A /* SwipeDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99BEC4CD897EB251A48BFD39E525AC9 /* SwipeDirection.swift */; };
-		0B5D501CB65E956676001866EF248ED3 /* ButtonBarViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8775BFB2A6F1A433CEE52FB074BDEFB0 /* ButtonBarViewCell.swift */; };
+		0348E72A279882575367B52CE6A0C2B1 /* M13CheckboxFlatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E70766BABC1246FA7DC8417E00BFB7 /* M13CheckboxFlatController.swift */; };
 		1B7E7B16CDEC321A263291419E7CE00B /* XLPagerTabStrip.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 78BA4BB1A553AB4136F879792D99C87D /* XLPagerTabStrip.bundle */; };
-		211EB0470934631079F0BA331FAE0FEE /* PagerTabStripError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EB7A99F81BD5CA9DAED48FEE6731FA /* PagerTabStripError.swift */; };
+		1FBDFABF69A41C9A19642E15AEE5D828 /* Pods-Inspection-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 29C00D7FF5FF562995C1A577626C5F70 /* Pods-Inspection-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2229A6998218AC6DFF497473500021C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD608BCCF279B1277BB911F33106997F /* Foundation.framework */; };
-		231BDAD2130658C05F63A88406D6635A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD608BCCF279B1277BB911F33106997F /* Foundation.framework */; };
-		254315B3201BB02B083E2B189DD456E3 /* M13Checkbox-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 86059D798187DB00B20BF6A6E487CCAA /* M13Checkbox-dummy.m */; };
+		242773397FE855EFE071BCE7B83A0C02 /* Pods-Inspection-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C680AE911270EBA2F9CDED9E99DC48 /* Pods-Inspection-dummy.m */; };
+		254315B3201BB02B083E2B189DD456E3 /* M13Checkbox-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E062DF4E9F388CCAE4222D7DBAEEA31 /* M13Checkbox-dummy.m */; };
+		28336F1C947B57D07831C63C31B84A0C /* IndicatorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFABE39760B9E3D6566AE05C941129A8 /* IndicatorInfo.swift */; };
+		2B39B33ECADFF6B44583C4DBA8854A9C /* ButtonBarViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B8B96A627F4B9C00959215D982888C /* ButtonBarViewCell.swift */; };
+		2BC8DF4EADD024A30A84555CB575CAC6 /* SwipeDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBF781DE614A6CD524C24F93E251A1F /* SwipeDirection.swift */; };
 		2DABB7F30476F072B6A15D510614C93E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01BDA658338AD3813D969D7011B56B8D /* UIKit.framework */; };
-		32B9BAE28C80A3DFB64E216522F231EA /* SegmentedPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A1F3D5210F72C9082BECB85A3228E5 /* SegmentedPagerTabStripViewController.swift */; };
-		3E3EB29E1A912DA51B5A537C152AA490 /* M13CheckboxGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9421910B6220DEF75D54726253CBBF /* M13CheckboxGestureRecognizer.swift */; };
-		445D61C3F4F1E353873FE474EA856E02 /* FXPageControl.h in Headers */ = {isa = PBXBuildFile; fileRef = DE95B4A48FED58D67BF51F7C1DD0E30D /* FXPageControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		311557DC2943E068608D1B6A7B663232 /* SegmentedPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA3D3D2F38D28386A6E8A61E0C3ABA3 /* SegmentedPagerTabStripViewController.swift */; };
+		361F5CE2807CBD530C8C6E63FD245F5A /* DropDownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A738A89E6D959A273BCA993858D184D /* DropDownCell.swift */; };
+		399F2A0161278488DC1E5ADD297DE3B7 /* BaseButtonBarPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D244BC6E572D05B38D5DC2DF41FFB68 /* BaseButtonBarPagerTabStripViewController.swift */; };
+		3E3EB29E1A912DA51B5A537C152AA490 /* M13CheckboxGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619797738D54F36E353C897717C66C36 /* M13CheckboxGestureRecognizer.swift */; };
+		3F1E6AE0B8A22678DB406AE072F213FC /* PagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CE329B2845EC131DC50C1AEE0C8292 /* PagerTabStripViewController.swift */; };
+		445D61C3F4F1E353873FE474EA856E02 /* FXPageControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 7EA55D8D231F8DF252B62CBF9A6B03BB /* FXPageControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		46DD08FB7D6071E99E75ECDBA47E90C1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01BDA658338AD3813D969D7011B56B8D /* UIKit.framework */; };
-		48F054ED0724ED5BCE257BD993F9DCA1 /* BarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6361C25675842F217C47E9D4384100F5 /* BarView.swift */; };
-		54295CEF5B5271B336B17776A282D3C6 /* M13CheckboxStrokeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2963D847F2D37FB2EB7290F767883BDD /* M13CheckboxStrokeController.swift */; };
-		56BC1A6298E10CCE7703ADBC5AD48FAC /* M13CheckboxExpandController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21AD28E808665749A649CD680FE7E50 /* M13CheckboxExpandController.swift */; };
-		6762724102132C861217B911E70056ED /* iOSDropDown-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 166C44200F13558BF214F9FA75686E07 /* iOSDropDown-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4A8FE4C4F6D45B41CE01A00D24C56961 /* DPDUIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4718A3FCAD4B861E76A33A47A128828F /* DPDUIView+Extension.swift */; };
+		4F86F33F807A003D18DEDBCA01210037 /* BarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3993BC721BDC38C54614E6ED4FB789 /* BarView.swift */; };
+		54295CEF5B5271B336B17776A282D3C6 /* M13CheckboxStrokeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B563D3860FEE3F1F2A7B52C83792154 /* M13CheckboxStrokeController.swift */; };
+		56BC1A6298E10CCE7703ADBC5AD48FAC /* M13CheckboxExpandController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70112B9E3820AE04B3714D5F19971C2 /* M13CheckboxExpandController.swift */; };
+		59BA6FD61F0A9B68CD58C371DA1F1D60 /* BarPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEB0B4DAABE65F002270E71215E9D22 /* BarPagerTabStripViewController.swift */; };
+		5F515237FF94DAB4C8A15B7E33A3877B /* DPDConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F10631EE9095923E00A7143F92E71E /* DPDConstants.swift */; };
+		6064C623428CE711C252E442741F81AB /* DropDown+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5D7000335ED9EB644F7FEB3801C495 /* DropDown+Appearance.swift */; };
+		618D9C6E8BFF0C7AAD509E9279488585 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD608BCCF279B1277BB911F33106997F /* Foundation.framework */; };
+		6762724102132C861217B911E70056ED /* iOSDropDown-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 34413F7258AED2320971FA54D479295A /* iOSDropDown-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		690A3616858F1EF14011B02B88924458 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01BDA658338AD3813D969D7011B56B8D /* UIKit.framework */; };
-		69B419B8DBDE3DC6EA250BA01BEEAC62 /* XLPagerTabStrip-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D6263D9D0D4C12BEE67C9DC92D984AE2 /* XLPagerTabStrip-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6A332AF6C1B4A44654EEA9A031A751F6 /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88EBD0E8E3BACDEDC627E5FC9FF7C3E1 /* ButtonCell.xib */; };
-		6ADFB626C34AA35AC883469526699F8D /* iOSDropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8DF2DAEE4ACFC1D59FD237262FBB5B /* iOSDropDown.swift */; };
-		79DBC63187C3124B13B943F658A98D63 /* FXPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = E2E4D0D293237425E2C2BF674D72B248 /* FXPageControl.m */; };
+		69B419B8DBDE3DC6EA250BA01BEEAC62 /* XLPagerTabStrip-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 45661401F73AF2A72F050798F5A8C934 /* XLPagerTabStrip-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6A332AF6C1B4A44654EEA9A031A751F6 /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB2EF8491C22DE4BF774FD17F8A7E156 /* ButtonCell.xib */; };
+		6ADFB626C34AA35AC883469526699F8D /* iOSDropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8853CA3ED7004AD7272E9A502FF5B15D /* iOSDropDown.swift */; };
+		775542D5BE6B24392EF7FCA2CE7C5E97 /* TwitterPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B105221ED3E18988426404B0A07559 /* TwitterPagerTabStripViewController.swift */; };
 		7AF77E6823887DFE89A3E24E9E57A34E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 276842F3A283EE87124FE6C3EAAFD184 /* CoreGraphics.framework */; };
-		81F54CDC8FBD3C3AFEC7B8419B2E89F7 /* Pods-Inspection-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA7CDB369987B73CB8C29A20A88B9E8 /* Pods-Inspection-dummy.m */; };
-		8B49CC1BB164F7BDB5CE3FB2E87B2AA4 /* TwitterPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0C81FC069AE346F7E29FA560751640 /* TwitterPagerTabStripViewController.swift */; };
-		91DE47E4BCDE92CC97123C314723B3A8 /* M13CheckboxDisclosurePathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9525E95A28921A3FCB6D1C418DC93ADF /* M13CheckboxDisclosurePathGenerator.swift */; };
-		9684309B19EA945F06219FFCFDB3DEAE /* BaseButtonBarPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEF0E1A0EDAB40A4CCD2E7B7132087A /* BaseButtonBarPagerTabStripViewController.swift */; };
-		97A18E7CA66BA87E83A038BF75B2DCB2 /* M13CheckboxAnimationGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEB7D98D68901606040ABCC7B32E637 /* M13CheckboxAnimationGenerator.swift */; };
-		99FBBAF5AEB8A1895DAB1752E3AB115C /* M13CheckboxRadioPathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55B3019AEEAD1FE88CD93ABF395891C /* M13CheckboxRadioPathGenerator.swift */; };
-		A14D173D1A208AE9ADB6419B6BFBF426 /* M13Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC4CCBD7A7CE15C06AA8F77A0D6FF12 /* M13Checkbox.swift */; };
-		A2DB311E6BA5064E56EC9DF2B7C1D39C /* ButtonBarPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9014D342B9690C15F11F589AA0BC2AF4 /* ButtonBarPagerTabStripViewController.swift */; };
-		A7448C3B3357059EE87853CFF2BE09C4 /* M13CheckboxAddRemovePathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B93BD1156C015710D4F6E2C441E96B2 /* M13CheckboxAddRemovePathGenerator.swift */; };
-		AB81A7C4CA1E83A8FA4E9430D88A7DFE /* XLPagerTabStrip-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F53D6D4394ED3C7E888F03C52DE17DD /* XLPagerTabStrip-dummy.m */; };
-		AE32CE1F494D51291E92F6B0C29D7034 /* M13CheckboxSpiralController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DB633F63E702315CDAD2C230E5FF7D /* M13CheckboxSpiralController.swift */; };
-		B0471D9061D1AE1F54C08242A5773ECF /* M13CheckboxFillController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882CD3E18C46BFC692F79015360088A7 /* M13CheckboxFillController.swift */; };
-		B323D65D6BE2950D9615F791E7A90A7F /* M13CheckboxDotController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4296BDA421AAB890471E08A017E38101 /* M13CheckboxDotController.swift */; };
-		B642D0A666A7B76CE25C412820331536 /* M13Checkbox+IB.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0485F0011D633D7DA62BD4B06F76EDB /* M13Checkbox+IB.swift */; };
-		C044961E56994DE71D794C83855427B5 /* PagerTabStripBehaviour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EF13BDB32D8F68557D7A2C7478A85E /* PagerTabStripBehaviour.swift */; };
-		C2BA008A914F681607429815D2EDEA95 /* M13CheckboxPathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F639BA6FE9FC74BC4F2BCC6766BB64 /* M13CheckboxPathGenerator.swift */; };
-		C312131E6526BFB7C1CB92D93D58FCC7 /* iOSDropDown-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B18B1D4A9BA59583EBE416B0F3A353 /* iOSDropDown-dummy.m */; };
-		CA89E0222ABBC43F957E4F3BF7F46142 /* M13Checkbox-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 071328EABA502EC119059FA971EDD1B1 /* M13Checkbox-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D035EDC528DBF5BA980CDF5299828034 /* M13CheckboxBounceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD053D2FFAFFF74D0F8D2ACA0AEEFFF /* M13CheckboxBounceController.swift */; };
-		D5584524FE609C7CD27E83BCB74CE685 /* M13CheckboxController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73C72EA9815A71BB502C53BB4EEB78D /* M13CheckboxController.swift */; };
-		D5C73B236406677780F9514C285BBC46 /* Pods-Inspection-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C726F6B76D3C78A0014458331CC10EB /* Pods-Inspection-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E08B31BE69E7F9FD79F888D6878470CE /* DefaultValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0184D638026E56546EDF20E08CA5B658 /* DefaultValues.swift */; };
-		E857E8E3BF4A819960F4312F8DD09456 /* BarPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FCD82EF1D037E5A9C9E87B011F77F1 /* BarPagerTabStripViewController.swift */; };
-		E9D6E5290AA728E26BB83686BABD683A /* M13CheckboxCheckPathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1186815F372549019FB8034B13EB1E /* M13CheckboxCheckPathGenerator.swift */; };
-		ED6E38E31CD87896D70C36688C28E531 /* ButtonBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBE837C0F469E73839B2629B979EEEF /* ButtonBarView.swift */; };
-		F0641A2C3F54DF6B4687B019DAA045C8 /* PagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AE754AC790B1B9314A546CC6201DA1 /* PagerTabStripViewController.swift */; };
-		F7E1A8BE69700A04A787230C3302EFD1 /* IndicatorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994BDE639D2EC6897303A5550D57EDCD /* IndicatorInfo.swift */; };
+		842DFBB1471889C2CA329AE05620BBE7 /* DropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB913E70FAEAFB0E89540CC32457544 /* DropDown.swift */; };
+		911CC04F55219F3CB8EE70FA8F7347E7 /* ButtonBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8800DF97882FF76A61149A827EF7EC5A /* ButtonBarView.swift */; };
+		91DE47E4BCDE92CC97123C314723B3A8 /* M13CheckboxDisclosurePathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E10DFB81C79FCBF06FF2B6BF07DF96 /* M13CheckboxDisclosurePathGenerator.swift */; };
+		9518195DB69E904D77247E0A55A0043C /* DropDown-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 44745BB5C21443EB0F4B32700FCE972D /* DropDown-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		95897DCFD4071A7D61AEAE1DA86BB539 /* DropDown-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BC3596307ECDC5AF27889C44E57C17 /* DropDown-dummy.m */; };
+		97A18E7CA66BA87E83A038BF75B2DCB2 /* M13CheckboxAnimationGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAD8277F8129C815C27826D717111C3 /* M13CheckboxAnimationGenerator.swift */; };
+		99FBBAF5AEB8A1895DAB1752E3AB115C /* M13CheckboxRadioPathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3213B71AAB1E1FC68BF714994BB43C0A /* M13CheckboxRadioPathGenerator.swift */; };
+		A14D173D1A208AE9ADB6419B6BFBF426 /* M13Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B4B683F22DB3E44EE1F8D66F9D6B44 /* M13Checkbox.swift */; };
+		A26276F206FFA15CF0A57BE54526140C /* XLPagerTabStrip-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA9B85CAC7AF4142E9E3C6AAFA8D08F /* XLPagerTabStrip-dummy.m */; };
+		A7448C3B3357059EE87853CFF2BE09C4 /* M13CheckboxAddRemovePathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9702130A20B2B9FE5BEE4E79266A1AC1 /* M13CheckboxAddRemovePathGenerator.swift */; };
+		A7AEEE825346429BB80914A7D2365A51 /* PagerTabStripBehaviour.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78874E52E8E3518BD32D75AC28D014E /* PagerTabStripBehaviour.swift */; };
+		AE32CE1F494D51291E92F6B0C29D7034 /* M13CheckboxSpiralController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6F2CF7F8B1D3F80D5197146930BE09 /* M13CheckboxSpiralController.swift */; };
+		B0471D9061D1AE1F54C08242A5773ECF /* M13CheckboxFillController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1617268B9989DD59D1328BD0506EAB3E /* M13CheckboxFillController.swift */; };
+		B323D65D6BE2950D9615F791E7A90A7F /* M13CheckboxDotController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF7819A421B0E9FD67C4B4AB994FB9B /* M13CheckboxDotController.swift */; };
+		B642D0A666A7B76CE25C412820331536 /* M13Checkbox+IB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380F4E394162326AC8B4EE53C54FA00A /* M13Checkbox+IB.swift */; };
+		BA7BB2FF04CE1CAFC5238D1807EF0034 /* DPDKeyboardListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A3CEAB43316AC717C1D5226A7E0EBD /* DPDKeyboardListener.swift */; };
+		C2BA008A914F681607429815D2EDEA95 /* M13CheckboxPathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36048E6A77480036DF3345EFE82929D4 /* M13CheckboxPathGenerator.swift */; };
+		C312131E6526BFB7C1CB92D93D58FCC7 /* iOSDropDown-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A3C0EF9C74BEB06B12FE1E35E4ED2FD /* iOSDropDown-dummy.m */; };
+		CA89E0222ABBC43F957E4F3BF7F46142 /* M13Checkbox-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 09AA560535ED5480B9171CE9C168983A /* M13Checkbox-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D035EDC528DBF5BA980CDF5299828034 /* M13CheckboxBounceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF7589D3148C5E805377DA7496C5013 /* M13CheckboxBounceController.swift */; };
+		D094C36BAB6A1DBEF2FBF31DAD55EC4E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD608BCCF279B1277BB911F33106997F /* Foundation.framework */; };
+		D5584524FE609C7CD27E83BCB74CE685 /* M13CheckboxController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6361356344BCDAC332AEA396615D0C /* M13CheckboxController.swift */; };
+		E08B31BE69E7F9FD79F888D6878470CE /* DefaultValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80294909790AD7D767F28C3A825B2071 /* DefaultValues.swift */; };
+		E554C1894F7994C45693A532CC18769A /* ButtonBarPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEC0E5A8F69A04B6E05E7147B1E3DAB /* ButtonBarPagerTabStripViewController.swift */; };
+		E9D6E5290AA728E26BB83686BABD683A /* M13CheckboxCheckPathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34F80EB2B866E07A17C9C9E0D5D7A45 /* M13CheckboxCheckPathGenerator.swift */; };
+		EB3D83C05EC7793D23A1192C11B9F631 /* DropDownCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1983AD19FB36BC55D2240BF60970BFB /* DropDownCell.xib */; };
+		F2E3366710556B8D518FF6F12259CFA5 /* PagerTabStripError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFF9CA3076593B1ACE5D158F56704FB /* PagerTabStripError.swift */; };
+		F805832DAAFB6DFA063DCE467BC59B9F /* FXPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3D9CAD1AABADAEA9F58639D2C0B095 /* FXPageControl.m */; };
 		FB1A59DAD92E574036C966A2CD221FAB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD608BCCF279B1277BB911F33106997F /* Foundation.framework */; };
 		FB7C01AB26481D05ABFF2C7F60D7D67C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD608BCCF279B1277BB911F33106997F /* Foundation.framework */; };
-		FF6BF71F784703DB5F302C257245A51B /* M13CheckboxFadeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5F1466C0AD2EF3E3DCACD49C17340B /* M13CheckboxFadeController.swift */; };
+		FF6BF71F784703DB5F302C257245A51B /* M13CheckboxFadeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378E6C17DF8E1DBA0E89866B00653E9D /* M13CheckboxFadeController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		43E56F96AEDCE14F48DC0410B8164757 /* PBXContainerItemProxy */ = {
+		256860DA7A9D36A2E56D5E0F6D82E2DF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 3C76CE6CD60B1CE55A174F03CC59AE17;
-			remoteInfo = iOSDropDown;
+			remoteGlobalIDString = 7111E54EAE43E89F451A75076C3525ED;
+			remoteInfo = M13Checkbox;
 		};
 		5B8329DD02E7A5BBD4BB45C327ED895A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -77,96 +109,153 @@
 			remoteGlobalIDString = EBF90A3A56D4C5830C212D000AB67BC1;
 			remoteInfo = "XLPagerTabStrip-XLPagerTabStrip";
 		};
-		BDA6C97900353BDD0A0E0F8E8359C9BA /* PBXContainerItemProxy */ = {
+		6EB1C2DD30E6564FC3135C9E8002D8F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E5B4BBC6DD552AC8943C7E22772FC1D3;
+			remoteInfo = GoogleMaps;
+		};
+		7D6DD2194C22C34EB49D8F48AEA2984C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3C76CE6CD60B1CE55A174F03CC59AE17;
+			remoteInfo = iOSDropDown;
+		};
+		A0685BFD08154D6674416064F844983E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E5B4BBC6DD552AC8943C7E22772FC1D3;
+			remoteInfo = GoogleMaps;
+		};
+		B03033A0EBA5D3E06B8C9A031073D25A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C1885900810601510E0C632060FAF26;
+			remoteInfo = GooglePlaces;
+		};
+		E47830BA203B413939A9C3162652DD53 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = DC5C3A7662FFA04D04D29F4657D032CE;
 			remoteInfo = XLPagerTabStrip;
 		};
-		C344C761F99BC69DDBCA0ED17B47C45C /* PBXContainerItemProxy */ = {
+		FD593F4335D824DD0DA43ADDB1EB889A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 7111E54EAE43E89F451A75076C3525ED;
-			remoteInfo = M13Checkbox;
+			remoteGlobalIDString = E9F9401E9C74C0C393164FD8D86D0068;
+			remoteInfo = DropDown;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0184D638026E56546EDF20E08CA5B658 /* DefaultValues.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DefaultValues.swift; path = Sources/DefaultValues.swift; sourceTree = "<group>"; };
-		01AE754AC790B1B9314A546CC6201DA1 /* PagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagerTabStripViewController.swift; path = Sources/PagerTabStripViewController.swift; sourceTree = "<group>"; };
 		01BDA658338AD3813D969D7011B56B8D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		033D769F36EC14F8F1C6DB60195D8739 /* iOSDropDown-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "iOSDropDown-Info.plist"; sourceTree = "<group>"; };
-		038DA13DF3EA5D32F0008797C48BEB9C /* iOSDropDown.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = iOSDropDown.modulemap; sourceTree = "<group>"; };
-		04A1F3D5210F72C9082BECB85A3228E5 /* SegmentedPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SegmentedPagerTabStripViewController.swift; path = Sources/SegmentedPagerTabStripViewController.swift; sourceTree = "<group>"; };
-		071328EABA502EC119059FA971EDD1B1 /* M13Checkbox-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "M13Checkbox-umbrella.h"; sourceTree = "<group>"; };
-		0A4CAF9A09F423864179AD8E9DA08B07 /* M13Checkbox.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = M13Checkbox.xcconfig; sourceTree = "<group>"; };
-		166C44200F13558BF214F9FA75686E07 /* iOSDropDown-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iOSDropDown-umbrella.h"; sourceTree = "<group>"; };
-		18ECB9EE503F5E421EEF6A5E4A31C6E4 /* XLPagerTabStrip.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = XLPagerTabStrip.modulemap; sourceTree = "<group>"; };
-		19544F28040460289F17E980DF91EB53 /* Pods-Inspection-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Inspection-acknowledgements.plist"; sourceTree = "<group>"; };
-		2441602BF892B28C22EC8585F18C1DC4 /* XLPagerTabStrip.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XLPagerTabStrip.xcconfig; sourceTree = "<group>"; };
+		031E1D6A3A4195FCD71E585E8F0237FD /* XLPagerTabStrip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XLPagerTabStrip.debug.xcconfig; sourceTree = "<group>"; };
+		0487F09556372E758D543F86215C0F19 /* DropDown.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DropDown.release.xcconfig; sourceTree = "<group>"; };
+		086045E2858E0D404047298C5E369286 /* iOSDropDown-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iOSDropDown-prefix.pch"; sourceTree = "<group>"; };
+		09AA560535ED5480B9171CE9C168983A /* M13Checkbox-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "M13Checkbox-umbrella.h"; sourceTree = "<group>"; };
+		0B563D3860FEE3F1F2A7B52C83792154 /* M13CheckboxStrokeController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxStrokeController.swift; path = Sources/Managers/M13CheckboxStrokeController.swift; sourceTree = "<group>"; };
+		0BF7589D3148C5E805377DA7496C5013 /* M13CheckboxBounceController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxBounceController.swift; path = Sources/Managers/M13CheckboxBounceController.swift; sourceTree = "<group>"; };
+		0C6361356344BCDAC332AEA396615D0C /* M13CheckboxController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxController.swift; path = Sources/M13CheckboxController.swift; sourceTree = "<group>"; };
+		1617268B9989DD59D1328BD0506EAB3E /* M13CheckboxFillController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxFillController.swift; path = Sources/Managers/M13CheckboxFillController.swift; sourceTree = "<group>"; };
+		17427EE52A0CA9423A6BFD2DEA191767 /* iOSDropDown.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = iOSDropDown.debug.xcconfig; sourceTree = "<group>"; };
+		18A3CEAB43316AC717C1D5226A7E0EBD /* DPDKeyboardListener.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DPDKeyboardListener.swift; path = DropDown/helpers/DPDKeyboardListener.swift; sourceTree = "<group>"; };
+		1A3C0EF9C74BEB06B12FE1E35E4ED2FD /* iOSDropDown-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "iOSDropDown-dummy.m"; sourceTree = "<group>"; };
+		26F10631EE9095923E00A7143F92E71E /* DPDConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DPDConstants.swift; path = DropDown/helpers/DPDConstants.swift; sourceTree = "<group>"; };
 		276842F3A283EE87124FE6C3EAAFD184 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		2963D847F2D37FB2EB7290F767883BDD /* M13CheckboxStrokeController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxStrokeController.swift; path = Sources/Managers/M13CheckboxStrokeController.swift; sourceTree = "<group>"; };
-		2A5F1466C0AD2EF3E3DCACD49C17340B /* M13CheckboxFadeController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxFadeController.swift; path = Sources/Managers/M13CheckboxFadeController.swift; sourceTree = "<group>"; };
-		38EADF621F816FCA8AA4CA80AF8F6025 /* XLPagerTabStrip-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XLPagerTabStrip-prefix.pch"; sourceTree = "<group>"; };
-		3CD053D2FFAFFF74D0F8D2ACA0AEEFFF /* M13CheckboxBounceController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxBounceController.swift; path = Sources/Managers/M13CheckboxBounceController.swift; sourceTree = "<group>"; };
-		40EF13BDB32D8F68557D7A2C7478A85E /* PagerTabStripBehaviour.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagerTabStripBehaviour.swift; path = Sources/PagerTabStripBehaviour.swift; sourceTree = "<group>"; };
-		4296BDA421AAB890471E08A017E38101 /* M13CheckboxDotController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxDotController.swift; path = Sources/Managers/M13CheckboxDotController.swift; sourceTree = "<group>"; };
-		47EB7A99F81BD5CA9DAED48FEE6731FA /* PagerTabStripError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagerTabStripError.swift; path = Sources/PagerTabStripError.swift; sourceTree = "<group>"; };
-		4FD95427E3B4398080A83D9F4E5F6E96 /* M13Checkbox-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "M13Checkbox-Info.plist"; sourceTree = "<group>"; };
-		5631BB2C5E95554F81DFF1B55D135F66 /* Pods-Inspection-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Inspection-Info.plist"; sourceTree = "<group>"; };
-		5CC4CCBD7A7CE15C06AA8F77A0D6FF12 /* M13Checkbox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13Checkbox.swift; path = Sources/M13Checkbox.swift; sourceTree = "<group>"; };
+		29C00D7FF5FF562995C1A577626C5F70 /* Pods-Inspection-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Inspection-umbrella.h"; sourceTree = "<group>"; };
+		2BB913E70FAEAFB0E89540CC32457544 /* DropDown.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropDown.swift; path = DropDown/src/DropDown.swift; sourceTree = "<group>"; };
+		2DB3EE8B1DFF3944F4389C0EE729BB8A /* XLPagerTabStrip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XLPagerTabStrip.release.xcconfig; sourceTree = "<group>"; };
+		3213B71AAB1E1FC68BF714994BB43C0A /* M13CheckboxRadioPathGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxRadioPathGenerator.swift; path = Sources/Paths/M13CheckboxRadioPathGenerator.swift; sourceTree = "<group>"; };
+		34413F7258AED2320971FA54D479295A /* iOSDropDown-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iOSDropDown-umbrella.h"; sourceTree = "<group>"; };
+		36048E6A77480036DF3345EFE82929D4 /* M13CheckboxPathGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxPathGenerator.swift; path = Sources/Paths/M13CheckboxPathGenerator.swift; sourceTree = "<group>"; };
+		378E6C17DF8E1DBA0E89866B00653E9D /* M13CheckboxFadeController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxFadeController.swift; path = Sources/Managers/M13CheckboxFadeController.swift; sourceTree = "<group>"; };
+		37C680AE911270EBA2F9CDED9E99DC48 /* Pods-Inspection-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Inspection-dummy.m"; sourceTree = "<group>"; };
+		380F4E394162326AC8B4EE53C54FA00A /* M13Checkbox+IB.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "M13Checkbox+IB.swift"; path = "Sources/M13Checkbox+IB.swift"; sourceTree = "<group>"; };
+		3B01C03020399D2070A9AA56E88D7ECE /* DropDown-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DropDown-prefix.pch"; sourceTree = "<group>"; };
+		3C78019096DA70E7CEE00DEECBC78DCC /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsCore.framework; path = Maps/Frameworks/GoogleMapsCore.framework; sourceTree = "<group>"; };
+		3CA30916447AF86FA42FEC8305C190D8 /* Pods-Inspection-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Inspection-frameworks.sh"; sourceTree = "<group>"; };
+		3E062DF4E9F388CCAE4222D7DBAEEA31 /* M13Checkbox-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "M13Checkbox-dummy.m"; sourceTree = "<group>"; };
+		44745BB5C21443EB0F4B32700FCE972D /* DropDown-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DropDown-umbrella.h"; sourceTree = "<group>"; };
+		45661401F73AF2A72F050798F5A8C934 /* XLPagerTabStrip-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XLPagerTabStrip-umbrella.h"; sourceTree = "<group>"; };
+		4718A3FCAD4B861E76A33A47A128828F /* DPDUIView+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DPDUIView+Extension.swift"; path = "DropDown/helpers/DPDUIView+Extension.swift"; sourceTree = "<group>"; };
+		4BAED35FC6ED0CB47C044ABC78B57D7E /* XLPagerTabStrip-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "XLPagerTabStrip-Info.plist"; sourceTree = "<group>"; };
+		4DEC0E5A8F69A04B6E05E7147B1E3DAB /* ButtonBarPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ButtonBarPagerTabStripViewController.swift; path = Sources/ButtonBarPagerTabStripViewController.swift; sourceTree = "<group>"; };
+		50704B07D05BFCADEC292E9BAED32880 /* Pods-Inspection-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Inspection-Info.plist"; sourceTree = "<group>"; };
+		51D904DCA80D6A5F46F3AB59897B5B0F /* Pods-Inspection.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Inspection.modulemap"; sourceTree = "<group>"; };
+		55BC3596307ECDC5AF27889C44E57C17 /* DropDown-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DropDown-dummy.m"; sourceTree = "<group>"; };
+		5A742B11E094AF34ED9A181D8A017AC8 /* Pods-Inspection-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Inspection-acknowledgements.markdown"; sourceTree = "<group>"; };
 		5CE79C5BF20743404E59BEFD080A364D /* M13Checkbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = M13Checkbox.framework; path = M13Checkbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6361C25675842F217C47E9D4384100F5 /* BarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarView.swift; path = Sources/BarView.swift; sourceTree = "<group>"; };
-		642BCADCBF83737355A5BBAA8DD49C76 /* M13CheckboxFlatController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxFlatController.swift; path = Sources/Managers/M13CheckboxFlatController.swift; sourceTree = "<group>"; };
-		64F639BA6FE9FC74BC4F2BCC6766BB64 /* M13CheckboxPathGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxPathGenerator.swift; path = Sources/Paths/M13CheckboxPathGenerator.swift; sourceTree = "<group>"; };
-		6F53D6D4394ED3C7E888F03C52DE17DD /* XLPagerTabStrip-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "XLPagerTabStrip-dummy.m"; sourceTree = "<group>"; };
+		5CEB0B4DAABE65F002270E71215E9D22 /* BarPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarPagerTabStripViewController.swift; path = Sources/BarPagerTabStripViewController.swift; sourceTree = "<group>"; };
+		5D244BC6E572D05B38D5DC2DF41FFB68 /* BaseButtonBarPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseButtonBarPagerTabStripViewController.swift; path = Sources/BaseButtonBarPagerTabStripViewController.swift; sourceTree = "<group>"; };
+		5DBF781DE614A6CD524C24F93E251A1F /* SwipeDirection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeDirection.swift; path = Sources/SwipeDirection.swift; sourceTree = "<group>"; };
+		5E8B1EC1D8D9854DEDE19E56AD64E424 /* iOSDropDown.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = iOSDropDown.modulemap; sourceTree = "<group>"; };
+		619797738D54F36E353C897717C66C36 /* M13CheckboxGestureRecognizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxGestureRecognizer.swift; path = Sources/M13CheckboxGestureRecognizer.swift; sourceTree = "<group>"; };
+		6F896773249369E6AD6F78A1FFEAC189 /* GooglePlaces.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GooglePlaces.framework; path = Frameworks/GooglePlaces.framework; sourceTree = "<group>"; };
 		78BA4BB1A553AB4136F879792D99C87D /* XLPagerTabStrip.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = XLPagerTabStrip.bundle; path = "XLPagerTabStrip-XLPagerTabStrip.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
-		78DB633F63E702315CDAD2C230E5FF7D /* M13CheckboxSpiralController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxSpiralController.swift; path = Sources/Managers/M13CheckboxSpiralController.swift; sourceTree = "<group>"; };
-		7B93BD1156C015710D4F6E2C441E96B2 /* M13CheckboxAddRemovePathGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxAddRemovePathGenerator.swift; path = Sources/Paths/M13CheckboxAddRemovePathGenerator.swift; sourceTree = "<group>"; };
-		7CDB8F8EC7CCD7A5E587D6727DACF3A5 /* XLPagerTabStrip-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "XLPagerTabStrip-Info.plist"; sourceTree = "<group>"; };
-		86059D798187DB00B20BF6A6E487CCAA /* M13Checkbox-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "M13Checkbox-dummy.m"; sourceTree = "<group>"; };
-		860721F0463F38CE23646813FC40C7FF /* Pods-Inspection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Inspection.debug.xcconfig"; sourceTree = "<group>"; };
-		8775BFB2A6F1A433CEE52FB074BDEFB0 /* ButtonBarViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ButtonBarViewCell.swift; path = Sources/ButtonBarViewCell.swift; sourceTree = "<group>"; };
-		882CD3E18C46BFC692F79015360088A7 /* M13CheckboxFillController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxFillController.swift; path = Sources/Managers/M13CheckboxFillController.swift; sourceTree = "<group>"; };
-		88EBD0E8E3BACDEDC627E5FC9FF7C3E1 /* ButtonCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = ButtonCell.xib; path = Sources/ButtonCell.xib; sourceTree = "<group>"; };
-		899C740709A1937EDC4DDFDCEC789E55 /* Pods-Inspection-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Inspection-frameworks.sh"; sourceTree = "<group>"; };
-		8C726F6B76D3C78A0014458331CC10EB /* Pods-Inspection-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Inspection-umbrella.h"; sourceTree = "<group>"; };
-		9014D342B9690C15F11F589AA0BC2AF4 /* ButtonBarPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ButtonBarPagerTabStripViewController.swift; path = Sources/ButtonBarPagerTabStripViewController.swift; sourceTree = "<group>"; };
-		93D4FE2F8E6D3972CC44B53367CD5B63 /* Pods-Inspection.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Inspection.modulemap"; sourceTree = "<group>"; };
-		9525E95A28921A3FCB6D1C418DC93ADF /* M13CheckboxDisclosurePathGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxDisclosurePathGenerator.swift; path = Sources/Paths/M13CheckboxDisclosurePathGenerator.swift; sourceTree = "<group>"; };
-		964B084C8680209D20071F2CF8496A89 /* iOSDropDown.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = iOSDropDown.xcconfig; sourceTree = "<group>"; };
-		96E3A5841184E580A52B8CEB52A0D09E /* Pods-Inspection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Inspection.release.xcconfig"; sourceTree = "<group>"; };
-		994BDE639D2EC6897303A5550D57EDCD /* IndicatorInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IndicatorInfo.swift; path = Sources/IndicatorInfo.swift; sourceTree = "<group>"; };
-		9CDA334B59CC5B50E71A748B4E39F698 /* M13Checkbox.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = M13Checkbox.modulemap; sourceTree = "<group>"; };
+		790499CB2A5648A0FE13BE83EA7D18A9 /* GooglePlaces.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GooglePlaces.bundle; path = Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle; sourceTree = "<group>"; };
+		7EA55D8D231F8DF252B62CBF9A6B03BB /* FXPageControl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FXPageControl.h; path = Sources/FXPageControl.h; sourceTree = "<group>"; };
+		80294909790AD7D767F28C3A825B2071 /* DefaultValues.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DefaultValues.swift; path = Sources/DefaultValues.swift; sourceTree = "<group>"; };
+		80B105221ED3E18988426404B0A07559 /* TwitterPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TwitterPagerTabStripViewController.swift; path = Sources/TwitterPagerTabStripViewController.swift; sourceTree = "<group>"; };
+		81F67D3769952E6772993CEB080B5CB9 /* M13Checkbox-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "M13Checkbox-Info.plist"; sourceTree = "<group>"; };
+		8523A2DFB99D06E99623FE6CF43BB9A2 /* GoogleMaps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleMaps.release.xcconfig; sourceTree = "<group>"; };
+		85B4B683F22DB3E44EE1F8D66F9D6B44 /* M13Checkbox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13Checkbox.swift; path = Sources/M13Checkbox.swift; sourceTree = "<group>"; };
+		8800DF97882FF76A61149A827EF7EC5A /* ButtonBarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ButtonBarView.swift; path = Sources/ButtonBarView.swift; sourceTree = "<group>"; };
+		8853CA3ED7004AD7272E9A502FF5B15D /* iOSDropDown.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = iOSDropDown.swift; path = iOSDropDown/Classes/iOSDropDown.swift; sourceTree = "<group>"; };
+		88CF14347AD8506D92FEB3AAF9D501DA /* Pods-Inspection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Inspection.release.xcconfig"; sourceTree = "<group>"; };
+		8AA3D3D2F38D28386A6E8A61E0C3ABA3 /* SegmentedPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SegmentedPagerTabStripViewController.swift; path = Sources/SegmentedPagerTabStripViewController.swift; sourceTree = "<group>"; };
+		8E6F2CF7F8B1D3F80D5197146930BE09 /* M13CheckboxSpiralController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxSpiralController.swift; path = Sources/Managers/M13CheckboxSpiralController.swift; sourceTree = "<group>"; };
+		8EFDA6059595FA3EB5D01B47D733D148 /* DropDown.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DropDown.debug.xcconfig; sourceTree = "<group>"; };
+		8FA9B85CAC7AF4142E9E3C6AAFA8D08F /* XLPagerTabStrip-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "XLPagerTabStrip-dummy.m"; sourceTree = "<group>"; };
+		94D5C21284E5636966AD5C987B39A262 /* ResourceBundle-XLPagerTabStrip-XLPagerTabStrip-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-XLPagerTabStrip-XLPagerTabStrip-Info.plist"; sourceTree = "<group>"; };
+		95BD408B89734FC804B2785051297A60 /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Base/Frameworks/GoogleMapsBase.framework; sourceTree = "<group>"; };
+		9702130A20B2B9FE5BEE4E79266A1AC1 /* M13CheckboxAddRemovePathGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxAddRemovePathGenerator.swift; path = Sources/Paths/M13CheckboxAddRemovePathGenerator.swift; sourceTree = "<group>"; };
+		9A738A89E6D959A273BCA993858D184D /* DropDownCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropDownCell.swift; path = DropDown/src/DropDownCell.swift; sourceTree = "<group>"; };
+		9B6725B782188F18CB76A740433F14E4 /* DropDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DropDown.framework; path = DropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D5D7000335ED9EB644F7FEB3801C495 /* DropDown+Appearance.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DropDown+Appearance.swift"; path = "DropDown/src/DropDown+Appearance.swift"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9F24A937A5A3FF37D47FA8FEAB1521E0 /* ResourceBundle-XLPagerTabStrip-XLPagerTabStrip-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-XLPagerTabStrip-XLPagerTabStrip-Info.plist"; sourceTree = "<group>"; };
-		A1B18B1D4A9BA59583EBE416B0F3A353 /* iOSDropDown-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "iOSDropDown-dummy.m"; sourceTree = "<group>"; };
-		A7FCD82EF1D037E5A9C9E87B011F77F1 /* BarPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarPagerTabStripViewController.swift; path = Sources/BarPagerTabStripViewController.swift; sourceTree = "<group>"; };
-		A99BEC4CD897EB251A48BFD39E525AC9 /* SwipeDirection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeDirection.swift; path = Sources/SwipeDirection.swift; sourceTree = "<group>"; };
-		ACBE837C0F469E73839B2629B979EEEF /* ButtonBarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ButtonBarView.swift; path = Sources/ButtonBarView.swift; sourceTree = "<group>"; };
-		B1857F0647B6AB3D9DF0AEC1B88E2812 /* M13Checkbox-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "M13Checkbox-prefix.pch"; sourceTree = "<group>"; };
-		BB1186815F372549019FB8034B13EB1E /* M13CheckboxCheckPathGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxCheckPathGenerator.swift; path = Sources/Paths/M13CheckboxCheckPathGenerator.swift; sourceTree = "<group>"; };
-		BD0C81FC069AE346F7E29FA560751640 /* TwitterPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TwitterPagerTabStripViewController.swift; path = Sources/TwitterPagerTabStripViewController.swift; sourceTree = "<group>"; };
-		C0485F0011D633D7DA62BD4B06F76EDB /* M13Checkbox+IB.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "M13Checkbox+IB.swift"; path = "Sources/M13Checkbox+IB.swift"; sourceTree = "<group>"; };
-		C098332024A8F9DA2EB52984D9801193 /* iOSDropDown-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iOSDropDown-prefix.pch"; sourceTree = "<group>"; };
-		CD8DF2DAEE4ACFC1D59FD237262FBB5B /* iOSDropDown.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = iOSDropDown.swift; path = iOSDropDown/Classes/iOSDropDown.swift; sourceTree = "<group>"; };
-		D6263D9D0D4C12BEE67C9DC92D984AE2 /* XLPagerTabStrip-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XLPagerTabStrip-umbrella.h"; sourceTree = "<group>"; };
-		D73C72EA9815A71BB502C53BB4EEB78D /* M13CheckboxController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxController.swift; path = Sources/M13CheckboxController.swift; sourceTree = "<group>"; };
-		DDEF0E1A0EDAB40A4CCD2E7B7132087A /* BaseButtonBarPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseButtonBarPagerTabStripViewController.swift; path = Sources/BaseButtonBarPagerTabStripViewController.swift; sourceTree = "<group>"; };
-		DE95B4A48FED58D67BF51F7C1DD0E30D /* FXPageControl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FXPageControl.h; path = Sources/FXPageControl.h; sourceTree = "<group>"; };
-		DEEB7D98D68901606040ABCC7B32E637 /* M13CheckboxAnimationGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxAnimationGenerator.swift; path = Sources/M13CheckboxAnimationGenerator.swift; sourceTree = "<group>"; };
+		9E04495A435863B964CAE0889E51658D /* iOSDropDown.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = iOSDropDown.release.xcconfig; sourceTree = "<group>"; };
+		A22402A05F09C8CE791B48CF38B5CCD0 /* GoogleMaps.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
+		AC86E9FB216EA259158E1153BDCE0B4B /* XLPagerTabStrip-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XLPagerTabStrip-prefix.pch"; sourceTree = "<group>"; };
+		B0E70766BABC1246FA7DC8417E00BFB7 /* M13CheckboxFlatController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxFlatController.swift; path = Sources/Managers/M13CheckboxFlatController.swift; sourceTree = "<group>"; };
+		B1983AD19FB36BC55D2240BF60970BFB /* DropDownCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = DropDownCell.xib; path = DropDown/resources/DropDownCell.xib; sourceTree = "<group>"; };
+		B70112B9E3820AE04B3714D5F19971C2 /* M13CheckboxExpandController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxExpandController.swift; path = Sources/Managers/M13CheckboxExpandController.swift; sourceTree = "<group>"; };
+		BB2C95D6115F483E1DE5A09D7A6232CE /* M13Checkbox-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "M13Checkbox-prefix.pch"; sourceTree = "<group>"; };
+		BB2EF8491C22DE4BF774FD17F8A7E156 /* ButtonCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = ButtonCell.xib; path = Sources/ButtonCell.xib; sourceTree = "<group>"; };
+		BBF7819A421B0E9FD67C4B4AB994FB9B /* M13CheckboxDotController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxDotController.swift; path = Sources/Managers/M13CheckboxDotController.swift; sourceTree = "<group>"; };
+		BFFF9CA3076593B1ACE5D158F56704FB /* PagerTabStripError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagerTabStripError.swift; path = Sources/PagerTabStripError.swift; sourceTree = "<group>"; };
+		C2830776F77F1A42DFB33050028AA7A2 /* iOSDropDown-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "iOSDropDown-Info.plist"; sourceTree = "<group>"; };
+		C3E1F5C675998902860A5026ED6CDC23 /* DropDown.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = DropDown.modulemap; sourceTree = "<group>"; };
+		C5AD945EB0140BF82AA6A8162F662401 /* DropDown-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "DropDown-Info.plist"; sourceTree = "<group>"; };
+		CFABE39760B9E3D6566AE05C941129A8 /* IndicatorInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IndicatorInfo.swift; path = Sources/IndicatorInfo.swift; sourceTree = "<group>"; };
+		D1E10DFB81C79FCBF06FF2B6BF07DF96 /* M13CheckboxDisclosurePathGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxDisclosurePathGenerator.swift; path = Sources/Paths/M13CheckboxDisclosurePathGenerator.swift; sourceTree = "<group>"; };
+		D3F5E374E476149B713B4C6F8AE9ABA5 /* M13Checkbox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = M13Checkbox.debug.xcconfig; sourceTree = "<group>"; };
+		D6CE329B2845EC131DC50C1AEE0C8292 /* PagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagerTabStripViewController.swift; path = Sources/PagerTabStripViewController.swift; sourceTree = "<group>"; };
+		DABDC92B060035DE75717CFB0A46A0D6 /* Pods-Inspection-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Inspection-resources.sh"; sourceTree = "<group>"; };
+		DDF4FEA07E85F25E06591A86E1C398E1 /* GooglePlaces.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GooglePlaces.release.xcconfig; sourceTree = "<group>"; };
 		E01039C07926161B6AEDE007F83C4343 /* Pods_Inspection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Inspection.framework; path = "Pods-Inspection.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E2E4D0D293237425E2C2BF674D72B248 /* FXPageControl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FXPageControl.m; path = Sources/FXPageControl.m; sourceTree = "<group>"; };
-		E55B3019AEEAD1FE88CD93ABF395891C /* M13CheckboxRadioPathGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxRadioPathGenerator.swift; path = Sources/Paths/M13CheckboxRadioPathGenerator.swift; sourceTree = "<group>"; };
-		E6E11731CD4B0481484845011AFB74ED /* Pods-Inspection-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Inspection-acknowledgements.markdown"; sourceTree = "<group>"; };
-		ECA7CDB369987B73CB8C29A20A88B9E8 /* Pods-Inspection-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Inspection-dummy.m"; sourceTree = "<group>"; };
+		E3196D40E4971CAA814C229875154DD5 /* Pods-Inspection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Inspection.debug.xcconfig"; sourceTree = "<group>"; };
+		E34F80EB2B866E07A17C9C9E0D5D7A45 /* M13CheckboxCheckPathGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxCheckPathGenerator.swift; path = Sources/Paths/M13CheckboxCheckPathGenerator.swift; sourceTree = "<group>"; };
+		E673D720CD6D9C925224771892F544DF /* M13Checkbox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = M13Checkbox.release.xcconfig; sourceTree = "<group>"; };
+		E70D0B381482832BE7C9F465B048FB33 /* XLPagerTabStrip.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = XLPagerTabStrip.modulemap; sourceTree = "<group>"; };
+		E917605E2C1BE81224E7D1145828C155 /* Pods-Inspection-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Inspection-acknowledgements.plist"; sourceTree = "<group>"; };
+		EA3D9CAD1AABADAEA9F58639D2C0B095 /* FXPageControl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FXPageControl.m; path = Sources/FXPageControl.m; sourceTree = "<group>"; };
+		EB927EBEA6BDDBB79118B83E477AD0A9 /* GoogleMaps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleMaps.debug.xcconfig; sourceTree = "<group>"; };
+		ECD928B4503D5DCD64807F71379A6907 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Maps/Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
 		F1DDEA945255A18F0B9913AB1C2AB718 /* XLPagerTabStrip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = XLPagerTabStrip.framework; path = XLPagerTabStrip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F21AD28E808665749A649CD680FE7E50 /* M13CheckboxExpandController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxExpandController.swift; path = Sources/Managers/M13CheckboxExpandController.swift; sourceTree = "<group>"; };
-		FB9421910B6220DEF75D54726253CBBF /* M13CheckboxGestureRecognizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxGestureRecognizer.swift; path = Sources/M13CheckboxGestureRecognizer.swift; sourceTree = "<group>"; };
+		F2B8B96A627F4B9C00959215D982888C /* ButtonBarViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ButtonBarViewCell.swift; path = Sources/ButtonBarViewCell.swift; sourceTree = "<group>"; };
+		F78874E52E8E3518BD32D75AC28D014E /* PagerTabStripBehaviour.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagerTabStripBehaviour.swift; path = Sources/PagerTabStripBehaviour.swift; sourceTree = "<group>"; };
+		F999632E2C9C470DBA32F24F61AF5322 /* M13Checkbox.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = M13Checkbox.modulemap; sourceTree = "<group>"; };
+		FA3993BC721BDC38C54614E6ED4FB789 /* BarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarView.swift; path = Sources/BarView.swift; sourceTree = "<group>"; };
+		FA527E7F457091E4673263A2903F89F7 /* GooglePlaces.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GooglePlaces.debug.xcconfig; sourceTree = "<group>"; };
 		FCEEA8BBD9DA8D0CCE0A3092B20E3FA7 /* iOSDropDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = iOSDropDown.framework; path = iOSDropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD608BCCF279B1277BB911F33106997F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		FDAD8277F8129C815C27826D717111C3 /* M13CheckboxAnimationGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxAnimationGenerator.swift; path = Sources/M13CheckboxAnimationGenerator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,14 +266,6 @@
 				7AF77E6823887DFE89A3E24E9E57A34E /* CoreGraphics.framework in Frameworks */,
 				2229A6998218AC6DFF497473500021C7 /* Foundation.framework in Frameworks */,
 				690A3616858F1EF14011B02B88924458 /* UIKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0E2361165F34DFAC73379E1FE52864C8 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				231BDAD2130658C05F63A88406D6635A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,6 +282,22 @@
 			files = (
 				FB1A59DAD92E574036C966A2CD221FAB /* Foundation.framework in Frameworks */,
 				46DD08FB7D6071E99E75ECDBA47E90C1 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		290A391BCFD10DA2785693DA7F3E21F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D094C36BAB6A1DBEF2FBF31DAD55EC4E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9727840973A9C2692E58F7089A7C243E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				618D9C6E8BFF0C7AAD509E9279488585 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,130 +321,241 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		2BCE9516229411A2E19C0B05E6E751AD /* Support Files */ = {
+		0F1E44B9026DFC93F6CAD7FD679B4F5E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				038DA13DF3EA5D32F0008797C48BEB9C /* iOSDropDown.modulemap */,
-				964B084C8680209D20071F2CF8496A89 /* iOSDropDown.xcconfig */,
-				A1B18B1D4A9BA59583EBE416B0F3A353 /* iOSDropDown-dummy.m */,
-				033D769F36EC14F8F1C6DB60195D8739 /* iOSDropDown-Info.plist */,
-				C098332024A8F9DA2EB52984D9801193 /* iOSDropDown-prefix.pch */,
-				166C44200F13558BF214F9FA75686E07 /* iOSDropDown-umbrella.h */,
+				A22402A05F09C8CE791B48CF38B5CCD0 /* GoogleMaps.bundle */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/iOSDropDown";
+			name = Resources;
 			sourceTree = "<group>";
 		};
-		3D206C120D2DA495351E3390BD662B16 /* Pods */ = {
+		1E2D0A9A907C1549190A632C650216C5 /* M13Checkbox */ = {
 			isa = PBXGroup;
 			children = (
-				940B049927F45C405B7894B3C3D40A5D /* iOSDropDown */,
-				52402751E4E586F9F387C3ECD4CE2A41 /* M13Checkbox */,
-				4A8FD722188E8BA34D329BD4979C7963 /* XLPagerTabStrip */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		4A8FD722188E8BA34D329BD4979C7963 /* XLPagerTabStrip */ = {
-			isa = PBXGroup;
-			children = (
-				A7FCD82EF1D037E5A9C9E87B011F77F1 /* BarPagerTabStripViewController.swift */,
-				6361C25675842F217C47E9D4384100F5 /* BarView.swift */,
-				DDEF0E1A0EDAB40A4CCD2E7B7132087A /* BaseButtonBarPagerTabStripViewController.swift */,
-				9014D342B9690C15F11F589AA0BC2AF4 /* ButtonBarPagerTabStripViewController.swift */,
-				ACBE837C0F469E73839B2629B979EEEF /* ButtonBarView.swift */,
-				8775BFB2A6F1A433CEE52FB074BDEFB0 /* ButtonBarViewCell.swift */,
-				DE95B4A48FED58D67BF51F7C1DD0E30D /* FXPageControl.h */,
-				E2E4D0D293237425E2C2BF674D72B248 /* FXPageControl.m */,
-				994BDE639D2EC6897303A5550D57EDCD /* IndicatorInfo.swift */,
-				40EF13BDB32D8F68557D7A2C7478A85E /* PagerTabStripBehaviour.swift */,
-				47EB7A99F81BD5CA9DAED48FEE6731FA /* PagerTabStripError.swift */,
-				01AE754AC790B1B9314A546CC6201DA1 /* PagerTabStripViewController.swift */,
-				04A1F3D5210F72C9082BECB85A3228E5 /* SegmentedPagerTabStripViewController.swift */,
-				A99BEC4CD897EB251A48BFD39E525AC9 /* SwipeDirection.swift */,
-				BD0C81FC069AE346F7E29FA560751640 /* TwitterPagerTabStripViewController.swift */,
-				E7DF130B136B9EBC578650855EE3DBBC /* Resources */,
-				BEE2D91E2EC5A386FDCDF5487148D231 /* Support Files */,
-			);
-			name = XLPagerTabStrip;
-			path = XLPagerTabStrip;
-			sourceTree = "<group>";
-		};
-		52402751E4E586F9F387C3ECD4CE2A41 /* M13Checkbox */ = {
-			isa = PBXGroup;
-			children = (
-				0184D638026E56546EDF20E08CA5B658 /* DefaultValues.swift */,
-				5CC4CCBD7A7CE15C06AA8F77A0D6FF12 /* M13Checkbox.swift */,
-				C0485F0011D633D7DA62BD4B06F76EDB /* M13Checkbox+IB.swift */,
-				7B93BD1156C015710D4F6E2C441E96B2 /* M13CheckboxAddRemovePathGenerator.swift */,
-				DEEB7D98D68901606040ABCC7B32E637 /* M13CheckboxAnimationGenerator.swift */,
-				3CD053D2FFAFFF74D0F8D2ACA0AEEFFF /* M13CheckboxBounceController.swift */,
-				BB1186815F372549019FB8034B13EB1E /* M13CheckboxCheckPathGenerator.swift */,
-				D73C72EA9815A71BB502C53BB4EEB78D /* M13CheckboxController.swift */,
-				9525E95A28921A3FCB6D1C418DC93ADF /* M13CheckboxDisclosurePathGenerator.swift */,
-				4296BDA421AAB890471E08A017E38101 /* M13CheckboxDotController.swift */,
-				F21AD28E808665749A649CD680FE7E50 /* M13CheckboxExpandController.swift */,
-				2A5F1466C0AD2EF3E3DCACD49C17340B /* M13CheckboxFadeController.swift */,
-				882CD3E18C46BFC692F79015360088A7 /* M13CheckboxFillController.swift */,
-				642BCADCBF83737355A5BBAA8DD49C76 /* M13CheckboxFlatController.swift */,
-				FB9421910B6220DEF75D54726253CBBF /* M13CheckboxGestureRecognizer.swift */,
-				64F639BA6FE9FC74BC4F2BCC6766BB64 /* M13CheckboxPathGenerator.swift */,
-				E55B3019AEEAD1FE88CD93ABF395891C /* M13CheckboxRadioPathGenerator.swift */,
-				78DB633F63E702315CDAD2C230E5FF7D /* M13CheckboxSpiralController.swift */,
-				2963D847F2D37FB2EB7290F767883BDD /* M13CheckboxStrokeController.swift */,
-				77C823449C893EFBA37110BC26E35B51 /* Support Files */,
+				80294909790AD7D767F28C3A825B2071 /* DefaultValues.swift */,
+				85B4B683F22DB3E44EE1F8D66F9D6B44 /* M13Checkbox.swift */,
+				380F4E394162326AC8B4EE53C54FA00A /* M13Checkbox+IB.swift */,
+				9702130A20B2B9FE5BEE4E79266A1AC1 /* M13CheckboxAddRemovePathGenerator.swift */,
+				FDAD8277F8129C815C27826D717111C3 /* M13CheckboxAnimationGenerator.swift */,
+				0BF7589D3148C5E805377DA7496C5013 /* M13CheckboxBounceController.swift */,
+				E34F80EB2B866E07A17C9C9E0D5D7A45 /* M13CheckboxCheckPathGenerator.swift */,
+				0C6361356344BCDAC332AEA396615D0C /* M13CheckboxController.swift */,
+				D1E10DFB81C79FCBF06FF2B6BF07DF96 /* M13CheckboxDisclosurePathGenerator.swift */,
+				BBF7819A421B0E9FD67C4B4AB994FB9B /* M13CheckboxDotController.swift */,
+				B70112B9E3820AE04B3714D5F19971C2 /* M13CheckboxExpandController.swift */,
+				378E6C17DF8E1DBA0E89866B00653E9D /* M13CheckboxFadeController.swift */,
+				1617268B9989DD59D1328BD0506EAB3E /* M13CheckboxFillController.swift */,
+				B0E70766BABC1246FA7DC8417E00BFB7 /* M13CheckboxFlatController.swift */,
+				619797738D54F36E353C897717C66C36 /* M13CheckboxGestureRecognizer.swift */,
+				36048E6A77480036DF3345EFE82929D4 /* M13CheckboxPathGenerator.swift */,
+				3213B71AAB1E1FC68BF714994BB43C0A /* M13CheckboxRadioPathGenerator.swift */,
+				8E6F2CF7F8B1D3F80D5197146930BE09 /* M13CheckboxSpiralController.swift */,
+				0B563D3860FEE3F1F2A7B52C83792154 /* M13CheckboxStrokeController.swift */,
+				B2CD95CAC1DA3A4316C3481E70078B99 /* Support Files */,
 			);
 			name = M13Checkbox;
 			path = M13Checkbox;
 			sourceTree = "<group>";
 		};
-		54376E2EF95443D5356FABAF9E0B8D79 /* Pods-Inspection */ = {
+		2099823F15C14160D75051FC470C7F7D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				93D4FE2F8E6D3972CC44B53367CD5B63 /* Pods-Inspection.modulemap */,
-				E6E11731CD4B0481484845011AFB74ED /* Pods-Inspection-acknowledgements.markdown */,
-				19544F28040460289F17E980DF91EB53 /* Pods-Inspection-acknowledgements.plist */,
-				ECA7CDB369987B73CB8C29A20A88B9E8 /* Pods-Inspection-dummy.m */,
-				899C740709A1937EDC4DDFDCEC789E55 /* Pods-Inspection-frameworks.sh */,
-				5631BB2C5E95554F81DFF1B55D135F66 /* Pods-Inspection-Info.plist */,
-				8C726F6B76D3C78A0014458331CC10EB /* Pods-Inspection-umbrella.h */,
-				860721F0463F38CE23646813FC40C7FF /* Pods-Inspection.debug.xcconfig */,
-				96E3A5841184E580A52B8CEB52A0D09E /* Pods-Inspection.release.xcconfig */,
+				95BD408B89734FC804B2785051297A60 /* GoogleMapsBase.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		20B4E5EADAC50648E5985DACA0C8A569 /* iOSDropDown */ = {
+			isa = PBXGroup;
+			children = (
+				8853CA3ED7004AD7272E9A502FF5B15D /* iOSDropDown.swift */,
+				A3C78F94FE974B3984D6961419A54B7D /* Support Files */,
+			);
+			name = iOSDropDown;
+			path = iOSDropDown;
+			sourceTree = "<group>";
+		};
+		26DAEC4857060CCFEA0BEA5F73078FEF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B1983AD19FB36BC55D2240BF60970BFB /* DropDownCell.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		2F329BE44ED0CE3A75A514863D9B1C0A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				EB927EBEA6BDDBB79118B83E477AD0A9 /* GoogleMaps.debug.xcconfig */,
+				8523A2DFB99D06E99623FE6CF43BB9A2 /* GoogleMaps.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GoogleMaps";
+			sourceTree = "<group>";
+		};
+		35387063E1DFDDD05D8124F1A040F065 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C3E1F5C675998902860A5026ED6CDC23 /* DropDown.modulemap */,
+				55BC3596307ECDC5AF27889C44E57C17 /* DropDown-dummy.m */,
+				C5AD945EB0140BF82AA6A8162F662401 /* DropDown-Info.plist */,
+				3B01C03020399D2070A9AA56E88D7ECE /* DropDown-prefix.pch */,
+				44745BB5C21443EB0F4B32700FCE972D /* DropDown-umbrella.h */,
+				8EFDA6059595FA3EB5D01B47D733D148 /* DropDown.debug.xcconfig */,
+				0487F09556372E758D543F86215C0F19 /* DropDown.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/DropDown";
+			sourceTree = "<group>";
+		};
+		4308C555C7A5A225AFC80CAD0ED2937C /* GooglePlaces */ = {
+			isa = PBXGroup;
+			children = (
+				E37F0255B16F9570806AE8E0B6F3EF16 /* Frameworks */,
+				9CB5FC9FA9AA74D3394C0070B70468D9 /* Resources */,
+				5AB43B148BC6B71D682BD4F646510E9C /* Support Files */,
+			);
+			name = GooglePlaces;
+			path = GooglePlaces;
+			sourceTree = "<group>";
+		};
+		588869B575009861B29D62948FC30EA9 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				2099823F15C14160D75051FC470C7F7D /* Frameworks */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		5AB43B148BC6B71D682BD4F646510E9C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FA527E7F457091E4673263A2903F89F7 /* GooglePlaces.debug.xcconfig */,
+				DDF4FEA07E85F25E06591A86E1C398E1 /* GooglePlaces.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GooglePlaces";
+			sourceTree = "<group>";
+		};
+		5D57AD58A958A56C82204A3B907370C5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9CA4050BD09D66A9505041CDB1F1887B /* DropDown */,
+				AD6AA432FE47B23F55215C6A5E5CF161 /* GoogleMaps */,
+				4308C555C7A5A225AFC80CAD0ED2937C /* GooglePlaces */,
+				20B4E5EADAC50648E5985DACA0C8A569 /* iOSDropDown */,
+				1E2D0A9A907C1549190A632C650216C5 /* M13Checkbox */,
+				76DDDCF55D0782AD361AE46D46E89F7A /* XLPagerTabStrip */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6825B21622458D445CF6EE561458FAA3 /* Pods-Inspection */ = {
+			isa = PBXGroup;
+			children = (
+				51D904DCA80D6A5F46F3AB59897B5B0F /* Pods-Inspection.modulemap */,
+				5A742B11E094AF34ED9A181D8A017AC8 /* Pods-Inspection-acknowledgements.markdown */,
+				E917605E2C1BE81224E7D1145828C155 /* Pods-Inspection-acknowledgements.plist */,
+				37C680AE911270EBA2F9CDED9E99DC48 /* Pods-Inspection-dummy.m */,
+				3CA30916447AF86FA42FEC8305C190D8 /* Pods-Inspection-frameworks.sh */,
+				50704B07D05BFCADEC292E9BAED32880 /* Pods-Inspection-Info.plist */,
+				DABDC92B060035DE75717CFB0A46A0D6 /* Pods-Inspection-resources.sh */,
+				29C00D7FF5FF562995C1A577626C5F70 /* Pods-Inspection-umbrella.h */,
+				E3196D40E4971CAA814C229875154DD5 /* Pods-Inspection.debug.xcconfig */,
+				88CF14347AD8506D92FEB3AAF9D501DA /* Pods-Inspection.release.xcconfig */,
 			);
 			name = "Pods-Inspection";
 			path = "Target Support Files/Pods-Inspection";
 			sourceTree = "<group>";
 		};
-		593B24EA8E306637F311895B2AFFE88E /* Targets Support Files */ = {
+		765228AEF4B4C3CBA957EC73582E1922 /* Maps */ = {
 			isa = PBXGroup;
 			children = (
-				54376E2EF95443D5356FABAF9E0B8D79 /* Pods-Inspection */,
+				7E28A38A2D3CB19D8AB3127BEC268A75 /* Frameworks */,
+				0F1E44B9026DFC93F6CAD7FD679B4F5E /* Resources */,
+			);
+			name = Maps;
+			sourceTree = "<group>";
+		};
+		76DDDCF55D0782AD361AE46D46E89F7A /* XLPagerTabStrip */ = {
+			isa = PBXGroup;
+			children = (
+				5CEB0B4DAABE65F002270E71215E9D22 /* BarPagerTabStripViewController.swift */,
+				FA3993BC721BDC38C54614E6ED4FB789 /* BarView.swift */,
+				5D244BC6E572D05B38D5DC2DF41FFB68 /* BaseButtonBarPagerTabStripViewController.swift */,
+				4DEC0E5A8F69A04B6E05E7147B1E3DAB /* ButtonBarPagerTabStripViewController.swift */,
+				8800DF97882FF76A61149A827EF7EC5A /* ButtonBarView.swift */,
+				F2B8B96A627F4B9C00959215D982888C /* ButtonBarViewCell.swift */,
+				7EA55D8D231F8DF252B62CBF9A6B03BB /* FXPageControl.h */,
+				EA3D9CAD1AABADAEA9F58639D2C0B095 /* FXPageControl.m */,
+				CFABE39760B9E3D6566AE05C941129A8 /* IndicatorInfo.swift */,
+				F78874E52E8E3518BD32D75AC28D014E /* PagerTabStripBehaviour.swift */,
+				BFFF9CA3076593B1ACE5D158F56704FB /* PagerTabStripError.swift */,
+				D6CE329B2845EC131DC50C1AEE0C8292 /* PagerTabStripViewController.swift */,
+				8AA3D3D2F38D28386A6E8A61E0C3ABA3 /* SegmentedPagerTabStripViewController.swift */,
+				5DBF781DE614A6CD524C24F93E251A1F /* SwipeDirection.swift */,
+				80B105221ED3E18988426404B0A07559 /* TwitterPagerTabStripViewController.swift */,
+				B9E5A77975E5712256A6916C94D31448 /* Resources */,
+				B8C60EA28A910CDC523FE7139DF8E3D6 /* Support Files */,
+			);
+			name = XLPagerTabStrip;
+			path = XLPagerTabStrip;
+			sourceTree = "<group>";
+		};
+		7E28A38A2D3CB19D8AB3127BEC268A75 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ECD928B4503D5DCD64807F71379A6907 /* GoogleMaps.framework */,
+				3C78019096DA70E7CEE00DEECBC78DCC /* GoogleMapsCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8CF7C15D8FA81E3E01E0D5A8F5D4B70A /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6825B21622458D445CF6EE561458FAA3 /* Pods-Inspection */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		77C823449C893EFBA37110BC26E35B51 /* Support Files */ = {
+		9CA4050BD09D66A9505041CDB1F1887B /* DropDown */ = {
 			isa = PBXGroup;
 			children = (
-				9CDA334B59CC5B50E71A748B4E39F698 /* M13Checkbox.modulemap */,
-				0A4CAF9A09F423864179AD8E9DA08B07 /* M13Checkbox.xcconfig */,
-				86059D798187DB00B20BF6A6E487CCAA /* M13Checkbox-dummy.m */,
-				4FD95427E3B4398080A83D9F4E5F6E96 /* M13Checkbox-Info.plist */,
-				B1857F0647B6AB3D9DF0AEC1B88E2812 /* M13Checkbox-prefix.pch */,
-				071328EABA502EC119059FA971EDD1B1 /* M13Checkbox-umbrella.h */,
+				26F10631EE9095923E00A7143F92E71E /* DPDConstants.swift */,
+				18A3CEAB43316AC717C1D5226A7E0EBD /* DPDKeyboardListener.swift */,
+				4718A3FCAD4B861E76A33A47A128828F /* DPDUIView+Extension.swift */,
+				2BB913E70FAEAFB0E89540CC32457544 /* DropDown.swift */,
+				9D5D7000335ED9EB644F7FEB3801C495 /* DropDown+Appearance.swift */,
+				9A738A89E6D959A273BCA993858D184D /* DropDownCell.swift */,
+				26DAEC4857060CCFEA0BEA5F73078FEF /* Resources */,
+				35387063E1DFDDD05D8124F1A040F065 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/M13Checkbox";
+			name = DropDown;
+			path = DropDown;
 			sourceTree = "<group>";
 		};
-		940B049927F45C405B7894B3C3D40A5D /* iOSDropDown */ = {
+		9CB5FC9FA9AA74D3394C0070B70468D9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				CD8DF2DAEE4ACFC1D59FD237262FBB5B /* iOSDropDown.swift */,
-				2BCE9516229411A2E19C0B05E6E751AD /* Support Files */,
+				790499CB2A5648A0FE13BE83EA7D18A9 /* GooglePlaces.bundle */,
 			);
-			name = iOSDropDown;
-			path = iOSDropDown;
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		A3C78F94FE974B3984D6961419A54B7D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5E8B1EC1D8D9854DEDE19E56AD64E424 /* iOSDropDown.modulemap */,
+				1A3C0EF9C74BEB06B12FE1E35E4ED2FD /* iOSDropDown-dummy.m */,
+				C2830776F77F1A42DFB33050028AA7A2 /* iOSDropDown-Info.plist */,
+				086045E2858E0D404047298C5E369286 /* iOSDropDown-prefix.pch */,
+				34413F7258AED2320971FA54D479295A /* iOSDropDown-umbrella.h */,
+				17427EE52A0CA9423A6BFD2DEA191767 /* iOSDropDown.debug.xcconfig */,
+				9E04495A435863B964CAE0889E51658D /* iOSDropDown.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/iOSDropDown";
 			sourceTree = "<group>";
 		};
 		ABE8076CBFEE71A3B199C34F20F66745 /* iOS */ = {
@@ -360,19 +568,54 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		BEE2D91E2EC5A386FDCDF5487148D231 /* Support Files */ = {
+		AD6AA432FE47B23F55215C6A5E5CF161 /* GoogleMaps */ = {
 			isa = PBXGroup;
 			children = (
-				9F24A937A5A3FF37D47FA8FEAB1521E0 /* ResourceBundle-XLPagerTabStrip-XLPagerTabStrip-Info.plist */,
-				18ECB9EE503F5E421EEF6A5E4A31C6E4 /* XLPagerTabStrip.modulemap */,
-				2441602BF892B28C22EC8585F18C1DC4 /* XLPagerTabStrip.xcconfig */,
-				6F53D6D4394ED3C7E888F03C52DE17DD /* XLPagerTabStrip-dummy.m */,
-				7CDB8F8EC7CCD7A5E587D6727DACF3A5 /* XLPagerTabStrip-Info.plist */,
-				38EADF621F816FCA8AA4CA80AF8F6025 /* XLPagerTabStrip-prefix.pch */,
-				D6263D9D0D4C12BEE67C9DC92D984AE2 /* XLPagerTabStrip-umbrella.h */,
+				588869B575009861B29D62948FC30EA9 /* Base */,
+				765228AEF4B4C3CBA957EC73582E1922 /* Maps */,
+				2F329BE44ED0CE3A75A514863D9B1C0A /* Support Files */,
+			);
+			name = GoogleMaps;
+			path = GoogleMaps;
+			sourceTree = "<group>";
+		};
+		B2CD95CAC1DA3A4316C3481E70078B99 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F999632E2C9C470DBA32F24F61AF5322 /* M13Checkbox.modulemap */,
+				3E062DF4E9F388CCAE4222D7DBAEEA31 /* M13Checkbox-dummy.m */,
+				81F67D3769952E6772993CEB080B5CB9 /* M13Checkbox-Info.plist */,
+				BB2C95D6115F483E1DE5A09D7A6232CE /* M13Checkbox-prefix.pch */,
+				09AA560535ED5480B9171CE9C168983A /* M13Checkbox-umbrella.h */,
+				D3F5E374E476149B713B4C6F8AE9ABA5 /* M13Checkbox.debug.xcconfig */,
+				E673D720CD6D9C925224771892F544DF /* M13Checkbox.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/M13Checkbox";
+			sourceTree = "<group>";
+		};
+		B8C60EA28A910CDC523FE7139DF8E3D6 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				94D5C21284E5636966AD5C987B39A262 /* ResourceBundle-XLPagerTabStrip-XLPagerTabStrip-Info.plist */,
+				E70D0B381482832BE7C9F465B048FB33 /* XLPagerTabStrip.modulemap */,
+				8FA9B85CAC7AF4142E9E3C6AAFA8D08F /* XLPagerTabStrip-dummy.m */,
+				4BAED35FC6ED0CB47C044ABC78B57D7E /* XLPagerTabStrip-Info.plist */,
+				AC86E9FB216EA259158E1153BDCE0B4B /* XLPagerTabStrip-prefix.pch */,
+				45661401F73AF2A72F050798F5A8C934 /* XLPagerTabStrip-umbrella.h */,
+				031E1D6A3A4195FCD71E585E8F0237FD /* XLPagerTabStrip.debug.xcconfig */,
+				2DB3EE8B1DFF3944F4389C0EE729BB8A /* XLPagerTabStrip.release.xcconfig */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/XLPagerTabStrip";
+			sourceTree = "<group>";
+		};
+		B9E5A77975E5712256A6916C94D31448 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BB2EF8491C22DE4BF774FD17F8A7E156 /* ButtonCell.xib */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -380,23 +623,24 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				03C5C200A0787E300053CFA8F53CA094 /* Frameworks */,
-				3D206C120D2DA495351E3390BD662B16 /* Pods */,
-				F97FF16F02CE1E6105E7EB4AD5EADA52 /* Products */,
-				593B24EA8E306637F311895B2AFFE88E /* Targets Support Files */,
+				5D57AD58A958A56C82204A3B907370C5 /* Pods */,
+				F6CA1213E6A2C7751990311CF0026B0B /* Products */,
+				8CF7C15D8FA81E3E01E0D5A8F5D4B70A /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		E7DF130B136B9EBC578650855EE3DBBC /* Resources */ = {
+		E37F0255B16F9570806AE8E0B6F3EF16 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				88EBD0E8E3BACDEDC627E5FC9FF7C3E1 /* ButtonCell.xib */,
+				6F896773249369E6AD6F78A1FFEAC189 /* GooglePlaces.framework */,
 			);
-			name = Resources;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F97FF16F02CE1E6105E7EB4AD5EADA52 /* Products */ = {
+		F6CA1213E6A2C7751990311CF0026B0B /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				9B6725B782188F18CB76A740433F14E4 /* DropDown.framework */,
 				FCEEA8BBD9DA8D0CCE0A3092B20E3FA7 /* iOSDropDown.framework */,
 				5CE79C5BF20743404E59BEFD080A364D /* M13Checkbox.framework */,
 				E01039C07926161B6AEDE007F83C4343 /* Pods_Inspection.framework */,
@@ -409,11 +653,11 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		01961B57213CE0F14C7F3701715CBA7A /* Headers */ = {
+		2BB5683F7D1AA8FB2F94DA252A664DB8 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5C73B236406677780F9514C285BBC46 /* Pods-Inspection-umbrella.h in Headers */,
+				9518195DB69E904D77247E0A55A0043C /* DropDown-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,6 +675,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				6762724102132C861217B911E70056ED /* iOSDropDown-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAA2FDBE4A494E6EEA67825609B7FBA7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FBDFABF69A41C9A19642E15AEE5D828 /* Pods-Inspection-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,7 +738,7 @@
 			buildConfigurationList = 88D866DA052EF93195E917061DB86D9A /* Build configuration list for PBXNativeTarget "XLPagerTabStrip" */;
 			buildPhases = (
 				2E74127AF027B11FF09F7F50BB4B9622 /* Headers */,
-				16B20A825375FF61FF4A4ECA6D562BCF /* Sources */,
+				BCDC6490FBBA170437C0B29649B4ED6F /* Sources */,
 				AF7861E3E33A6BA2B9F973559B8C53D5 /* Frameworks */,
 				47847C1AE9C5FA9092141B090DA283A9 /* Resources */,
 			);
@@ -502,23 +754,44 @@
 		};
 		DC85D5B167F1C64E28FD39FAE9BB9475 /* Pods-Inspection */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5320B3DF99C32F9133D9C2621635F3DE /* Build configuration list for PBXNativeTarget "Pods-Inspection" */;
+			buildConfigurationList = EF9B3DB8E033A20F28E80EFAF2B9FA45 /* Build configuration list for PBXNativeTarget "Pods-Inspection" */;
 			buildPhases = (
-				01961B57213CE0F14C7F3701715CBA7A /* Headers */,
-				3D6CBCB3B3167AFB30BFDEC6C8D4B193 /* Sources */,
-				0E2361165F34DFAC73379E1FE52864C8 /* Frameworks */,
-				EDA6A4A300DB3A204F4D9787C2CB06F4 /* Resources */,
+				DAA2FDBE4A494E6EEA67825609B7FBA7 /* Headers */,
+				0195EFDD3E4BBB8D16F845F0FA97A240 /* Sources */,
+				290A391BCFD10DA2785693DA7F3E21F4 /* Frameworks */,
+				4D468BC49094623275E8476F609D0C70 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				32532BE7EB656060B912C398E4119902 /* PBXTargetDependency */,
-				E72AA1D3A2E893569C59670FE950A78D /* PBXTargetDependency */,
-				5FC11CEA212E47EE18881551593ABDFE /* PBXTargetDependency */,
+				8FA34D7D8C46147D6646C49C2C91B38D /* PBXTargetDependency */,
+				CA60282A42FE15ED9D3AAE595B520651 /* PBXTargetDependency */,
+				E131F025848C09E27720D7CDE344ADF6 /* PBXTargetDependency */,
+				C76BE859BC146126F8DB363B1BB3D451 /* PBXTargetDependency */,
+				A47BB1A17C3B0E70A5D41EAE996A0B81 /* PBXTargetDependency */,
+				8C5A6955987420892FDF244DF0666611 /* PBXTargetDependency */,
 			);
 			name = "Pods-Inspection";
 			productName = "Pods-Inspection";
 			productReference = E01039C07926161B6AEDE007F83C4343 /* Pods_Inspection.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E9F9401E9C74C0C393164FD8D86D0068 /* DropDown */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBED57D13F9A2559E14BCD92E7CFF597 /* Build configuration list for PBXNativeTarget "DropDown" */;
+			buildPhases = (
+				2BB5683F7D1AA8FB2F94DA252A664DB8 /* Headers */,
+				FAFA782452D3B598A37FB459CD314120 /* Sources */,
+				9727840973A9C2692E58F7089A7C243E /* Frameworks */,
+				D0143B72ED2669C4E98A5B8BBCE72151 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DropDown;
+			productName = DropDown;
+			productReference = 9B6725B782188F18CB76A740433F14E4 /* DropDown.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		EBF90A3A56D4C5830C212D000AB67BC1 /* XLPagerTabStrip-XLPagerTabStrip */ = {
@@ -553,12 +826,16 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = F97FF16F02CE1E6105E7EB4AD5EADA52 /* Products */;
+			productRefGroup = F6CA1213E6A2C7751990311CF0026B0B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				E9F9401E9C74C0C393164FD8D86D0068 /* DropDown */,
+				E5B4BBC6DD552AC8943C7E22772FC1D3 /* GoogleMaps */,
+				0C1885900810601510E0C632060FAF26 /* GooglePlaces */,
 				3C76CE6CD60B1CE55A174F03CC59AE17 /* iOSDropDown */,
 				7111E54EAE43E89F451A75076C3525ED /* M13Checkbox */,
 				DC85D5B167F1C64E28FD39FAE9BB9475 /* Pods-Inspection */,
@@ -585,6 +862,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4D468BC49094623275E8476F609D0C70 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4F2761F0F0D962265232D9EE899A184E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -599,43 +883,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EDA6A4A300DB3A204F4D9787C2CB06F4 /* Resources */ = {
+		D0143B72ED2669C4E98A5B8BBCE72151 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB3D83C05EC7793D23A1192C11B9F631 /* DropDownCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		16B20A825375FF61FF4A4ECA6D562BCF /* Sources */ = {
+		0195EFDD3E4BBB8D16F845F0FA97A240 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E857E8E3BF4A819960F4312F8DD09456 /* BarPagerTabStripViewController.swift in Sources */,
-				48F054ED0724ED5BCE257BD993F9DCA1 /* BarView.swift in Sources */,
-				9684309B19EA945F06219FFCFDB3DEAE /* BaseButtonBarPagerTabStripViewController.swift in Sources */,
-				A2DB311E6BA5064E56EC9DF2B7C1D39C /* ButtonBarPagerTabStripViewController.swift in Sources */,
-				ED6E38E31CD87896D70C36688C28E531 /* ButtonBarView.swift in Sources */,
-				0B5D501CB65E956676001866EF248ED3 /* ButtonBarViewCell.swift in Sources */,
-				79DBC63187C3124B13B943F658A98D63 /* FXPageControl.m in Sources */,
-				F7E1A8BE69700A04A787230C3302EFD1 /* IndicatorInfo.swift in Sources */,
-				C044961E56994DE71D794C83855427B5 /* PagerTabStripBehaviour.swift in Sources */,
-				211EB0470934631079F0BA331FAE0FEE /* PagerTabStripError.swift in Sources */,
-				F0641A2C3F54DF6B4687B019DAA045C8 /* PagerTabStripViewController.swift in Sources */,
-				32B9BAE28C80A3DFB64E216522F231EA /* SegmentedPagerTabStripViewController.swift in Sources */,
-				0AE252718DB97E22262C12079DD7AA8A /* SwipeDirection.swift in Sources */,
-				8B49CC1BB164F7BDB5CE3FB2E87B2AA4 /* TwitterPagerTabStripViewController.swift in Sources */,
-				AB81A7C4CA1E83A8FA4E9430D88A7DFE /* XLPagerTabStrip-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3D6CBCB3B3167AFB30BFDEC6C8D4B193 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				81F54CDC8FBD3C3AFEC7B8419B2E89F7 /* Pods-Inspection-dummy.m in Sources */,
+				242773397FE855EFE071BCE7B83A0C02 /* Pods-Inspection-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -675,6 +938,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BCDC6490FBBA170437C0B29649B4ED6F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59BA6FD61F0A9B68CD58C371DA1F1D60 /* BarPagerTabStripViewController.swift in Sources */,
+				4F86F33F807A003D18DEDBCA01210037 /* BarView.swift in Sources */,
+				399F2A0161278488DC1E5ADD297DE3B7 /* BaseButtonBarPagerTabStripViewController.swift in Sources */,
+				E554C1894F7994C45693A532CC18769A /* ButtonBarPagerTabStripViewController.swift in Sources */,
+				911CC04F55219F3CB8EE70FA8F7347E7 /* ButtonBarView.swift in Sources */,
+				2B39B33ECADFF6B44583C4DBA8854A9C /* ButtonBarViewCell.swift in Sources */,
+				F805832DAAFB6DFA063DCE467BC59B9F /* FXPageControl.m in Sources */,
+				28336F1C947B57D07831C63C31B84A0C /* IndicatorInfo.swift in Sources */,
+				A7AEEE825346429BB80914A7D2365A51 /* PagerTabStripBehaviour.swift in Sources */,
+				F2E3366710556B8D518FF6F12259CFA5 /* PagerTabStripError.swift in Sources */,
+				3F1E6AE0B8A22678DB406AE072F213FC /* PagerTabStripViewController.swift in Sources */,
+				311557DC2943E068608D1B6A7B663232 /* SegmentedPagerTabStripViewController.swift in Sources */,
+				2BC8DF4EADD024A30A84555CB575CAC6 /* SwipeDirection.swift in Sources */,
+				775542D5BE6B24392EF7FCA2CE7C5E97 /* TwitterPagerTabStripViewController.swift in Sources */,
+				A26276F206FFA15CF0A57BE54526140C /* XLPagerTabStrip-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E55B2DFC65133EF5AF928D548C83EA56 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -682,36 +967,217 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FAFA782452D3B598A37FB459CD314120 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F515237FF94DAB4C8A15B7E33A3877B /* DPDConstants.swift in Sources */,
+				BA7BB2FF04CE1CAFC5238D1807EF0034 /* DPDKeyboardListener.swift in Sources */,
+				4A8FE4C4F6D45B41CE01A00D24C56961 /* DPDUIView+Extension.swift in Sources */,
+				6064C623428CE711C252E442741F81AB /* DropDown+Appearance.swift in Sources */,
+				95897DCFD4071A7D61AEAE1DA86BB539 /* DropDown-dummy.m in Sources */,
+				842DFBB1471889C2CA329AE05620BBE7 /* DropDown.swift in Sources */,
+				361F5CE2807CBD530C8C6E63FD245F5A /* DropDownCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		32532BE7EB656060B912C398E4119902 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = M13Checkbox;
-			target = 7111E54EAE43E89F451A75076C3525ED /* M13Checkbox */;
-			targetProxy = C344C761F99BC69DDBCA0ED17B47C45C /* PBXContainerItemProxy */;
-		};
-		5FC11CEA212E47EE18881551593ABDFE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = iOSDropDown;
-			target = 3C76CE6CD60B1CE55A174F03CC59AE17 /* iOSDropDown */;
-			targetProxy = 43E56F96AEDCE14F48DC0410B8164757 /* PBXContainerItemProxy */;
-		};
 		8608636E5CBFC36C931368912AC4340E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "XLPagerTabStrip-XLPagerTabStrip";
 			target = EBF90A3A56D4C5830C212D000AB67BC1 /* XLPagerTabStrip-XLPagerTabStrip */;
 			targetProxy = 5B8329DD02E7A5BBD4BB45C327ED895A /* PBXContainerItemProxy */;
 		};
-		E72AA1D3A2E893569C59670FE950A78D /* PBXTargetDependency */ = {
+		8C5A6955987420892FDF244DF0666611 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = iOSDropDown;
+			target = 3C76CE6CD60B1CE55A174F03CC59AE17 /* iOSDropDown */;
+			targetProxy = 7D6DD2194C22C34EB49D8F48AEA2984C /* PBXContainerItemProxy */;
+		};
+		8FA34D7D8C46147D6646C49C2C91B38D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DropDown;
+			target = E9F9401E9C74C0C393164FD8D86D0068 /* DropDown */;
+			targetProxy = FD593F4335D824DD0DA43ADDB1EB889A /* PBXContainerItemProxy */;
+		};
+		A47BB1A17C3B0E70A5D41EAE996A0B81 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = XLPagerTabStrip;
 			target = DC5C3A7662FFA04D04D29F4657D032CE /* XLPagerTabStrip */;
-			targetProxy = BDA6C97900353BDD0A0E0F8E8359C9BA /* PBXContainerItemProxy */;
+			targetProxy = E47830BA203B413939A9C3162652DD53 /* PBXContainerItemProxy */;
+		};
+		C76BE859BC146126F8DB363B1BB3D451 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = M13Checkbox;
+			target = 7111E54EAE43E89F451A75076C3525ED /* M13Checkbox */;
+			targetProxy = 256860DA7A9D36A2E56D5E0F6D82E2DF /* PBXContainerItemProxy */;
+		};
+		CA60282A42FE15ED9D3AAE595B520651 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GoogleMaps;
+			target = E5B4BBC6DD552AC8943C7E22772FC1D3 /* GoogleMaps */;
+			targetProxy = A0685BFD08154D6674416064F844983E /* PBXContainerItemProxy */;
+		};
+		D42315111F400C0605ACCD6B5CAF2178 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GoogleMaps;
+			target = E5B4BBC6DD552AC8943C7E22772FC1D3 /* GoogleMaps */;
+			targetProxy = 6EB1C2DD30E6564FC3135C9E8002D8F7 /* PBXContainerItemProxy */;
+		};
+		E131F025848C09E27720D7CDE344ADF6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GooglePlaces;
+			target = 0C1885900810601510E0C632060FAF26 /* GooglePlaces */;
+			targetProxy = B03033A0EBA5D3E06B8C9A031073D25A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		06B0EB282756FD1F14BDAC2AE50C226E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3196D40E4971CAA814C229875154DD5 /* Pods-Inspection.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Inspection/Pods-Inspection-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Inspection/Pods-Inspection.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0B7DC032279BE78A6812F2410910F946 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 031E1D6A3A4195FCD71E585E8F0237FD /* XLPagerTabStrip.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/XLPagerTabStrip/XLPagerTabStrip-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/XLPagerTabStrip/XLPagerTabStrip-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/XLPagerTabStrip/XLPagerTabStrip.modulemap";
+				PRODUCT_MODULE_NAME = XLPagerTabStrip;
+				PRODUCT_NAME = XLPagerTabStrip;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0E48F95F467933FE40BF77299A4E3228 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3F5E374E476149B713B4C6F8AE9ABA5 /* M13Checkbox.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/M13Checkbox/M13Checkbox-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/M13Checkbox/M13Checkbox-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/M13Checkbox/M13Checkbox.modulemap";
+				PRODUCT_MODULE_NAME = M13Checkbox;
+				PRODUCT_NAME = M13Checkbox;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		113FE450017590BFCDE0E07D448096DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8EFDA6059595FA3EB5D01B47D733D148 /* DropDown.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DropDown/DropDown-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DropDown/DropDown-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/DropDown/DropDown.modulemap";
+				PRODUCT_MODULE_NAME = DropDown;
+				PRODUCT_NAME = DropDown;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		204B8AEA4AE90A551A1768B355C2F9F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -776,42 +1242,6 @@
 			};
 			name = Debug;
 		};
-		232D6AC5A0769201FCBD8133C3DC7DCE /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 964B084C8680209D20071F2CF8496A89 /* iOSDropDown.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/iOSDropDown/iOSDropDown-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/iOSDropDown/iOSDropDown-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/iOSDropDown/iOSDropDown.modulemap";
-				PRODUCT_MODULE_NAME = iOSDropDown;
-				PRODUCT_NAME = iOSDropDown;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		3CCC6195EDBEE5DA2A49DF962113BE16 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -872,12 +1302,82 @@
 			};
 			name = Release;
 		};
-		4B5B76EE47B47DB955C976D64DB4F656 /* Debug */ = {
+		42EE5E78EF9E13F316166B6A70BD5874 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2441602BF892B28C22EC8585F18C1DC4 /* XLPagerTabStrip.xcconfig */;
+			baseConfigurationReference = 0487F09556372E758D543F86215C0F19 /* DropDown.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DropDown/DropDown-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DropDown/DropDown-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/DropDown/DropDown.modulemap";
+				PRODUCT_MODULE_NAME = DropDown;
+				PRODUCT_NAME = DropDown;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4AE9FC8A852243DC9A2EFE9BA39BAC7B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA527E7F457091E4673263A2903F89F7 /* GooglePlaces.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		573B04AB9E058A1911353A22A780E993 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDF4FEA07E85F25E06591A86E1C398E1 /* GooglePlaces.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5E2F6241912131CA13253F31A7EDF998 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 031E1D6A3A4195FCD71E585E8F0237FD /* XLPagerTabStrip.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/XLPagerTabStrip";
+				IBSC_MODULE = XLPagerTabStrip;
 				INFOPLIST_FILE = "Target Support Files/XLPagerTabStrip/ResourceBundle-XLPagerTabStrip-XLPagerTabStrip-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				PRODUCT_NAME = XLPagerTabStrip;
@@ -888,9 +1388,62 @@
 			};
 			name = Debug;
 		};
-		65F6A4EC6048DDEAED714D2373277408 /* Debug */ = {
+		8CE5BA3EF4F6FABF028CE30772ECDA11 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 964B084C8680209D20071F2CF8496A89 /* iOSDropDown.xcconfig */;
+			baseConfigurationReference = 8523A2DFB99D06E99623FE6CF43BB9A2 /* GoogleMaps.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		92111D7F4357A63D476FF4384C052E33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E04495A435863B964CAE0889E51658D /* iOSDropDown.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/iOSDropDown/iOSDropDown-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/iOSDropDown/iOSDropDown-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/iOSDropDown/iOSDropDown.modulemap";
+				PRODUCT_MODULE_NAME = iOSDropDown;
+				PRODUCT_NAME = iOSDropDown;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9777F8A98343527160CF9950B9A6980B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17427EE52A0CA9423A6BFD2DEA191767 /* iOSDropDown.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -923,10 +1476,12 @@
 			};
 			name = Debug;
 		};
-		7FBC2164C77486E1C6CE0ACCD088B56F /* Debug */ = {
+		A8CD66665944B58EB7C27CDA77B99432 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0A4CAF9A09F423864179AD8E9DA08B07 /* M13Checkbox.xcconfig */;
+			baseConfigurationReference = 88CF14347AD8506D92FEB3AAF9D501DA /* Pods-Inspection.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -936,57 +1491,23 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/M13Checkbox/M13Checkbox-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/M13Checkbox/M13Checkbox-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-Inspection/Pods-Inspection-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MODULEMAP_FILE = "Target Support Files/M13Checkbox/M13Checkbox.modulemap";
-				PRODUCT_MODULE_NAME = M13Checkbox;
-				PRODUCT_NAME = M13Checkbox;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Inspection/Pods-Inspection.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		856A4A3102DF1AB41D672284C54D29F5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0A4CAF9A09F423864179AD8E9DA08B07 /* M13Checkbox.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/M13Checkbox/M13Checkbox-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/M13Checkbox/M13Checkbox-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/M13Checkbox/M13Checkbox.modulemap";
-				PRODUCT_MODULE_NAME = M13Checkbox;
-				PRODUCT_NAME = M13Checkbox;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -994,9 +1515,9 @@
 			};
 			name = Release;
 		};
-		9F0443855CA5B9A50AE6FEE5D362E6B0 /* Debug */ = {
+		A9E7B14B75BE417AE484B1AF452E3FFC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2441602BF892B28C22EC8585F18C1DC4 /* XLPagerTabStrip.xcconfig */;
+			baseConfigurationReference = 2DB3EE8B1DFF3944F4389C0EE729BB8A /* XLPagerTabStrip.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1024,17 +1545,19 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
-		B2128FE478FDC25E55CE320A5751309A /* Release */ = {
+		C0137CA247E3BD4B0D6142D887E2931D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2441602BF892B28C22EC8585F18C1DC4 /* XLPagerTabStrip.xcconfig */;
+			baseConfigurationReference = 2DB3EE8B1DFF3944F4389C0EE729BB8A /* XLPagerTabStrip.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/XLPagerTabStrip";
+				IBSC_MODULE = XLPagerTabStrip;
 				INFOPLIST_FILE = "Target Support Files/XLPagerTabStrip/ResourceBundle-XLPagerTabStrip-XLPagerTabStrip-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				PRODUCT_NAME = XLPagerTabStrip;
@@ -1045,86 +1568,9 @@
 			};
 			name = Release;
 		};
-		CBC4ADA7107D93F20F4A48150B56B966 /* Release */ = {
+		CB52B8550DF5E086958C2CEB32AFE0A4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 96E3A5841184E580A52B8CEB52A0D09E /* Pods-Inspection.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Inspection/Pods-Inspection-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Inspection/Pods-Inspection.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		CF917EE15A2F74751ECFF3792EA14F2E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 860721F0463F38CE23646813FC40C7FF /* Pods-Inspection.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Inspection/Pods-Inspection-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Inspection/Pods-Inspection.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		D43951F6AFB26750906F6BC3783C430A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2441602BF892B28C22EC8585F18C1DC4 /* XLPagerTabStrip.xcconfig */;
+			baseConfigurationReference = E673D720CD6D9C925224771892F544DF /* M13Checkbox.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1135,18 +1581,18 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/XLPagerTabStrip/XLPagerTabStrip-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/XLPagerTabStrip/XLPagerTabStrip-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/M13Checkbox/M13Checkbox-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/M13Checkbox/M13Checkbox-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MODULEMAP_FILE = "Target Support Files/XLPagerTabStrip/XLPagerTabStrip.modulemap";
-				PRODUCT_MODULE_NAME = XLPagerTabStrip;
-				PRODUCT_NAME = XLPagerTabStrip;
+				MODULEMAP_FILE = "Target Support Files/M13Checkbox/M13Checkbox.modulemap";
+				PRODUCT_MODULE_NAME = M13Checkbox;
+				PRODUCT_NAME = M13Checkbox;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -1158,14 +1604,30 @@
 			};
 			name = Release;
 		};
+		E1E452060D51DF935547186CE54B26CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB927EBEA6BDDBB79118B83E477AD0A9 /* GoogleMaps.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
 		0C969E3F923CFEC15B65102F99FD224A /* Build configuration list for PBXNativeTarget "M13Checkbox" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7FBC2164C77486E1C6CE0ACCD088B56F /* Debug */,
-				856A4A3102DF1AB41D672284C54D29F5 /* Release */,
+				0E48F95F467933FE40BF77299A4E3228 /* Debug */,
+				CB52B8550DF5E086958C2CEB32AFE0A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1173,8 +1635,26 @@
 		0DC3A1F894722359353AC05A476C7644 /* Build configuration list for PBXNativeTarget "XLPagerTabStrip-XLPagerTabStrip" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4B5B76EE47B47DB955C976D64DB4F656 /* Debug */,
-				B2128FE478FDC25E55CE320A5751309A /* Release */,
+				5E2F6241912131CA13253F31A7EDF998 /* Debug */,
+				C0137CA247E3BD4B0D6142D887E2931D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2FC2AC47FDB0310285CE777F18CD1532 /* Build configuration list for PBXAggregateTarget "GooglePlaces" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4AE9FC8A852243DC9A2EFE9BA39BAC7B /* Debug */,
+				573B04AB9E058A1911353A22A780E993 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		46921981F609C5BA3CB72EC4EA41299D /* Build configuration list for PBXAggregateTarget "GoogleMaps" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1E452060D51DF935547186CE54B26CC /* Debug */,
+				8CE5BA3EF4F6FABF028CE30772ECDA11 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1188,20 +1668,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5320B3DF99C32F9133D9C2621635F3DE /* Build configuration list for PBXNativeTarget "Pods-Inspection" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CF917EE15A2F74751ECFF3792EA14F2E /* Debug */,
-				CBC4ADA7107D93F20F4A48150B56B966 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		88D866DA052EF93195E917061DB86D9A /* Build configuration list for PBXNativeTarget "XLPagerTabStrip" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9F0443855CA5B9A50AE6FEE5D362E6B0 /* Debug */,
-				D43951F6AFB26750906F6BC3783C430A /* Release */,
+				0B7DC032279BE78A6812F2410910F946 /* Debug */,
+				A9E7B14B75BE417AE484B1AF452E3FFC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1209,8 +1680,26 @@
 		A476A331E996DC82BDA1CD0E8A43F8B6 /* Build configuration list for PBXNativeTarget "iOSDropDown" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				65F6A4EC6048DDEAED714D2373277408 /* Debug */,
-				232D6AC5A0769201FCBD8133C3DC7DCE /* Release */,
+				9777F8A98343527160CF9950B9A6980B /* Debug */,
+				92111D7F4357A63D476FF4384C052E33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBED57D13F9A2559E14BCD92E7CFF597 /* Build configuration list for PBXNativeTarget "DropDown" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				113FE450017590BFCDE0E07D448096DF /* Debug */,
+				42EE5E78EF9E13F316166B6A70BD5874 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF9B3DB8E033A20F28E80EFAF2B9FA45 /* Build configuration list for PBXNativeTarget "Pods-Inspection" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06B0EB282756FD1F14BDAC2AE50C226E /* Debug */,
+				A8CD66665944B58EB7C27CDA77B99432 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
