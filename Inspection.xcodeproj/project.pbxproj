@@ -28,6 +28,7 @@
 		8C43D8EE24643CD300B7CDED /* SummaryFirstCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C43D8EC24643CD200B7CDED /* SummaryFirstCollectionViewCell.swift */; };
 		8C43D8EF24643CD300B7CDED /* SummaryFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C43D8ED24643CD300B7CDED /* SummaryFirstViewController.swift */; };
 		8C43D8F124643D4200B7CDED /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C43D8F024643D4200B7CDED /* LoginViewController.swift */; };
+		8C43D8F32464454600B7CDED /* SummarySecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C43D8F22464454600B7CDED /* SummarySecondViewController.swift */; };
 		8CAD912A2461D28900968CB1 /* RollStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD91292461D28900968CB1 /* RollStruct.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,7 @@
 		8C43D8EC24643CD200B7CDED /* SummaryFirstCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryFirstCollectionViewCell.swift; sourceTree = "<group>"; };
 		8C43D8ED24643CD300B7CDED /* SummaryFirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryFirstViewController.swift; sourceTree = "<group>"; };
 		8C43D8F024643D4200B7CDED /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Inspection/LoginViewController.swift; sourceTree = SOURCE_ROOT; };
+		8C43D8F22464454600B7CDED /* SummarySecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummarySecondViewController.swift; sourceTree = "<group>"; };
 		8CAD91292461D28900968CB1 /* RollStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollStruct.swift; sourceTree = "<group>"; };
 		A5BA398F8F3B401D4F739B1C /* Pods-Inspection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Inspection.debug.xcconfig"; path = "Target Support Files/Pods-Inspection/Pods-Inspection.debug.xcconfig"; sourceTree = "<group>"; };
 		D76B5DF36B9A605AAE4855E8 /* Pods-Inspection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Inspection.release.xcconfig"; path = "Target Support Files/Pods-Inspection/Pods-Inspection.release.xcconfig"; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 			children = (
 				8C43D8EC24643CD200B7CDED /* SummaryFirstCollectionViewCell.swift */,
 				8C43D8ED24643CD300B7CDED /* SummaryFirstViewController.swift */,
+				8C43D8F22464454600B7CDED /* SummarySecondViewController.swift */,
 			);
 			path = Summary;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				8C43D8E624643C5B00B7CDED /* RollsFirstViewController.swift in Sources */,
 				471A7EF824231171000169F0 /* SummaryViewController.swift in Sources */,
 				031D1CF52461C47E0027A17C /* BasicSecondViewController.swift in Sources */,
+				8C43D8F32464454600B7CDED /* SummarySecondViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

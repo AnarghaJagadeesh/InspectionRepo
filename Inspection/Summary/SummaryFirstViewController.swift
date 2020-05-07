@@ -47,6 +47,10 @@ class SummaryFirstViewController: UIViewController {
     }
     */
     @IBAction func onTapNext(_ sender: UIButton) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let summarySecondVC = storyBoard.instantiateViewController(withIdentifier: "summarySecondVC") as! SummarySecondViewController
+        self.navigationController?.pushViewController(summarySecondVC, animated: true)
+
     }
     
 }

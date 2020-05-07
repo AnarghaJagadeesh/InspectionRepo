@@ -132,10 +132,10 @@
             </objects>
             <point key="canvasLocation" x="2504.6875" y="124.80468749999999"/>
         </scene>
-        <!--Checklist View Controller-->
+        <!--Summary Second View Controller-->
         <scene sceneID="ig7-mS-lAB">
             <objects>
-                <viewController id="Q7R-9S-cWW" customClass="ChecklistViewController" customModule="Inspection" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="summarySecondVC" id="Q7R-9S-cWW" customClass="SummarySecondViewController" customModule="Inspection" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xy6-Y4-eX3"/>
                         <viewControllerLayoutGuide type="bottom" id="HBY-dU-xgl"/>
@@ -213,7 +213,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kns-nO-SKy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1013" y="1111"/>
+            <point key="canvasLocation" x="1315" y="1102"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="cax-dQ-t1O">
@@ -254,7 +254,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dV2-Si-IRy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1534" y="1119"/>
+            <point key="canvasLocation" x="1999" y="1102"/>
         </scene>
         <!--Rolls First View Controller-->
         <scene sceneID="3vI-53-2ci">
@@ -1260,6 +1260,30 @@
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="dke-cW-kTD">
                                             <rect key="frame" x="0.0" y="0.0" width="693" height="325"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SZ9-P9-2N5">
+                                                    <rect key="frame" x="8" y="22" width="665" height="279"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tmv-3d-xzq">
+                                                        <size key="itemSize" width="665" height="275"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="VeK-9A-G9g">
+                                                            <rect key="frame" x="0.0" y="0.0" width="665" height="275"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Rbo-32-dqF">
+                                                                <rect key="frame" x="0.0" y="0.0" width="665" height="275"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                            </collectionViewCellContentView>
+                                                            <size key="customSize" width="665" height="275"/>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                </collectionView>
+                                            </subviews>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="693" height="325"/>
                                     </collectionViewCell>
