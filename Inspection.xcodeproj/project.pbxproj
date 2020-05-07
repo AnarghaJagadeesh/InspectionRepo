@@ -21,6 +21,11 @@
 		471B2BC7241F901E000A902C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 471B2BC5241F901E000A902C /* Main.storyboard */; };
 		471B2BC9241F901F000A902C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 471B2BC8241F901F000A902C /* Assets.xcassets */; };
 		471B2BCC241F901F000A902C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 471B2BCA241F901F000A902C /* LaunchScreen.storyboard */; };
+		8CAD912A2461D28900968CB1 /* RollStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD91292461D28900968CB1 /* RollStruct.swift */; };
+		8CB5D1072461D00E00E496F0 /* RollsFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5D1062461D00E00E496F0 /* RollsFirstViewController.swift */; };
+		8CB5D1092461D02A00E496F0 /* RollsFirstCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5D1082461D02A00E496F0 /* RollsFirstCollectionViewCell.swift */; };
+		8CF34A8524632B20004C80BF /* SummaryFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF34A8424632B20004C80BF /* SummaryFirstViewController.swift */; };
+		8CF34A87246333F7004C80BF /* SummaryFirstCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF34A86246333F7004C80BF /* SummaryFirstCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +46,11 @@
 		471B2BCB241F901F000A902C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		471B2BCD241F901F000A902C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		78E6E270F8806E26B74FD2B1 /* Pods_Inspection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Inspection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CAD91292461D28900968CB1 /* RollStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollStruct.swift; sourceTree = "<group>"; };
+		8CB5D1062461D00E00E496F0 /* RollsFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollsFirstViewController.swift; sourceTree = "<group>"; };
+		8CB5D1082461D02A00E496F0 /* RollsFirstCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollsFirstCollectionViewCell.swift; sourceTree = "<group>"; };
+		8CF34A8424632B20004C80BF /* SummaryFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryFirstViewController.swift; sourceTree = "<group>"; };
+		8CF34A86246333F7004C80BF /* SummaryFirstCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryFirstCollectionViewCell.swift; sourceTree = "<group>"; };
 		A5BA398F8F3B401D4F739B1C /* Pods-Inspection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Inspection.debug.xcconfig"; path = "Target Support Files/Pods-Inspection/Pods-Inspection.debug.xcconfig"; sourceTree = "<group>"; };
 		D76B5DF36B9A605AAE4855E8 /* Pods-Inspection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Inspection.release.xcconfig"; path = "Target Support Files/Pods-Inspection/Pods-Inspection.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,6 +91,7 @@
 		471B2BC0241F901E000A902C /* Inspection */ = {
 			isa = PBXGroup;
 			children = (
+				8CAD91282461D27300968CB1 /* Model */,
 				471B2BC1241F901E000A902C /* AppDelegate.swift */,
 				471B2BC3241F901E000A902C /* ViewController.swift */,
 				4713BC642421F2B400BD2BC7 /* HomeViewController.swift */,
@@ -88,6 +99,10 @@
 				4713BC6B2422291E00BD2BC7 /* RollsViewController.swift */,
 				471A7EF724231171000169F0 /* SummaryViewController.swift */,
 				4719EC612424DD4500A5508B /* ChecklistViewController.swift */,
+				8CB5D1062461D00E00E496F0 /* RollsFirstViewController.swift */,
+				8CB5D1082461D02A00E496F0 /* RollsFirstCollectionViewCell.swift */,
+				8CF34A8424632B20004C80BF /* SummaryFirstViewController.swift */,
+				8CF34A86246333F7004C80BF /* SummaryFirstCollectionViewCell.swift */,
 				471B2BC5241F901E000A902C /* Main.storyboard */,
 				471B2BC8241F901F000A902C /* Assets.xcassets */,
 				471B2BCA241F901F000A902C /* LaunchScreen.storyboard */,
@@ -115,6 +130,14 @@
 				D76B5DF36B9A605AAE4855E8 /* Pods-Inspection.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		8CAD91282461D27300968CB1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8CAD91292461D28900968CB1 /* RollStruct.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,8 +259,13 @@
 				4719EC622424DD4500A5508B /* ChecklistViewController.swift in Sources */,
 				4713BC6A242228A500BD2BC7 /* BasicViewController.swift in Sources */,
 				471B2BC2241F901E000A902C /* AppDelegate.swift in Sources */,
+				8CF34A87246333F7004C80BF /* SummaryFirstCollectionViewCell.swift in Sources */,
+				8CB5D1072461D00E00E496F0 /* RollsFirstViewController.swift in Sources */,
+				8CAD912A2461D28900968CB1 /* RollStruct.swift in Sources */,
 				4713BC6C2422291E00BD2BC7 /* RollsViewController.swift in Sources */,
 				4713BC652421F2B400BD2BC7 /* HomeViewController.swift in Sources */,
+				8CB5D1092461D02A00E496F0 /* RollsFirstCollectionViewCell.swift in Sources */,
+				8CF34A8524632B20004C80BF /* SummaryFirstViewController.swift in Sources */,
 				471A7EF824231171000169F0 /* SummaryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -385,8 +413,9 @@
 			baseConfigurationReference = A5BA398F8F3B401D4F739B1C /* Pods-Inspection.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ACFF6RY3V2;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Inspection/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -394,6 +423,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.CastWield.Inspection;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -404,8 +434,9 @@
 			baseConfigurationReference = D76B5DF36B9A605AAE4855E8 /* Pods-Inspection.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ACFF6RY3V2;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Inspection/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -413,6 +444,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.CastWield.Inspection;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
