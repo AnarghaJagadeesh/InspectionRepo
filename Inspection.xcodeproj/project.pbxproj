@@ -30,6 +30,7 @@
 		8C43D8EF24643CD300B7CDED /* SummaryFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C43D8ED24643CD300B7CDED /* SummaryFirstViewController.swift */; };
 		8C43D8F124643D4200B7CDED /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C43D8F024643D4200B7CDED /* LoginViewController.swift */; };
 		8C43D8F32464454600B7CDED /* SummarySecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C43D8F22464454600B7CDED /* SummarySecondViewController.swift */; };
+		8C43D8F724646AA200B7CDED /* InspectionDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8C43D8F524646AA200B7CDED /* InspectionDataModel.xcdatamodeld */; };
 		8CAD912A2461D28900968CB1 /* RollStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD91292461D28900968CB1 /* RollStruct.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,7 @@
 		8C43D8ED24643CD300B7CDED /* SummaryFirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryFirstViewController.swift; sourceTree = "<group>"; };
 		8C43D8F024643D4200B7CDED /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Inspection/LoginViewController.swift; sourceTree = SOURCE_ROOT; };
 		8C43D8F22464454600B7CDED /* SummarySecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummarySecondViewController.swift; sourceTree = "<group>"; };
+		8C43D8F624646AA200B7CDED /* InspectionDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = InspectionDataModel.xcdatamodel; sourceTree = "<group>"; };
 		8CAD91292461D28900968CB1 /* RollStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollStruct.swift; sourceTree = "<group>"; };
 		A5BA398F8F3B401D4F739B1C /* Pods-Inspection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Inspection.debug.xcconfig"; path = "Target Support Files/Pods-Inspection/Pods-Inspection.debug.xcconfig"; sourceTree = "<group>"; };
 		D76B5DF36B9A605AAE4855E8 /* Pods-Inspection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Inspection.release.xcconfig"; path = "Target Support Files/Pods-Inspection/Pods-Inspection.release.xcconfig"; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 		471B2BC0241F901E000A902C /* Inspection */ = {
 			isa = PBXGroup;
 			children = (
+				8C43D8F424646A4D00B7CDED /* Core Data */,
 				8C43D8E724643C6C00B7CDED /* Summary */,
 				8CAD91282461D27300968CB1 /* Model */,
 				0317A03124631F4600554E13 /* Rolls */,
@@ -177,6 +180,14 @@
 				8C43D8F22464454600B7CDED /* SummarySecondViewController.swift */,
 			);
 			path = Summary;
+			sourceTree = "<group>";
+		};
+		8C43D8F424646A4D00B7CDED /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				8C43D8F524646AA200B7CDED /* InspectionDataModel.xcdatamodeld */,
+			);
+			path = "Core Data";
 			sourceTree = "<group>";
 		};
 		8CAD91282461D27300968CB1 /* Model */ = {
@@ -328,6 +339,7 @@
 				8CAD912A2461D28900968CB1 /* RollStruct.swift in Sources */,
 				8C43D8E224643C2900B7CDED /* BasicFirstViewController.swift in Sources */,
 				8C43D8E524643C5B00B7CDED /* RollsFirstCollectionViewCell.swift in Sources */,
+				8C43D8F724646AA200B7CDED /* InspectionDataModel.xcdatamodeld in Sources */,
 				0317A03324631F5E00554E13 /* RollsThirdViewController.swift in Sources */,
 				4713BC6C2422291E00BD2BC7 /* RollsViewController.swift in Sources */,
 				4713BC652421F2B400BD2BC7 /* HomeViewController.swift in Sources */,
@@ -542,6 +554,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8C43D8F524646AA200B7CDED /* InspectionDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8C43D8F624646AA200B7CDED /* InspectionDataModel.xcdatamodel */,
+			);
+			currentVersion = 8C43D8F624646AA200B7CDED /* InspectionDataModel.xcdatamodel */;
+			path = InspectionDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 471B2BB6241F901E000A902C /* Project object */;
 }

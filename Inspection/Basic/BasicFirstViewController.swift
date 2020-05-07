@@ -7,15 +7,74 @@
 //
 
 import UIKit
+import CoreData
 
 class BasicFirstViewController: UIViewController {
 
+    var basicFirst: [NSManagedObject] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-
+//        self.saveToCoreData()
+        self.fetchFromCoreData()
         // Do any additional setup after loading the view.
     }
     
+    func saveToCoreData(){
+        guard let appDelegate =
+          UIApplication.shared.delegate as? AppDelegate else {
+          return
+        }
+        
+        // 1
+        let managedContext =
+          appDelegate.persistentContainer.viewContext
+        
+        // 2
+        let basicEntity =
+          NSEntityDescription.entity(forEntityName: "BasicFirst",
+                                     in: managedContext)!
+        let basicFirstVal = NSManagedObject(entity: basicEntity,
+                                     insertInto: managedContext)
+        
+        // 3
+        basicFirstVal.setValue("Test 2", forKeyPath: "fabricCategory")
+        
+        // 4
+        do {
+          try managedContext.save()
+//          basicFirst.append(basicFirstVal)
+        } catch let error as NSError {
+          print("Could not save. \(error), \(error.userInfo)")
+        }
+    }
+    
+    func fetchFromCoreData(){
+        guard let appDelegate =
+          UIApplication.shared.delegate as? AppDelegate else {
+          return
+        }
+        
+        // 1
+        let managedContext =
+          appDelegate.persistentContainer.viewContext
+        
+        // 2
+
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "BasicFirst")
+//        let fetchRequest = NSFetchRequest<NSFetchRequestResult>.init(entityName: "BasicFirst")
+
+        //3
+        do {
+            let result = try managedContext.fetch(fetchRequest)
+            for data in result {
+                print(data.value(forKey: "fabricCategory") as! String)
+            }
+
+        } catch let error as NSError {
+          print("Could not fetch. \(error), \(error.userInfo)")
+        }
+
+    }
 
     /*
     // MARK: - Navigation
