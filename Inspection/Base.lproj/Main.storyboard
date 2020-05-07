@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -136,7 +137,7 @@
                         <viewControllerLayoutGuide type="bottom" id="HBY-dU-xgl"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="U4j-ze-SCa">
-                        <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="boC-Lq-w9O">
@@ -331,7 +332,7 @@
                                         <rect key="frame" x="523" y="0.0" width="235" height="55"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Summary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Zg-jR-kC3">
-                                                <rect key="frame" x="79" y="17.5" width="77.5" height="20"/>
+                                                <rect key="frame" x="79" y="17.5" width="77.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -421,7 +422,7 @@
                                         <rect key="frame" x="10" y="0.0" width="235" height="55"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Basic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YXU-dG-27s">
-                                                <rect key="frame" x="95" y="17.5" width="45" height="20"/>
+                                                <rect key="frame" x="95" y="17.5" width="45" height="20.5"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -741,7 +742,7 @@
                                             <rect key="frame" x="14.5" y="0.0" width="729" height="50"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sub Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CMi-KP-aio">
-                                                    <rect key="frame" x="10" y="15" width="219" height="20"/>
+                                                    <rect key="frame" x="10" y="15" width="219" height="20.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="219" id="jse-iP-Qmn"/>
                                                     </constraints>
@@ -750,7 +751,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4IL-V4-nai">
-                                                    <rect key="frame" x="234" y="14.5" width="90" height="21"/>
+                                                    <rect key="frame" x="234" y="15" width="90" height="20.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="90" id="7q3-PU-AWN"/>
                                                     </constraints>
@@ -759,7 +760,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mzF-gG-Yir">
-                                                    <rect key="frame" x="364" y="14.5" width="90" height="21"/>
+                                                    <rect key="frame" x="364" y="15" width="90" height="20.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="90" id="YHk-78-GFB"/>
                                                     </constraints>
@@ -768,7 +769,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CPE-WP-3jK">
-                                                    <rect key="frame" x="494" y="14.5" width="90" height="21"/>
+                                                    <rect key="frame" x="494" y="15" width="90" height="20.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="90" id="xYF-dT-xZg"/>
                                                     </constraints>
@@ -777,7 +778,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1KX-G6-HtN">
-                                                    <rect key="frame" x="624" y="14.5" width="90" height="21"/>
+                                                    <rect key="frame" x="624" y="15" width="90" height="20.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="90" id="3eH-h3-zUu"/>
                                                     </constraints>
@@ -1057,33 +1058,13 @@
         </scene>
         <!--Summary First View Controller-->
         <scene sceneID="AnB-bK-gDm">
-        <!--Rolls View Controller-->
-        <scene sceneID="7m3-yx-dqj">
-            <objects>
-                <viewController storyboardIdentifier="Rolls" id="guT-RQ-zyd" customClass="RollsViewController" customModule="Inspection" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Rf2-np-AuO"/>
-                        <viewControllerLayoutGuide type="bottom" id="Ho4-wa-Zyc"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="xkU-AP-PuC">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bJ4-4M-t3f" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4063" y="0.0"/>
-        </scene>
-        <!--Summary View Controller-->
-        <scene sceneID="I7W-Oa-6vy">
             <objects>
                 <viewController id="VmI-C3-MIq" customClass="SummaryFirstViewController" customModule="Inspection" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kTZ-yg-Yrf"/>
                         <viewControllerLayoutGuide type="bottom" id="U1R-dj-sNS"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="rtk-Kl-hts">
+                    <view key="view" contentMode="scaleToFill" id="t0b-Iy-MA2">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -1342,6 +1323,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fcH-rJ-mqa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3641.40625" y="-314.0625"/>
+        </scene>
+        <!--Rolls View Controller-->
+        <scene sceneID="7m3-yx-dqj">
+            <objects>
+                <viewController storyboardIdentifier="Rolls" id="guT-RQ-zyd" customClass="RollsViewController" customModule="Inspection" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Rf2-np-AuO"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ho4-wa-Zyc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xkU-AP-PuC">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bJ4-4M-t3f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4244" y="298"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bpk-qf-PZU">
@@ -2416,9 +2415,9 @@
         <image name="GreenTick" width="144" height="144"/>
         <image name="Group 3" width="304" height="173"/>
         <image name="Group 63" width="105" height="105"/>
+        <image name="UnSelect" width="50" height="50"/>
         <image name="add" width="50" height="50"/>
         <image name="backArrow" width="50" height="50"/>
         <image name="minus" width="50" height="50"/>
-        <image name="UnSelect" width="50" height="50"/>
     </resources>
 </document>
