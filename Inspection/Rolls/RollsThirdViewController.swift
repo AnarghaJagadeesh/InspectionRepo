@@ -54,6 +54,10 @@ class RollsThirdViewController: UIViewController {
     }
     
     @IBAction func nextPressed(_ sender: Any) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let summaryFirstVC = storyBoard.instantiateViewController(withIdentifier: "summaryFirstVC") as! SummaryFirstViewController
+        self.navigationController?.pushViewController(summaryFirstVC, animated: true)
+
     }
     
 }

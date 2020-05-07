@@ -58,6 +58,12 @@ class RollsFirstViewController: UIViewController {
     }
     */
 
+    @IBAction func onTapNext(_ sender: UIButton) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let rollsThirdVC = storyBoard.instantiateViewController(withIdentifier: "rollThirdVC") as! RollsThirdViewController
+        self.navigationController?.pushViewController(rollsThirdVC, animated: true)
+
+    }
 }
 
 extension RollsFirstViewController : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {

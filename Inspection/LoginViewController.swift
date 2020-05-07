@@ -9,7 +9,7 @@
 import UIKit
 import iOSDropDown
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
 
     @IBOutlet var languageDropDown: DropDown!
     @IBOutlet var employeeIDTextField: UITextField!
@@ -21,6 +21,11 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func onTapLogin(_ sender: UIButton) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let basicFirstVC = storyBoard.instantiateViewController(withIdentifier: "basicFirstVC") as! BasicFirstViewController
+        self.navigationController?.pushViewController(basicFirstVC, animated: true)
+    }
+    
 }
 
