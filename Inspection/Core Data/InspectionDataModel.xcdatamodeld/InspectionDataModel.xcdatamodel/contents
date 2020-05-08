@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19A583" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="BasicFirst" representedClassName="BasicFirst" syncable="YES" codeGenerationType="class">
+        <attribute name="colorName" optional="YES" attributeType="String"/>
+        <attribute name="construction" optional="YES" attributeType="String"/>
+        <attribute name="content" optional="YES" attributeType="String"/>
+        <attribute name="fabricCategory" optional="YES" attributeType="String"/>
+        <attribute name="fabricType" optional="YES" attributeType="String"/>
+        <attribute name="factoryName" optional="YES" attributeType="String"/>
+        <attribute name="finish" optional="YES" attributeType="String"/>
+        <attribute name="orderQty" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="poCutWidth" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="poNo" optional="YES" attributeType="String"/>
+        <attribute name="reportToName" optional="YES" attributeType="String"/>
+        <attribute name="totalQtyOffered" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="weightGSM" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="BasicSecond" representedClassName="BasicSecond" syncable="YES" codeGenerationType="class">
+        <attribute name="actualCutWidthOne" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="actualCutWidthThree" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="actualCutWidthTwo" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="actualLength" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="actualWeightGSM" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="endToEnd" optional="YES" attributeType="String"/>
+        <attribute name="handFeel" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="pattern" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="rollNumber" optional="YES" attributeType="String"/>
+        <attribute name="sideToCenter" optional="YES" attributeType="String"/>
+        <attribute name="sideToSide" optional="YES" attributeType="String"/>
+        <attribute name="skewBowing" optional="YES" attributeType="String"/>
+        <attribute name="ticketLength" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+    </entity>
+    <elements>
+        <element name="BasicFirst" positionX="-45" positionY="0" width="128" height="238"/>
+        <element name="BasicSecond" positionX="-45" positionY="99" width="128" height="238"/>
+    </elements>
+</model>

@@ -12,5 +12,6 @@ pod 'M13Checkbox'
 pod 'GoogleMaps'
 pod 'GooglePlaces'
 pod 'DropDown'
+pod 'IQKeyboardManager'
 
 end

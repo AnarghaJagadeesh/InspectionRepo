@@ -7,7 +7,15 @@
 //
 
 import UIKit
+import CoreData
 import DropDown
+
+enum Quality : String {
+    case LIGHT = "Light"
+    case MEDIUM = "Medium"
+    case HEAVY = "Heavy"
+    case NO = "No"
+}
 
 class BasicSecondViewController: UIViewController {
     @IBOutlet weak var rollNumberTxt: UITextField!
@@ -57,10 +65,18 @@ class BasicSecondViewController: UIViewController {
     @IBOutlet weak var skewTxt: UITextField!
     @IBOutlet weak var weightTxt: UITextField!
     
+    var basicSecondDict = [String : Any]()
+    var basicSecond = [NSManagedObject]()
+    var basicStruct : BasicSecondStruct?
+    
+    var editType : EditType = .UPDATE
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initialSetup()
+        if editType == .UPDATE {
+            self.fetchFromCoreData()
+        }
         // Do any additional setup after loading the view.
     }
     func initialSetup(){
@@ -70,6 +86,15 @@ class BasicSecondViewController: UIViewController {
         imageView.image = image
         rollNumberTxt.rightView = imageView
         dropDownSetup()
+        
+        self.rollNumberTxt.delegate = self
+        self.ticketLengthYdsTxt.delegate = self
+        self.actualLengthtxt.delegate = self
+        self.actualCutWidthFirstTxt.delegate = self
+        self.actualCutWidthSecondTxt.delegate = self
+        self.actualCutWidthThirdTxt.delegate = self
+        self.skewTxt.delegate = self
+        self.weightTxt.delegate = self
     }
     func dropDownSetup(){
         numberDropDown.anchorView = dropDownBottomView
@@ -77,6 +102,7 @@ class BasicSecondViewController: UIViewController {
         numberDropDown.selectionAction = { [unowned self] (index: Int, item: String) in
             print("Selected item: \(item) at index: \(index)")
             self.rollNumberTxt.text = item
+             self.basicSecondDict["rollNumber"] = item
             self.numberDropDown.hide()
         }
     }
@@ -96,6 +122,10 @@ class BasicSecondViewController: UIViewController {
     }
     
     @IBAction func nextBtnPressed(_ sender: Any) {
+        if editType == .NEW {
+            self.basicStruct = BasicSecondStruct(dict: basicSecondDict)
+            self.saveToCoreData()
+        }
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let rollsFirstVC = storyBoard.instantiateViewController(withIdentifier: "rollFirstVC") as! RollsFirstViewController
         self.navigationController?.pushViewController(rollsFirstVC, animated: true)
@@ -111,15 +141,19 @@ class BasicSecondViewController: UIViewController {
         
         if sender.tag == 0 {
             end2EndShadingImgLight.image = UIImage(named: "Select")
+            basicSecondDict["endToEnd"] = Quality.LIGHT.rawValue
         }
         if sender.tag == 1 {
             end2EndShadingImgMediuim.image = UIImage(named: "Select")
+            basicSecondDict["endToEnd"] = Quality.MEDIUM.rawValue
         }
         if sender.tag == 2 {
             end2EndShadingImgHeavy.image = UIImage(named: "Select")
+            basicSecondDict["endToEnd"] = Quality.HEAVY.rawValue
         }
         if sender.tag == 3 {
             end2EndShadingImgNo.image = UIImage(named: "Select")
+            basicSecondDict["endToEnd"] = Quality.NO.rawValue
         }
     }
     @IBAction func side2EndShadingPressed(_ sender: UIButton) {
@@ -131,15 +165,19 @@ class BasicSecondViewController: UIViewController {
         
         if sender.tag == 0 {
             side2SideShadingImgLight.image = UIImage(named: "Select")
+            basicSecondDict["sideToSide"] = Quality.LIGHT.rawValue
         }
         if sender.tag == 1 {
             side2SideShadingImgMedium.image = UIImage(named: "Select")
+            basicSecondDict["sideToSide"] = Quality.MEDIUM.rawValue
         }
         if sender.tag == 2 {
             side2SideShadingImgHeavy.image = UIImage(named: "Select")
+            basicSecondDict["sideToSide"] = Quality.HEAVY.rawValue
         }
         if sender.tag == 3 {
             side2SideShadingImgNo.image = UIImage(named: "Select")
+            basicSecondDict["sideToSide"] = Quality.NO.rawValue
         }
     }
     
@@ -148,19 +186,21 @@ class BasicSecondViewController: UIViewController {
         side2CenterImgMedium.image = UIImage(named: "UnSelect")
         side2CenterImgHeavy.image = UIImage(named: "UnSelect")
         side2CenterImgNo.image = UIImage(named: "UnSelect")
-        
-        
         if sender.tag == 0 {
             side2CenterImgLight.image = UIImage(named: "Select")
+            basicSecondDict["sideToCenter"] = Quality.LIGHT.rawValue
         }
         if sender.tag == 1 {
             side2CenterImgMedium.image = UIImage(named: "Select")
+            basicSecondDict["sideToCenter"] = Quality.MEDIUM.rawValue
         }
         if sender.tag == 2 {
             side2CenterImgHeavy.image = UIImage(named: "Select")
+            basicSecondDict["sideToCenter"] = Quality.HEAVY.rawValue
         }
         if sender.tag == 3 {
             side2CenterImgNo.image = UIImage(named: "Select")
+            basicSecondDict["sideToCenter"] = Quality.NO.rawValue
         }
     }
     
@@ -170,9 +210,11 @@ class BasicSecondViewController: UIViewController {
         
         if sender.tag == 0 {
             patternOkImg.image = UIImage(named: "Select")
+            basicSecondDict["pattern"] = true
         }
         if sender.tag == 1 {
             patternNotOkImg.image = UIImage(named: "Select")
+            basicSecondDict["pattern"] = false
         }
     }
     
@@ -182,10 +224,132 @@ class BasicSecondViewController: UIViewController {
         
         if sender.tag == 0 {
             handFeelOkImg.image = UIImage(named: "Select")
+            basicSecondDict["handFeel"] = true
         }
         if sender.tag == 1 {
             handfeelNotOkImg.image = UIImage(named: "Select")
+            basicSecondDict["handFeel"] = false
         }
         
+    }
+    
+    func saveToCoreData(){
+        guard let appDelegate =
+            UIApplication.shared.delegate as? AppDelegate else {
+                return
+        }
+        
+        // 1
+        let managedContext =
+            appDelegate.persistentContainer.viewContext
+        
+        // 2
+        let basicEntity =
+            NSEntityDescription.entity(forEntityName: "BasicSecond",
+                                       in: managedContext)!
+        let basicFirstVal = NSManagedObject(entity: basicEntity,
+                                            insertInto: managedContext)
+        
+        // 3
+        if let model = basicStruct {
+            basicFirstVal.setValue(model.rollNumber, forKeyPath: "rollNumber")
+            basicFirstVal.setValue(model.ticketLength, forKey: "ticketLength")
+            basicFirstVal.setValue(model.actualLength, forKeyPath: "actualLength")
+            basicFirstVal.setValue(model.actualCutWidthOne, forKeyPath: "actualCutWidthOne")
+            basicFirstVal.setValue(model.actualCutWidthTwo, forKeyPath: "actualCutWidthTwo")
+            basicFirstVal.setValue(model.actualCutWidthThree, forKeyPath: "actualCutWidthThree")
+            basicFirstVal.setValue(model.endToEnd, forKeyPath: "endToEnd")
+            basicFirstVal.setValue(model.sideToSide, forKeyPath: "sideToSide")
+            basicFirstVal.setValue(model.sideToCenter, forKeyPath: "sideToCenter")
+            basicFirstVal.setValue(model.skewBowing, forKeyPath: "skewBowing")
+            basicFirstVal.setValue(model.pattern, forKeyPath: "pattern")
+            basicFirstVal.setValue(model.actualWeightGSM, forKeyPath: "actualWeightGSM")
+            basicFirstVal.setValue(model.handFeel, forKeyPath: "handFeel")
+        }
+        
+        
+        // 4
+        do {
+            try managedContext.save()
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
+    }
+    
+    func fetchFromCoreData(){
+        guard let appDelegate =
+            UIApplication.shared.delegate as? AppDelegate else {
+                return
+        }
+        
+        // 1
+        let managedContext =
+            appDelegate.persistentContainer.viewContext
+        
+        // 2
+        
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "BasicSecond")
+        //        let fetchRequest = NSFetchRequest<NSFetchRequestResult>.init(entityName: "BasicFirst")
+        
+        //3
+        do {
+            let result = try managedContext.fetch(fetchRequest)
+            for data in result {
+                basicSecondDict["rollNumber"] = data.value(forKey: "rollNumber") as! String
+                basicSecondDict["ticketLength"] = data.value(forKey: "ticketLength") as! Float
+                basicSecondDict["actualLength"] = data.value(forKey: "actualLength") as! Float
+                basicSecondDict["actualCutWidthOne"] = data.value(forKey: "actualCutWidthOne") as! Float
+                basicSecondDict["actualCutWidthTwo"] = data.value(forKey: "actualCutWidthTwo") as! Float
+                basicSecondDict["actualCutWidthThree"] = data.value(forKey: "actualCutWidthThree") as! Float
+                basicSecondDict["endToEnd"] = data.value(forKey: "endToEnd") as! String
+                basicSecondDict["sideToSide"] = data.value(forKey: "sideToSide") as! String
+                basicSecondDict["sideToCenter"] = data.value(forKey: "sideToCenter") as! String
+                basicSecondDict["skewBowing"] = data.value(forKey: "skewBowing") as! String
+                basicSecondDict["pattern"] = data.value(forKey: "pattern") as! Bool
+                basicSecondDict["actualWeightGSM"] = data.value(forKey: "actualWeightGSM") as! Float
+                basicSecondDict["handFeel"] = data.value(forKey: "handFeel") as! Bool
+                self.basicStruct = BasicSecondStruct(dict: basicSecondDict)
+            }
+            
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+        }
+        if let model = basicStruct {
+//            self.txtPO.text = "\(model.PONo)"
+//            self.txtContent.text = "\(model.content)"
+//            self.txtConstruction.text = "\(model.construction)"
+//            self.txtPOCutWidth.text = "\(model.POCutWidth)"
+//            self.txtFactoryName.text = "\(model.factoryName)"
+//            self.txtOrderQty.text = "\(model.orderQty)"
+//            self.txtTotalQtyOffered.text = "\(model.totalQtyOffered)"
+//            self.txtWeightGSM.text = "\(model.weightGSM)"
+//            self.txtColorName.text = "\(model.colorName)"
+//            self.txtFinish.text = "\(model.finish)"
+        }
+    }
+
+}
+
+extension BasicSecondViewController : UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        let value : String = textField.text ?? ""
+        switch textField {
+        case ticketLengthYdsTxt:
+            self.basicSecondDict["ticketLength"] = Float(value)
+        case actualLengthtxt:
+            self.basicSecondDict["actualLength"] = Float(value)
+        case actualCutWidthFirstTxt:
+            self.basicSecondDict["actualCutWidthOne"] = Float(value)
+        case actualCutWidthSecondTxt:
+            self.basicSecondDict["actualCutWidthTwo"] = Float(value)
+        case actualCutWidthThirdTxt:
+            self.basicSecondDict["actualCutWidthThree"] = Float(value)
+        case skewTxt:
+            self.basicSecondDict["skewBowing"] = value
+        case weightTxt:
+            self.basicSecondDict["actualWeightGSM"] = Float(value)
+        default:
+            print("Default")
+        }
     }
 }
