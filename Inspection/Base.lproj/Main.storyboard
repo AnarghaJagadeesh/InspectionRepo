@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="VmI-C3-MIq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="KA8-4y-cXg">
     <device id="ipad9_7" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -1067,6 +1067,21 @@
                         </constraints>
                     </view>
                     <size key="freeformSize" width="375" height="1100"/>
+                    <connections>
+                        <outlet property="dropDownFabricType" destination="YGK-pc-dMt" id="Hfa-py-IuC"/>
+                        <outlet property="dropDownName" destination="P74-AX-fHH" id="LWP-qH-Ph2"/>
+                        <outlet property="txtColorName" destination="5dE-9e-xkj" id="8LN-gr-r5P"/>
+                        <outlet property="txtConstruction" destination="8xC-vf-wy6" id="ojT-pN-6Sd"/>
+                        <outlet property="txtContent" destination="QXP-ax-OX6" id="vFw-0c-wFw"/>
+                        <outlet property="txtFabricCategory" destination="5Rr-BV-DPf" id="sXB-SL-zey"/>
+                        <outlet property="txtFactoryName" destination="pEr-Gw-OQt" id="TJQ-br-x4Q"/>
+                        <outlet property="txtFinish" destination="yNT-bw-yur" id="PtH-oK-Kbm"/>
+                        <outlet property="txtOrderQty" destination="AlH-Ae-EBm" id="D2w-fu-hGY"/>
+                        <outlet property="txtPO" destination="6G8-mv-T5d" id="SFF-k2-2af"/>
+                        <outlet property="txtPOCutWidth" destination="Cqv-Vj-QBv" id="cA1-eh-e3J"/>
+                        <outlet property="txtTotalQtyOffered" destination="WLa-zL-vQY" id="ouV-m9-P7b"/>
+                        <outlet property="txtWeightGSM" destination="MdV-cc-su1" id="2l0-Em-Nil"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RkJ-s4-ya0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

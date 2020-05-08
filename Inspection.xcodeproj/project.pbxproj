@@ -32,6 +32,7 @@
 		8C43D8F32464454600B7CDED /* SummarySecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C43D8F22464454600B7CDED /* SummarySecondViewController.swift */; };
 		8C43D8F724646AA200B7CDED /* InspectionDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8C43D8F524646AA200B7CDED /* InspectionDataModel.xcdatamodeld */; };
 		8CAD912A2461D28900968CB1 /* RollStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD91292461D28900968CB1 /* RollStruct.swift */; };
+		8CF1F8FF24648B25001661F9 /* BasicFirstStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF1F8FE24648B25001661F9 /* BasicFirstStruct.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		8C43D8F22464454600B7CDED /* SummarySecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummarySecondViewController.swift; sourceTree = "<group>"; };
 		8C43D8F624646AA200B7CDED /* InspectionDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = InspectionDataModel.xcdatamodel; sourceTree = "<group>"; };
 		8CAD91292461D28900968CB1 /* RollStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollStruct.swift; sourceTree = "<group>"; };
+		8CF1F8FE24648B25001661F9 /* BasicFirstStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicFirstStruct.swift; sourceTree = "<group>"; };
 		A5BA398F8F3B401D4F739B1C /* Pods-Inspection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Inspection.debug.xcconfig"; path = "Target Support Files/Pods-Inspection/Pods-Inspection.debug.xcconfig"; sourceTree = "<group>"; };
 		D76B5DF36B9A605AAE4855E8 /* Pods-Inspection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Inspection.release.xcconfig"; path = "Target Support Files/Pods-Inspection/Pods-Inspection.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -194,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				8CAD91292461D28900968CB1 /* RollStruct.swift */,
+				8CF1F8FE24648B25001661F9 /* BasicFirstStruct.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 				4713BC6C2422291E00BD2BC7 /* RollsViewController.swift in Sources */,
 				4713BC652421F2B400BD2BC7 /* HomeViewController.swift in Sources */,
 				8C43D8EE24643CD300B7CDED /* SummaryFirstCollectionViewCell.swift in Sources */,
+				8CF1F8FF24648B25001661F9 /* BasicFirstStruct.swift in Sources */,
 				8C43D8E624643C5B00B7CDED /* RollsFirstViewController.swift in Sources */,
 				471A7EF824231171000169F0 /* SummaryViewController.swift in Sources */,
 				0317A03824646B0900554E13 /* SummaryRollDetailsCollectionViewCell.swift in Sources */,
@@ -496,7 +500,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Inspection/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -517,7 +521,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Inspection/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
