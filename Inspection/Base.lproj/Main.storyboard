@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="KA8-4y-cXg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="KA8-4y-cXg">
     <device id="ipad9_7" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -132,10 +132,10 @@
             </objects>
             <point key="canvasLocation" x="2504.6875" y="124.80468749999999"/>
         </scene>
-        <!--Summary Second View Controller-->
+        <!--Checklist View Controller-->
         <scene sceneID="ig7-mS-lAB">
             <objects>
-                <viewController storyboardIdentifier="summarySecondVC" id="Q7R-9S-cWW" customClass="SummarySecondViewController" customModule="Inspection" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="summarySecondVC" id="Q7R-9S-cWW" customClass="ChecklistViewController" customModule="Inspection" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xy6-Y4-eX3"/>
                         <viewControllerLayoutGuide type="bottom" id="HBY-dU-xgl"/>
@@ -1644,7 +1644,7 @@
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="693" height="491"/>
                                     </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="lpa-zk-rrm">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="lpa-zk-rrm" customClass="SummaryBottomCollectionViewCell" customModule="Inspection" customModuleProvider="target">
                                         <rect key="frame" x="16.5" y="622" width="695" height="262"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Xj4-gq-J2q">
@@ -1690,13 +1690,39 @@
                                                         </label>
                                                     </subviews>
                                                 </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jLd-ev-aRa">
+                                                    <rect key="frame" x="27" y="69" width="81.5" height="21.5"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
+                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wfe-JK-xzQ">
+                                                    <rect key="frame" x="27" y="98" width="640" height="128"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="128" id="tl1-70-qta"/>
+                                                    </constraints>
+                                                    <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="wfe-JK-xzQ" secondAttribute="trailing" constant="28" id="5MA-LB-QIS"/>
                                                 <constraint firstItem="dxF-MV-ok5" firstAttribute="top" secondItem="Xj4-gq-J2q" secondAttribute="top" constant="26" id="KcH-el-Htl"/>
+                                                <constraint firstItem="wfe-JK-xzQ" firstAttribute="leading" secondItem="jLd-ev-aRa" secondAttribute="leading" id="LCi-c6-D2F"/>
+                                                <constraint firstItem="wfe-JK-xzQ" firstAttribute="top" secondItem="jLd-ev-aRa" secondAttribute="bottom" constant="7.5" id="Uji-V0-Tvc"/>
                                                 <constraint firstItem="dxF-MV-ok5" firstAttribute="leading" secondItem="Xj4-gq-J2q" secondAttribute="leading" constant="27" id="Uvn-oo-jVc"/>
+                                                <constraint firstItem="jLd-ev-aRa" firstAttribute="top" secondItem="usN-PM-Sfx" secondAttribute="bottom" constant="25" id="Xfn-Kf-Sbu"/>
+                                                <constraint firstItem="jLd-ev-aRa" firstAttribute="leading" secondItem="usN-PM-Sfx" secondAttribute="leading" id="no5-5N-3kN"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="695" height="262"/>
+                                        <connections>
+                                            <outlet property="cmtTxtView" destination="wfe-JK-xzQ" id="rD0-pK-PFd"/>
+                                            <outlet property="noBtn" destination="Jzb-3A-Wex" id="HsV-El-hTC"/>
+                                            <outlet property="yesBtn" destination="u9Q-gC-mf2" id="VIO-98-w2y"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="summaryHeaderCell" id="jw9-5G-AQP">
