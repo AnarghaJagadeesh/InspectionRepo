@@ -31,7 +31,7 @@ class BasicFirstViewController: UIViewController {
     @IBOutlet weak var txtColorName: UITextField!
     @IBOutlet weak var txtFinish: UITextField!
     @IBOutlet weak var dropDownName: DropDown!
-    var basicFirst: [NSManagedObject] = []
+//    var basicFirst: [NSManagedObject] = []
     var basicStruct : BasicFirstStruct?
     var basicDict = [String:Any]()
     var editType : EditType = .UPDATE
