@@ -33,6 +33,7 @@
 		8C43D8F32464454600B7CDED /* SummarySecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C43D8F22464454600B7CDED /* SummarySecondViewController.swift */; };
 		8C43D8F724646AA200B7CDED /* InspectionDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8C43D8F524646AA200B7CDED /* InspectionDataModel.xcdatamodeld */; };
 		8C4596962466895A00D357E1 /* RollDetailsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4596952466895A00D357E1 /* RollDetailsCollectionViewCell.swift */; };
+		8C4596982466961200D357E1 /* RollsSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4596972466961200D357E1 /* RollsSecondViewController.swift */; };
 		8CAD912A2461D28900968CB1 /* RollStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD91292461D28900968CB1 /* RollStruct.swift */; };
 		8CF1F8FF24648B25001661F9 /* BasicFirstStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF1F8FE24648B25001661F9 /* BasicFirstStruct.swift */; };
 /* End PBXBuildFile section */
@@ -67,6 +68,7 @@
 		8C43D8F22464454600B7CDED /* SummarySecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummarySecondViewController.swift; sourceTree = "<group>"; };
 		8C43D8F624646AA200B7CDED /* InspectionDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = InspectionDataModel.xcdatamodel; sourceTree = "<group>"; };
 		8C4596952466895A00D357E1 /* RollDetailsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollDetailsCollectionViewCell.swift; sourceTree = "<group>"; };
+		8C4596972466961200D357E1 /* RollsSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollsSecondViewController.swift; sourceTree = "<group>"; };
 		8CAD91292461D28900968CB1 /* RollStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollStruct.swift; sourceTree = "<group>"; };
 		8CF1F8FE24648B25001661F9 /* BasicFirstStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicFirstStruct.swift; sourceTree = "<group>"; };
 		A5BA398F8F3B401D4F739B1C /* Pods-Inspection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Inspection.debug.xcconfig"; path = "Target Support Files/Pods-Inspection/Pods-Inspection.debug.xcconfig"; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				8C43D8E324643C5A00B7CDED /* RollsFirstCollectionViewCell.swift */,
 				8C43D8E424643C5B00B7CDED /* RollsFirstViewController.swift */,
 				0317A03224631F5E00554E13 /* RollsThirdViewController.swift */,
+				8C4596972466961200D357E1 /* RollsSecondViewController.swift */,
 			);
 			path = Rolls;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 				4713BC652421F2B400BD2BC7 /* HomeViewController.swift in Sources */,
 				8C43D8EE24643CD300B7CDED /* SummaryFirstCollectionViewCell.swift in Sources */,
 				8CF1F8FF24648B25001661F9 /* BasicFirstStruct.swift in Sources */,
+				8C4596982466961200D357E1 /* RollsSecondViewController.swift in Sources */,
 				8C43D8E624643C5B00B7CDED /* RollsFirstViewController.swift in Sources */,
 				471A7EF824231171000169F0 /* SummaryViewController.swift in Sources */,
 				8C4596962466895A00D357E1 /* RollDetailsCollectionViewCell.swift in Sources */,
