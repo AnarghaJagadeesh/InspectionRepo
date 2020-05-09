@@ -101,7 +101,36 @@
                     <view key="view" contentMode="scaleToFill" id="uMi-f0-uSz">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WJs-tX-uW0">
+                                <rect key="frame" x="0.0" y="150" width="768" height="689"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4iG-kk-n94">
+                                    <size key="itemSize" width="768" height="65"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Gng-mm-kPQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="768" height="65"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4wt-wa-5AZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="65"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="768" height="65"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WJs-tX-uW0" firstAttribute="leading" secondItem="uMi-f0-uSz" secondAttribute="leading" id="4yP-2I-BvP"/>
+                            <constraint firstAttribute="trailing" secondItem="WJs-tX-uW0" secondAttribute="trailing" id="6uJ-Dl-XOZ"/>
+                            <constraint firstItem="WJs-tX-uW0" firstAttribute="top" secondItem="v2g-LL-wRp" secondAttribute="bottom" constant="100" id="LoP-Ju-GSF"/>
+                            <constraint firstItem="Sss-b4-6RN" firstAttribute="top" secondItem="WJs-tX-uW0" secondAttribute="bottom" constant="185" id="UBe-Cb-cAM"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="SvU-fM-jlh"/>
                 </viewController>
@@ -775,10 +804,24 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hVd-FZ-Q7e">
+                                <rect key="frame" x="349" y="934" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="LUj-lZ-pGP"/>
+                                    <constraint firstAttribute="width" constant="70" id="mPl-nF-h89"/>
+                                </constraints>
+                                <state key="normal" image="Group 63"/>
+                                <connections>
+                                    <action selector="onTapNext:" destination="mnn-rU-bUA" eventType="touchUpInside" id="GGN-Do-ycw"/>
+                                    <action selector="onTapNext:" destination="ls8-io-7vG" eventType="touchUpInside" id="iaz-Ge-LfN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="hVd-FZ-Q7e" firstAttribute="centerX" secondItem="oxc-FA-Kyc" secondAttribute="centerX" id="5yM-gK-lDF"/>
                             <constraint firstItem="MDW-PD-JRA" firstAttribute="top" secondItem="Nmz-V0-ZFW" secondAttribute="bottom" constant="149" id="MiV-TP-rZZ"/>
+                            <constraint firstItem="MDW-PD-JRA" firstAttribute="top" secondItem="hVd-FZ-Q7e" secondAttribute="bottom" constant="20" id="Oom-hq-7pZ"/>
                             <constraint firstItem="Nmz-V0-ZFW" firstAttribute="leading" secondItem="oxc-FA-Kyc" secondAttribute="leading" id="Wyk-CP-Zt9"/>
                             <constraint firstItem="Nmz-V0-ZFW" firstAttribute="top" secondItem="EOl-AD-i37" secondAttribute="bottom" constant="123" id="d7L-nj-Ueb"/>
                             <constraint firstAttribute="trailing" secondItem="Nmz-V0-ZFW" secondAttribute="trailing" id="uoU-3m-Fev"/>
