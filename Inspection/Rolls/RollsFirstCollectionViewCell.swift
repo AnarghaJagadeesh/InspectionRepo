@@ -124,6 +124,7 @@ class RollsFirstCollectionViewCell: UICollectionViewCell {
         self.lblThreePoint.text = "\(value)"
 
     }
+  
     @IBAction func onTapFourMinusPlus(_ sender: UIButton) {
         let isPlus = sender.tag == 0 ? false : true
         var value : Int = Int(self.lblFourPoint.text ?? "") ?? 0

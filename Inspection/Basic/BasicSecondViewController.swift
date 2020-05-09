@@ -223,6 +223,9 @@ class BasicSecondViewController: UIViewController {
             basicSecondDict["pattern"] = false
         }
     }
+    @IBAction func bkPressed(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
     
     @IBAction func handFeelPressed(_ sender: UIButton) {
         handFeelOkImg.image = UIImage(named: "UnSelect")
