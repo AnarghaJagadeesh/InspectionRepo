@@ -4,6 +4,7 @@
         <attribute name="colorName" optional="YES" attributeType="String"/>
         <attribute name="construction" optional="YES" attributeType="String"/>
         <attribute name="content" optional="YES" attributeType="String"/>
+        <attribute name="date" optional="YES" attributeType="String"/>
         <attribute name="fabricCategory" optional="YES" attributeType="String"/>
         <attribute name="fabricType" optional="YES" attributeType="String"/>
         <attribute name="factoryName" optional="YES" attributeType="String"/>
@@ -51,7 +52,7 @@
         <attribute name="rollImage" optional="YES" attributeType="Transformable"/>
     </entity>
     <elements>
-        <element name="BasicFirst" positionX="-45" positionY="0" width="128" height="253"/>
+        <element name="BasicFirst" positionX="-45" positionY="0" width="128" height="268"/>
         <element name="BasicSecond" positionX="-45" positionY="99" width="128" height="253"/>
         <element name="RollFirst" positionX="-36" positionY="153" width="128" height="118"/>
         <element name="RollFirstSubTotal" positionX="-18" positionY="162" width="128" height="118"/>

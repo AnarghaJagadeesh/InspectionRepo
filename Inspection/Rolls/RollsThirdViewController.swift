@@ -111,6 +111,10 @@ class RollsThirdViewController: UIViewController {
     }
     
     @IBAction func AddMorePressed(_ sender: Any) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let basicSecondVC = storyBoard.instantiateViewController(withIdentifier: "basicSecondVC") as! BasicSecondViewController
+        self.rollCount = self.rollCount + 1
+        self.navigationController?.pushViewController(basicSecondVC, animated: true)
     }
     @IBAction func bkPressed(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)

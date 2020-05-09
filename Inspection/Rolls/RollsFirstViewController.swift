@@ -20,7 +20,7 @@ class RollsFirstViewController: UIViewController {
     
     var pickedImages = [UIImage]()
     
-    var editType : EditType = .UPDATE
+    var editType : EditType = .NEW
     
     var basicFirstModel : BasicFirstStruct?
     var basicSecondModel : BasicSecondStruct?
