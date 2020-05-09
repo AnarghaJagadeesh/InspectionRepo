@@ -53,6 +53,9 @@ class RollsThirdViewController: UIViewController {
     
     @IBAction func AddMorePressed(_ sender: Any) {
     }
+    @IBAction func bkPressed(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
     
     @IBAction func nextPressed(_ sender: Any) {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)

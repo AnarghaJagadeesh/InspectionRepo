@@ -246,6 +246,9 @@ class RollsFirstViewController: UIViewController {
      }
      */
     
+    @IBAction func bkPressed(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
     @IBAction func onTapNext(_ sender: UIButton) {
         if self.editType == .NEW {
             self.createCoreDataPointArray()
