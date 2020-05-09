@@ -13,7 +13,9 @@ class RollsSecondViewController: UIViewController {
     
     var pickedImages = [UIImage]()
     var editType : EditType = .UPDATE
-
+ 
+    
+    @IBOutlet weak var imageCol: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
 //        self.saveToCoreData()
@@ -53,5 +55,6 @@ class RollsSecondViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+  @IBAction func onTapNext(_ sender: UIButton) {
+    }
 }
