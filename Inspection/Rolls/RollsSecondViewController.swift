@@ -79,7 +79,8 @@ extension RollsSecondViewController : UICollectionViewDelegate, UICollectionView
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 500, height: 500)
+        let ht = 500
+        return CGSize(width: ht, height: ht)
     }
     
     
