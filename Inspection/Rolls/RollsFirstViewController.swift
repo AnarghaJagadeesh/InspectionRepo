@@ -255,9 +255,6 @@ class RollsFirstViewController: UIViewController {
             self.saveToCoreData()
             self.saveTotalToCoreData()
         }
-//        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//        let rollsThirdVC = storyBoard.instantiateViewController(withIdentifier: "rollThirdVC") as! RollsThirdViewController
-//        self.navigationController?.pushViewController(rollsThirdVC, animated: true)
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let rollsSecondVC = storyBoard.instantiateViewController(withIdentifier: "rollsSecondVC") as! RollsSecondViewController
         rollsSecondVC.pickedImages = self.pickedImages
