@@ -273,14 +273,11 @@ class RollsFirstViewController: UIViewController {
         picker.sourceType = .camera
         present(picker, animated: true)
     }
-    
-    
-    
 }
 
 extension RollsFirstViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        guard let userPickedImage = info[.editedImage] as? UIImage else { return }
+        guard let userPickedImage = info[.originalImage] as? UIImage else { return }
         self.pickedImages.append(userPickedImage)
         picker.dismiss(animated: true)
     }
