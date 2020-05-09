@@ -259,7 +259,7 @@ class RollsFirstViewController: UIViewController {
 //        let rollsThirdVC = storyBoard.instantiateViewController(withIdentifier: "rollThirdVC") as! RollsThirdViewController
 //        self.navigationController?.pushViewController(rollsThirdVC, animated: true)
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let rollsSecondVC = storyBoard.instantiateViewController(withIdentifier: "RollsSecond") as! RollsSecondViewController
+        let rollsSecondVC = storyBoard.instantiateViewController(withIdentifier: "rollsSecondVC") as! RollsSecondViewController
         rollsSecondVC.pickedImages = self.pickedImages
         self.navigationController?.pushViewController(rollsSecondVC, animated: true)
 
