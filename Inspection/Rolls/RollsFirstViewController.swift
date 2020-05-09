@@ -255,6 +255,12 @@ class RollsFirstViewController: UIViewController {
         self.navigationController?.pushViewController(rollsThirdVC, animated: true)
         
     }
+    
+    @IBAction func onTapCamera(_ sender: Any) {
+    }
+    
+    
+    
 }
 
 extension RollsFirstViewController : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
