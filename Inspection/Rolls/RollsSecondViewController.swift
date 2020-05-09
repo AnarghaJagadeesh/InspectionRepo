@@ -12,7 +12,7 @@ import CoreData
 class RollsSecondViewController: UIViewController {
     
     var pickedImages = [UIImage]()
-    var editType : EditType = .UPDATE
+    var editType : EditType = .NEW
     var pickedimgData = [Data]()
  
     var basicFirstModel : BasicFirstStruct?
@@ -20,10 +20,18 @@ class RollsSecondViewController: UIViewController {
     var rollFirstModel : RollStruct?
     var rollCount : Int = 0
     
+    @IBOutlet weak var lblNoImages: UILabel!
     @IBOutlet weak var testImage: UIImageView!
     @IBOutlet weak var imageCol: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        if self.pickedImages.count == 0 {
+            self.imageCol.isHidden = true
+            self.lblNoImages.isHidden = false
+        } else {
+            self.lblNoImages.isHidden = true
+            self.imageCol.isHidden = false
+        }
         self.imageCol.delegate = self
         self.imageCol.dataSource = self
 //        self.testImage.image = self.pickedImages[0]

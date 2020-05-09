@@ -70,7 +70,7 @@ class BasicSecondViewController: UIViewController {
     var basicStruct : BasicSecondStruct?
     var basicFirstStruct : BasicFirstStruct?
     
-    var editType : EditType = .UPDATE
+    var editType : EditType = .NEW
     
     var rollCount : Int = 0
     

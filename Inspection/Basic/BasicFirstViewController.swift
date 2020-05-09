@@ -34,7 +34,7 @@ class BasicFirstViewController: UIViewController {
 //    var basicFirst: [NSManagedObject] = []
     var basicStruct : BasicFirstStruct?
     var basicDict = [String:Any]()
-    var editType : EditType = .UPDATE
+    var editType : EditType = .NEW
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,6 +92,7 @@ class BasicFirstViewController: UIViewController {
             basicFirstVal.setValue(model.finish, forKeyPath: "finish")
             basicFirstVal.setValue(model.reportToName, forKeyPath: "reportToName")
             basicFirstVal.setValue(model.inspectionNo, forKey: "inspectionNo")
+            basicFirstVal.setValue(model.date, forKey: "date")
         }
         
         
@@ -103,22 +104,35 @@ class BasicFirstViewController: UIViewController {
           print("Could not save. \(error), \(error.userInfo)")
         }
     }
-    
+    func dateToDayMonthYearDate(rawDate: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeZone =  TimeZone(abbreviation: "UTC")
+        var calendar = Calendar.init(identifier: .gregorian)
+        //cal.timeZone = TimeZone(abbreviation: "GMT+5:30")!
+        //        cal.timeZone = TimeZone.current
+        calendar.timeZone = TimeZone(abbreviation: "UTC")!
+        
+        var newDate = ""
+        // Formate
+        dateFormatter.dateFormat = "MMM \'\'yy"
+        newDate = dateFormatter.string(from: rawDate)
+        return newDate
+    }
     func fetchFromCoreData(){
         guard let appDelegate =
-          UIApplication.shared.delegate as? AppDelegate else {
-          return
+            UIApplication.shared.delegate as? AppDelegate else {
+                return
         }
         
         // 1
         let managedContext =
-          appDelegate.persistentContainer.viewContext
+            appDelegate.persistentContainer.viewContext
         
         // 2
-
+        
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "BasicFirst")
-//        let fetchRequest = NSFetchRequest<NSFetchRequestResult>.init(entityName: "BasicFirst")
-
+        //        let fetchRequest = NSFetchRequest<NSFetchRequestResult>.init(entityName: "BasicFirst")
+        
         //3
         do {
             let result = try managedContext.fetch(fetchRequest)
@@ -137,13 +151,14 @@ class BasicFirstViewController: UIViewController {
                 basicDict["finish"] = data.value(forKey: "finish") as! String
                 basicDict["reportToName"] = data.value(forKey: "reportToName") as! String
                 basicDict["inspectionNo"] = data.value(forKey: "inspectionNo") as! Int
+                basicDict["date"] = data.value(forKey: "date") as! String
                 self.basicStruct = BasicFirstStruct(dict: basicDict)
                 
                 print(data.value(forKey: "fabricCategory") as! String)
             }
-
+            
         } catch let error as NSError {
-          print("Could not fetch. \(error), \(error.userInfo)")
+            print("Could not fetch. \(error), \(error.userInfo)")
         }
         if let model = basicStruct {
             self.txtPO.text = "\(model.PONo)"
@@ -182,6 +197,8 @@ class BasicFirstViewController: UIViewController {
             basicDict["fabricCategory"] = "Group 1"
             basicDict["fabricType"] = "Woven"
             basicDict["reportToName"] = "Name Test"
+            basicDict["date"] = self.dateToDayMonthYearDate(rawDate: Date())
+
             let inspectionNo = UserDefaults.standard.value(forKey: "inspectionNo") as! Int
             basicDict["inspectionNo"] = inspectionNo
             self.basicStruct = BasicFirstStruct(dict: basicDict)

@@ -23,6 +23,7 @@ struct BasicFirstStruct {
     var colorName : String = ""
     var finish : String = ""
     var reportToName : String = ""
+    var date : String = ""
     var inspectionNo : Int = 0
     
     init(dict:[String : Any]) {
@@ -40,6 +41,7 @@ struct BasicFirstStruct {
         self.finish = dict["finish"] as! String
         self.reportToName = dict["reportToName"] as! String
         self.inspectionNo = dict["inspectionNo"] as! Int
+        self.date = dict["date"] as! String
     }
 }
 
