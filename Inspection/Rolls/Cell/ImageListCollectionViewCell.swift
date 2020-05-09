@@ -10,6 +10,7 @@ import UIKit
 
 class ImageListCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var noImageLbl: UILabel!
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var deleteBtn: UIButton!
     @IBOutlet weak var txtLbl: UILabel!
