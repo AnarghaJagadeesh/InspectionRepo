@@ -68,8 +68,11 @@ class BasicSecondViewController: UIViewController {
     var basicSecondDict = [String : Any]()
     var basicSecond = [NSManagedObject]()
     var basicStruct : BasicSecondStruct?
+    var basicFirstStruct : BasicFirstStruct?
     
     var editType : EditType = .UPDATE
+    
+    var rollCount : Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -123,11 +126,15 @@ class BasicSecondViewController: UIViewController {
     
     @IBAction func nextBtnPressed(_ sender: Any) {
         if editType == .NEW {
+            self.basicSecondDict["inspectionNo"] = UserDefaults.standard.value(forKey: "inspectionNo") as! Int
             self.basicStruct = BasicSecondStruct(dict: basicSecondDict)
             self.saveToCoreData()
         }
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let rollsFirstVC = storyBoard.instantiateViewController(withIdentifier: "rollFirstVC") as! RollsFirstViewController
+        rollsFirstVC.basicFirstModel = self.basicFirstStruct
+        rollsFirstVC.basicSecondModel = self.basicStruct
+        rollsFirstVC.rollCount = self.rollCount
         self.navigationController?.pushViewController(rollsFirstVC, animated: true)
     }
     
@@ -264,6 +271,7 @@ class BasicSecondViewController: UIViewController {
             basicFirstVal.setValue(model.pattern, forKeyPath: "pattern")
             basicFirstVal.setValue(model.actualWeightGSM, forKeyPath: "actualWeightGSM")
             basicFirstVal.setValue(model.handFeel, forKeyPath: "handFeel")
+            basicFirstVal.setValue(model.inspectionNo, forKey: "inspectionNo")
         }
         
         
@@ -307,6 +315,7 @@ class BasicSecondViewController: UIViewController {
                 basicSecondDict["pattern"] = data.value(forKey: "pattern") as! Bool
                 basicSecondDict["actualWeightGSM"] = data.value(forKey: "actualWeightGSM") as! Float
                 basicSecondDict["handFeel"] = data.value(forKey: "handFeel") as! Bool
+                basicSecondDict["inspectionNo"] = data.value(forKey: "inspectionNo") as! Int
                 self.basicStruct = BasicSecondStruct(dict: basicSecondDict)
             }
             

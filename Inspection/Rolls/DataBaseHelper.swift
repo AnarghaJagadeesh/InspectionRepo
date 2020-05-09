@@ -11,9 +11,10 @@ import UIKit
 class DataBaseHelper {
     static let shareInstance = DataBaseHelper()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    func saveImage(data: Data) {
+    func saveImage(data: [Data]) {
         let imageInstance = RollImages(context: context)
-        imageInstance.rollImage = data
+        imageInstance.rollImage = data as NSObject
+        imageInstance.inspectionNo = Int32(UserDefaults.standard.value(forKey: "inspectionNo") as! Int)
         do {
             try context.save()
             print("Image is saved")

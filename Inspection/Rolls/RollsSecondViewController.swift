@@ -12,8 +12,13 @@ import CoreData
 class RollsSecondViewController: UIViewController {
     
     var pickedImages = [UIImage]()
-    var editType : EditType = .NEW
+    var editType : EditType = .UPDATE
+    var pickedimgData = [Data]()
  
+    var basicFirstModel : BasicFirstStruct?
+    var basicSecondModel : BasicSecondStruct?
+    var rollFirstModel : RollStruct?
+    var rollCount : Int = 0
     
     @IBOutlet weak var testImage: UIImageView!
     @IBOutlet weak var imageCol: UICollectionView!
@@ -31,8 +36,9 @@ class RollsSecondViewController: UIViewController {
     
     func saveToCoreData(img : UIImage){
         if let imageData = img.pngData() {
-        DataBaseHelper.shareInstance.saveImage(data: imageData)
+            self.pickedimgData.append(imageData)
         }
+        DataBaseHelper.shareInstance.saveImage(data: pickedimgData)
     }
     func fetchImage() {
         var fetchingImage = [RollImages]()
@@ -42,11 +48,15 @@ class RollsSecondViewController: UIViewController {
         do {
             fetchingImage = try context.fetch(fetchRequest) as! [RollImages]
             for data in fetchingImage {
-                print(data.rollImage!)
+                self.pickedimgData = data.rollImage as! [Data]
             }
         } catch {
             print("Error while fetching the image")
         }
+        self.pickedImages = []
+        _ = self.pickedimgData.map({ (imgData) in
+            self.pickedImages.append(UIImage(data: imgData) ?? UIImage())
+        })
 //        return fetchingImage
     }
 
@@ -67,6 +77,10 @@ class RollsSecondViewController: UIViewController {
         }
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let rollsThirdVC = storyBoard.instantiateViewController(withIdentifier: "rollThirdVC") as! RollsThirdViewController
+        rollsThirdVC.basicFirstModel = self.basicFirstModel
+        rollsThirdVC.basicSecondModel = self.basicSecondModel
+        rollsThirdVC.rollFirstModel = self.rollFirstModel
+        rollsThirdVC.rollCount = rollCount
         self.navigationController?.pushViewController(rollsThirdVC, animated: true)
         
     }
