@@ -173,16 +173,26 @@ class BasicFirstViewController: UIViewController {
     @IBAction func onTapNext(_ sender: UIButton) {
         
         
-        if editType == .NEW {
-            basicDict["fabricCategory"] = "Group 1"
-            basicDict["fabricType"] = "Woven"
-            basicDict["reportToName"] = "Name Test"
-            self.basicStruct = BasicFirstStruct(dict: basicDict)
-            self.saveToCoreData()
+        if  self.txtPO.text == "" || self.txtContent.text == "" || self.txtConstruction.text ==  "" || self.txtPOCutWidth.text == "" || self.txtFactoryName.text == "" || self.txtOrderQty.text == "" || self.txtTotalQtyOffered.text == "" || self.txtWeightGSM.text == "" || self.txtColorName.text == "" || self.txtFinish.text  == ""{
+            Helper.showAlert(message: "Please fill all the fields")
         }
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let basicSecondVC = storyBoard.instantiateViewController(withIdentifier: "basicSecondVC") as! BasicSecondViewController
-        self.navigationController?.pushViewController(basicSecondVC, animated: true)
+        else{
+            
+                   if editType == .NEW {
+                       basicDict["fabricCategory"] = "Group 1"
+                       basicDict["fabricType"] = "Woven"
+                       basicDict["reportToName"] = "Name Test"
+                       self.basicStruct = BasicFirstStruct(dict: basicDict)
+                       self.saveToCoreData()
+                   }
+                   let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                   let basicSecondVC = storyBoard.instantiateViewController(withIdentifier: "basicSecondVC") as! BasicSecondViewController
+                   self.navigationController?.pushViewController(basicSecondVC, animated: true)
+        }
+        
+        
+        
+       
 
     }
 }
