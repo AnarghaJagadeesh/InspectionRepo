@@ -30,8 +30,22 @@
         <attribute name="skewBowing" optional="YES" attributeType="String"/>
         <attribute name="ticketLength" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
     </entity>
+    <entity name="RollFirst" representedClassName="RollFirst" syncable="YES" codeGenerationType="class">
+        <attribute name="points1" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="points2" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="points3" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="points4" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="RollFirstSubTotal" representedClassName="RollFirstSubTotal" syncable="YES" codeGenerationType="class">
+        <attribute name="total1" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="total2" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="total3" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="total4" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
     <elements>
         <element name="BasicFirst" positionX="-45" positionY="0" width="128" height="238"/>
         <element name="BasicSecond" positionX="-45" positionY="99" width="128" height="238"/>
+        <element name="RollFirst" positionX="-36" positionY="153" width="128" height="103"/>
+        <element name="RollFirstSubTotal" positionX="-18" positionY="162" width="128" height="103"/>
     </elements>
 </model>

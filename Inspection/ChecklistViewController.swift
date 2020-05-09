@@ -47,13 +47,5 @@ class ChecklistViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    @IBAction func yesPressed(_ sender: Any) {
-        noCheckBox.checkState = .unchecked
-    }
-    @IBAction func noPressed(_ sender: Any) {
-         yesCheckbox.checkState = .unchecked
-    }
-    
-    @IBAction func saveBtnPressed(_ sender: Any) {
-    }
+
 }
