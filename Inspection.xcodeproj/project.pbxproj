@@ -12,6 +12,9 @@
 		031D1CF52461C47E0027A17C /* BasicSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031D1CF42461C47E0027A17C /* BasicSecondViewController.swift */; };
 		0363D6B624668C7100B106FE /* SummaryBottomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0363D6B524668C7100B106FE /* SummaryBottomCollectionViewCell.swift */; };
 		0368C58F2466A7A1006533D7 /* ImageListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0368C58E2466A7A1006533D7 /* ImageListCollectionViewCell.swift */; };
+		0368C5942466DF80006533D7 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0368C5932466DF80006533D7 /* HomeCollectionViewCell.swift */; };
+		0368C5962466DF9C006533D7 /* HomeHeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0368C5952466DF9C006533D7 /* HomeHeaderCollectionViewCell.swift */; };
+		0368C5992466E0E7006533D7 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0368C5982466E0E7006533D7 /* Helper.swift */; };
 		29C4D29792A12430C4BEBEF3 /* Pods_Inspection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78E6E270F8806E26B74FD2B1 /* Pods_Inspection.framework */; };
 		4713BC652421F2B400BD2BC7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4713BC642421F2B400BD2BC7 /* HomeViewController.swift */; };
 		4713BC6824221F5B00BD2BC7 /* XLPagerTabStrip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4713BC6724221F5B00BD2BC7 /* XLPagerTabStrip.framework */; };
@@ -46,6 +49,9 @@
 		031D1CF42461C47E0027A17C /* BasicSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicSecondViewController.swift; sourceTree = "<group>"; };
 		0363D6B524668C7100B106FE /* SummaryBottomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryBottomCollectionViewCell.swift; sourceTree = "<group>"; };
 		0368C58E2466A7A1006533D7 /* ImageListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListCollectionViewCell.swift; sourceTree = "<group>"; };
+		0368C5932466DF80006533D7 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		0368C5952466DF9C006533D7 /* HomeHeaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderCollectionViewCell.swift; sourceTree = "<group>"; };
+		0368C5982466E0E7006533D7 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		4713BC642421F2B400BD2BC7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4713BC6724221F5B00BD2BC7 /* XLPagerTabStrip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = XLPagerTabStrip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4713BC69242228A500BD2BC7 /* BasicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +140,23 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		0368C5922466DF6C006533D7 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0368C5932466DF80006533D7 /* HomeCollectionViewCell.swift */,
+				0368C5952466DF9C006533D7 /* HomeHeaderCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		0368C5972466E0CD006533D7 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				0368C5982466E0E7006533D7 /* Helper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		471B2BB5241F901E000A902C = {
 			isa = PBXGroup;
 			children = (
@@ -155,17 +178,19 @@
 		471B2BC0241F901E000A902C /* Inspection */ = {
 			isa = PBXGroup;
 			children = (
+				0368C5972466E0CD006533D7 /* Helper */,
+				0368C5922466DF6C006533D7 /* Cell */,
 				8C43D8F424646A4D00B7CDED /* Core Data */,
 				8C43D8E724643C6C00B7CDED /* Summary */,
 				8CAD91282461D27300968CB1 /* Model */,
 				0317A03124631F4600554E13 /* Rolls */,
 				031D1CF12461C4040027A17C /* Basic */,
 				471B2BC1241F901E000A902C /* AppDelegate.swift */,
-				4713BC642421F2B400BD2BC7 /* HomeViewController.swift */,
 				8C43D8F024643D4200B7CDED /* LoginViewController.swift */,
 				4713BC69242228A500BD2BC7 /* BasicViewController.swift */,
 				4713BC6B2422291E00BD2BC7 /* RollsViewController.swift */,
 				471A7EF724231171000169F0 /* SummaryViewController.swift */,
+				4713BC642421F2B400BD2BC7 /* HomeViewController.swift */,
 				4719EC612424DD4500A5508B /* ChecklistViewController.swift */,
 				471B2BC5241F901E000A902C /* Main.storyboard */,
 				471B2BC8241F901F000A902C /* Assets.xcassets */,
@@ -362,6 +387,7 @@
 				4713BC6A242228A500BD2BC7 /* BasicViewController.swift in Sources */,
 				8C43D8F124643D4200B7CDED /* LoginViewController.swift in Sources */,
 				471B2BC2241F901E000A902C /* AppDelegate.swift in Sources */,
+				0368C5992466E0E7006533D7 /* Helper.swift in Sources */,
 				8CAD912A2461D28900968CB1 /* RollStruct.swift in Sources */,
 				0368C58F2466A7A1006533D7 /* ImageListCollectionViewCell.swift in Sources */,
 				8C43D8E224643C2900B7CDED /* BasicFirstViewController.swift in Sources */,
@@ -369,6 +395,7 @@
 				8C43D8F724646AA200B7CDED /* InspectionDataModel.xcdatamodeld in Sources */,
 				0317A03324631F5E00554E13 /* RollsThirdViewController.swift in Sources */,
 				0363D6B624668C7100B106FE /* SummaryBottomCollectionViewCell.swift in Sources */,
+				0368C5962466DF9C006533D7 /* HomeHeaderCollectionViewCell.swift in Sources */,
 				4713BC6C2422291E00BD2BC7 /* RollsViewController.swift in Sources */,
 				4713BC652421F2B400BD2BC7 /* HomeViewController.swift in Sources */,
 				8C45969A24669C9600D357E1 /* DataBaseHelper.swift in Sources */,
@@ -377,6 +404,7 @@
 				8C4596982466961200D357E1 /* RollsSecondViewController.swift in Sources */,
 				8C43D8E624643C5B00B7CDED /* RollsFirstViewController.swift in Sources */,
 				471A7EF824231171000169F0 /* SummaryViewController.swift in Sources */,
+				0368C5942466DF80006533D7 /* HomeCollectionViewCell.swift in Sources */,
 				8C4596962466895A00D357E1 /* RollDetailsCollectionViewCell.swift in Sources */,
 				0317A03824646B0900554E13 /* SummaryRollDetailsCollectionViewCell.swift in Sources */,
 				031D1CF52461C47E0027A17C /* BasicSecondViewController.swift in Sources */,

@@ -11,6 +11,7 @@ import UIKit
 class RollsThirdViewController: UIViewController {
     @IBOutlet weak var rollLbl: UILabel!
     
+    @IBOutlet weak var txtView: UITextView!
     @IBOutlet weak var fourPointsLbl: UILabel!
     @IBOutlet weak var threePointsLbl: UILabel!
     

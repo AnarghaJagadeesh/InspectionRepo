@@ -11,17 +11,29 @@ import XLPagerTabStrip
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet weak var bottomView: UIView!
+    @IBOutlet weak var homeCol: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-       
+       initialSetup()
         // Do any additional setup after loading the view.
     }
-    
+    func initialSetup(){
+      
+        bottomView.layer.cornerRadius = 20
+        bottomView.layer.borderWidth = 0.5
+        bottomView.layer.borderColor = UIColor.lightGray.cgColor
+       // bottomView.dropShadow()
+    }
  
 
+    
+     @IBAction func searchPressed(_ sender: Any) {
+   
+    }
     /*
-    // MARK: - Navigation
+     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

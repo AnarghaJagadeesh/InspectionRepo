@@ -166,7 +166,10 @@ class BasicFirstViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBAction func bkPressed(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     @IBAction func onTapNext(_ sender: UIButton) {
         
         
