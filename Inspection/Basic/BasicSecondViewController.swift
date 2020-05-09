@@ -129,7 +129,6 @@ class BasicSecondViewController: UIViewController {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let rollsFirstVC = storyBoard.instantiateViewController(withIdentifier: "rollFirstVC") as! RollsFirstViewController
         self.navigationController?.pushViewController(rollsFirstVC, animated: true)
-
     }
     
     @IBAction func end2EndShadingPressed(_ sender: UIButton) {
@@ -315,16 +314,76 @@ class BasicSecondViewController: UIViewController {
             print("Could not fetch. \(error), \(error.userInfo)")
         }
         if let model = basicStruct {
-//            self.txtPO.text = "\(model.PONo)"
-//            self.txtContent.text = "\(model.content)"
-//            self.txtConstruction.text = "\(model.construction)"
-//            self.txtPOCutWidth.text = "\(model.POCutWidth)"
-//            self.txtFactoryName.text = "\(model.factoryName)"
-//            self.txtOrderQty.text = "\(model.orderQty)"
-//            self.txtTotalQtyOffered.text = "\(model.totalQtyOffered)"
-//            self.txtWeightGSM.text = "\(model.weightGSM)"
-//            self.txtColorName.text = "\(model.colorName)"
-//            self.txtFinish.text = "\(model.finish)"
+            self.rollNumberTxt.text = model.rollNumber
+            self.ticketLengthYdsTxt.text = "\(model.ticketLength)"
+            self.actualLengthtxt.text = "\(model.actualLength)"
+            self.actualCutWidthFirstTxt.text = "\(model.actualCutWidthOne)"
+            self.actualCutWidthSecondTxt.text = "\(model.actualCutWidthTwo)"
+            self.actualCutWidthThirdTxt.text = "\(model.actualCutWidthThree)"
+            self.skewTxt.text = model.skewBowing
+            self.weightTxt.text = "\(model.actualWeightGSM)"
+            let endToEndBtn = UIButton()
+            switch model.endToEnd {
+            case Quality.LIGHT.rawValue:
+                endToEndBtn.tag = 0
+            case Quality.MEDIUM.rawValue :
+                endToEndBtn.tag = 1
+            case Quality.HEAVY.rawValue :
+                endToEndBtn.tag = 2
+            case Quality.NO.rawValue:
+                endToEndBtn.tag = 3
+            default:
+                print("default")
+            }
+            self.end2EndShadingPressed(endToEndBtn)
+            let sideToSide = UIButton()
+            switch model.sideToSide {
+            case Quality.LIGHT.rawValue:
+                sideToSide.tag = 0
+            case Quality.MEDIUM.rawValue :
+                sideToSide.tag = 1
+            case Quality.HEAVY.rawValue :
+                sideToSide.tag = 2
+            case Quality.NO.rawValue:
+                sideToSide.tag = 3
+            default:
+                print("default")
+            }
+            self.side2EndShadingPressed(sideToSide)
+            let sideToCenter = UIButton()
+            switch model.sideToCenter {
+            case Quality.LIGHT.rawValue:
+                sideToCenter.tag = 0
+            case Quality.MEDIUM.rawValue :
+                sideToCenter.tag = 1
+            case Quality.HEAVY.rawValue :
+                sideToCenter.tag = 2
+            case Quality.NO.rawValue:
+                sideToCenter.tag = 3
+            default:
+                print("default")
+            }
+            self.side2CenterShadingPressed(sideToCenter)
+            let patterBtn = UIButton()
+            switch model.pattern {
+            case true:
+                patterBtn.tag = 0
+            case false :
+                patterBtn.tag = 1
+            default:
+                print("default")
+            }
+            self.patternPressed(patterBtn)
+            let handFeelBtn = UIButton()
+            switch model.handFeel {
+            case true:
+                handFeelBtn.tag = 0
+            case false :
+                handFeelBtn.tag = 1
+            default:
+                print("default")
+            }
+            self.handFeelPressed(handFeelBtn)
         }
     }
 

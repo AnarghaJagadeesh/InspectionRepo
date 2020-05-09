@@ -59,7 +59,11 @@ class RollsSecondViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-  @IBAction func onTapNext(_ sender: UIButton) {
+    @IBAction func onTapNext(_ sender: UIButton) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let rollsThirdVC = storyBoard.instantiateViewController(withIdentifier: "rollThirdVC") as! RollsThirdViewController
+        self.navigationController?.pushViewController(rollsThirdVC, animated: true)
+        
     }
 }
 
