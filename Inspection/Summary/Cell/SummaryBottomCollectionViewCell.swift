@@ -21,7 +21,21 @@ class SummaryBottomCollectionViewCell: UICollectionViewCell {
     func initialSetup(){
         cmtTxtView.layer.borderColor = UIColor.lightGray.cgColor
         cmtTxtView.layer.borderWidth = 0.5
-        
+        yesBtn.boxType = .circle
+              yesBtn.checkState = .unchecked
+              yesBtn.markType = .checkmark
+              yesBtn.secondaryCheckmarkTintColor = .white
+              yesBtn.secondaryTintColor = .darkGray
+              yesBtn.tintColor = .darkGray
+              yesBtn.stateChangeAnimation = .fill
+              yesBtn.checkmarkLineWidth = 1.5
+              noBtn.boxType = .circle
+              noBtn.checkState = .unchecked
+              noBtn.markType = .checkmark
+              noBtn.secondaryCheckmarkTintColor = .white
+              noBtn.secondaryTintColor = .darkGray
+              noBtn.stateChangeAnimation = .fill
+              noBtn.tintColor = .darkGray
     }
     
    
