@@ -18,6 +18,8 @@ class RollsFirstViewController: UIViewController {
     var point2Array = [Int]()
     var point1Array = [Int]()
     
+    var pickedImages = [UIImage]()
+    
     var editType : EditType = .UPDATE
 
     @IBOutlet weak var rollCollectionView: UICollectionView!
@@ -91,7 +93,7 @@ class RollsFirstViewController: UIViewController {
         })
     }
     
-    func saveToCoreData(point4Value : Int, point3Value : Int, point2Value : Int, point1Value : Int){
+    func saveToCoreData(){
         guard let appDelegate =
             UIApplication.shared.delegate as? AppDelegate else {
                 return
@@ -102,18 +104,20 @@ class RollsFirstViewController: UIViewController {
             appDelegate.persistentContainer.viewContext
         
         // 2
-        let rollEntity =
-            NSEntityDescription.entity(forEntityName: "RollFirst",
-                                       in: managedContext)!
-        let rollFirstVal = NSManagedObject(entity: rollEntity,
-                                            insertInto: managedContext)
+//        let rollFirstVal = NSManagedObject(entity: rollEntity,
+//                                            insertInto: managedContext)
         
         // 3
-       
-        rollFirstVal.setValue(point1Value, forKeyPath: "points1")
-        rollFirstVal.setValue(point2Value, forKeyPath: "points2")
-        rollFirstVal.setValue(point3Value, forKeyPath: "points3")
-        rollFirstVal.setValue(point4Value, forKeyPath: "points4")
+        
+        let rollFirstVal = RollFirst(context: managedContext)
+        rollFirstVal.points1 = self.point1Array as NSObject
+        rollFirstVal.points2 = self.point2Array as NSObject
+        rollFirstVal.points3 = self.point3Array as NSObject
+        rollFirstVal.points4 = self.point4Array as NSObject
+//        rollFirstVal.setValue(point1Value, forKeyPath: "points1")
+//        rollFirstVal.setValue(point2Value, forKeyPath: "points2")
+//        rollFirstVal.setValue(point3Value, forKeyPath: "points3")
+//        rollFirstVal.setValue(point4Value, forKeyPath: "points4")
         
     
         
@@ -149,10 +153,10 @@ class RollsFirstViewController: UIViewController {
             self.point3Array = []
             self.point4Array = []
             for data in result {
-                self.point1Array.append(data.value(forKey: "points1") as! Int)
-                self.point2Array.append(data.value(forKey: "points2") as! Int)
-                self.point3Array.append(data.value(forKey: "points3") as! Int)
-                self.point4Array.append(data.value(forKey: "points4") as! Int)
+                self.point1Array = (data.value(forKey: "points1") as! [Int])
+                self.point2Array = (data.value(forKey: "points2") as! [Int])
+                self.point3Array = (data.value(forKey: "points3") as! [Int])
+                self.point4Array = (data.value(forKey: "points4") as! [Int])
             }
             print(point1Array)
             print(point2Array)
@@ -245,21 +249,41 @@ class RollsFirstViewController: UIViewController {
     @IBAction func onTapNext(_ sender: UIButton) {
         if self.editType == .NEW {
             self.createCoreDataPointArray()
-            for i in 0 ..< 20 {
-                self.saveToCoreData(point4Value: point4Array[i], point3Value: point3Array[i], point2Value: point2Array[i], point1Value: point1Array[i])
-                self.saveTotalToCoreData()
-            }
+//            for i in 0 ..< 20 {
+//                self.saveToCoreData(point4Value: point4Array[i], point3Value: point3Array[i], point2Value: point2Array[i], point1Value: point1Array[i])
+//            }
+            self.saveToCoreData()
+            self.saveTotalToCoreData()
         }
+//        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//        let rollsThirdVC = storyBoard.instantiateViewController(withIdentifier: "rollThirdVC") as! RollsThirdViewController
+//        self.navigationController?.pushViewController(rollsThirdVC, animated: true)
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let rollsThirdVC = storyBoard.instantiateViewController(withIdentifier: "rollThirdVC") as! RollsThirdViewController
-        self.navigationController?.pushViewController(rollsThirdVC, animated: true)
+        let rollsSecondVC = storyBoard.instantiateViewController(withIdentifier: "RollsSecond") as! RollsSecondViewController
+        rollsSecondVC.pickedImages = self.pickedImages
+        self.navigationController?.pushViewController(rollsSecondVC, animated: true)
+
         
     }
     
     @IBAction func onTapCamera(_ sender: Any) {
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.allowsEditing = true
+        picker.sourceType = .camera
+        present(picker, animated: true)
     }
     
     
+    
+}
+
+extension RollsFirstViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let userPickedImage = info[.editedImage] as? UIImage else { return }
+        self.pickedImages.append(userPickedImage)
+        picker.dismiss(animated: true)
+    }
     
 }
 
@@ -279,31 +303,31 @@ extension RollsFirstViewController : UICollectionViewDelegate, UICollectionViewD
             if isPlus {
                 switch pointType {
                 case .ONEPOINT:
-                    self?.subTotalStruct.onePoint = (self?.subTotalStruct.onePoint ?? 0) + value
+                    self?.subTotalStruct.onePoint = (self?.subTotalStruct.onePoint ?? 0) + 1
                     self?.rollsArray[index].onePoint = value
                 case .TWOPOINT:
-                    self?.subTotalStruct.twoPoint = (self?.subTotalStruct.twoPoint ?? 0) + value
+                    self?.subTotalStruct.twoPoint = (self?.subTotalStruct.twoPoint ?? 0) + 1
                     self?.rollsArray[index].twoPoint = value
                 case .THREEPOINT:
-                    self?.subTotalStruct.threePoint = (self?.subTotalStruct.threePoint ?? 0) + value
+                    self?.subTotalStruct.threePoint = (self?.subTotalStruct.threePoint ?? 0) + 1
                     self?.rollsArray[index].threePoint = value
                 default:
-                    self?.subTotalStruct.fourPoint = (self?.subTotalStruct.fourPoint ?? 0) + value
+                    self?.subTotalStruct.fourPoint = (self?.subTotalStruct.fourPoint ?? 0) + 1
                     self?.rollsArray[index].fourPoint = value
                 }
             } else {
                 switch pointType {
                 case .ONEPOINT:
-                    self?.subTotalStruct.onePoint = (self?.subTotalStruct.onePoint ?? 0) - value
+                    self?.subTotalStruct.onePoint = self?.subTotalStruct.onePoint ?? 0 != 0 ? (self?.subTotalStruct.onePoint ?? 0) - 1 : 0
                     self?.rollsArray[index].onePoint = value
                 case .TWOPOINT:
-                    self?.subTotalStruct.twoPoint = (self?.subTotalStruct.twoPoint ?? 0) - value
+                    self?.subTotalStruct.twoPoint = self?.subTotalStruct.twoPoint ?? 0 != 0 ? (self?.subTotalStruct.twoPoint ?? 0) - 1 : 0
                     self?.rollsArray[index].twoPoint = value
                 case .THREEPOINT:
-                    self?.subTotalStruct.threePoint = (self?.subTotalStruct.threePoint ?? 0) - value
+                    self?.subTotalStruct.threePoint = (self?.subTotalStruct.threePoint ?? 0) - 1
                     self?.rollsArray[index].threePoint = value
                 default:
-                    self?.subTotalStruct.fourPoint = (self?.subTotalStruct.fourPoint ?? 0) - value
+                    self?.subTotalStruct.fourPoint = (self?.subTotalStruct.fourPoint ?? 0) - 1
                     self?.rollsArray[index].fourPoint = value
                 }
             }

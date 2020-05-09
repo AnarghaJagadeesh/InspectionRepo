@@ -75,56 +75,68 @@ class RollsFirstCollectionViewCell: UICollectionViewCell {
     
     @IBAction func onTapOneMinusPlus(_ sender: UIButton) {
         var value : Int = Int(self.lblOnePoint.text ?? "") ?? 0
+         let isPlus = sender.tag == 0 ? false : true
         if sender.tag == 0 {
             if value != 0 {
                 value = value - 1
+                self.didTapMinusPlus?(isPlus,PointType.ONEPOINT,value,currentIndex ?? 0)
             }
         } else {
             value = value + 1
+            self.didTapMinusPlus?(isPlus,PointType.ONEPOINT,value,currentIndex ?? 0)
         }
-        let isPlus = sender.tag == 0 ? false : true
-        self.didTapMinusPlus?(isPlus,PointType.ONEPOINT,value,currentIndex ?? 0)
+       
         self.lblOnePoint.text = "\(value)"
     }
     @IBAction func onTapTwoMinusPlus(_ sender: UIButton) {
+        let isPlus = sender.tag == 0 ? false : true
         var value : Int = Int(self.lblTwoPoint.text ?? "") ?? 0
         if sender.tag == 0 {
             if value != 0 {
                 value = value - 1
+                self.didTapMinusPlus?(isPlus,PointType.TWOPOINT,value,currentIndex ?? 0)
+
             }
         } else {
             value = value + 1
+            self.didTapMinusPlus?(isPlus,PointType.TWOPOINT,value,currentIndex ?? 0)
+
         }
-        let isPlus = sender.tag == 0 ? false : true
-        self.didTapMinusPlus?(isPlus,PointType.TWOPOINT,value,currentIndex ?? 0)
+        
         self.lblTwoPoint.text = "\(value)"
 
     }
     @IBAction func onTapThreeMinusPlus(_ sender: UIButton) {
+        let isPlus = sender.tag == 0 ? false : true
         var value : Int = Int(self.lblThreePoint.text ?? "") ?? 0
         if sender.tag == 0 {
             if value != 0 {
                 value = value - 1
+                self.didTapMinusPlus?(isPlus,PointType.THREEPOINT,value,currentIndex ?? 0)
+
             }
         } else {
             value = value + 1
+            self.didTapMinusPlus?(isPlus,PointType.THREEPOINT,value,currentIndex ?? 0)
+
         }
-        let isPlus = sender.tag == 0 ? false : true
-        self.didTapMinusPlus?(isPlus,PointType.THREEPOINT,value,currentIndex ?? 0)
+        
         self.lblThreePoint.text = "\(value)"
 
     }
     @IBAction func onTapFourMinusPlus(_ sender: UIButton) {
+        let isPlus = sender.tag == 0 ? false : true
         var value : Int = Int(self.lblFourPoint.text ?? "") ?? 0
         if sender.tag == 0 {
             if value != 0 {
                 value = value - 1
+                self.didTapMinusPlus?(isPlus,PointType.FOURPOINT,value,currentIndex ?? 0)
             }
         } else {
             value = value + 1
+            self.didTapMinusPlus?(isPlus,PointType.FOURPOINT,value,currentIndex ?? 0)
         }
-        let isPlus = sender.tag == 0 ? false : true
-        self.didTapMinusPlus?(isPlus,PointType.FOURPOINT,value,currentIndex ?? 0)
+        
         self.lblFourPoint.text = "\(value)"
 
     }
