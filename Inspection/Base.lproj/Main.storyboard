@@ -2277,7 +2277,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iQU-og-CLT">
-                                <rect key="frame" x="20" y="80" width="728" height="944"/>
+                                <rect key="frame" x="20" y="170" width="728" height="854"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roll Number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t6f-3W-pb6">
                                         <rect key="frame" x="22" y="25" width="684" height="20.5"/>
@@ -2929,7 +2929,7 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="GpM-0n-NZl"/>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RsD-QE-AbH">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="55"/>
+                                <rect key="frame" x="0.0" y="100" width="768" height="55"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PaV-vd-Oba">
                                         <rect key="frame" x="0.0" y="53" width="768" height="2"/>
@@ -3020,16 +3020,49 @@
                                     <constraint firstAttribute="trailing" secondItem="PaV-vd-Oba" secondAttribute="trailing" id="x0R-7W-Aiv"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wGp-Ia-1Ct">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="75"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add New Inspection" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZKo-px-xKN">
+                                        <rect key="frame" x="293" y="26" width="182.5" height="23"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I78-O4-86M">
+                                        <rect key="frame" x="21" y="21" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="WR1-fS-uqk"/>
+                                            <constraint firstAttribute="width" constant="40" id="erR-JJ-cad"/>
+                                        </constraints>
+                                        <state key="normal" image="backArrow"/>
+                                        <connections>
+                                            <action selector="bkPressed:" destination="Qo6-0X-hCg" eventType="touchUpInside" id="Dv8-rW-Odb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="I78-O4-86M" firstAttribute="centerY" secondItem="ZKo-px-xKN" secondAttribute="centerY" constant="3.5" id="JKj-G1-oEm"/>
+                                    <constraint firstItem="I78-O4-86M" firstAttribute="leading" secondItem="wGp-Ia-1Ct" secondAttribute="leading" constant="21" id="Ll7-9T-TNR"/>
+                                    <constraint firstItem="ZKo-px-xKN" firstAttribute="centerY" secondItem="wGp-Ia-1Ct" secondAttribute="centerY" id="Ped-te-Y8K"/>
+                                    <constraint firstAttribute="height" constant="75" id="c3A-bG-sym"/>
+                                    <constraint firstItem="ZKo-px-xKN" firstAttribute="centerX" secondItem="wGp-Ia-1Ct" secondAttribute="centerX" id="zyt-0q-U0g"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="RsD-QE-AbH" firstAttribute="top" secondItem="3Ta-f7-gVJ" secondAttribute="bottom" id="7en-Rs-3ym"/>
+                            <constraint firstItem="RsD-QE-AbH" firstAttribute="top" secondItem="3Ta-f7-gVJ" secondAttribute="bottom" constant="100" id="7en-Rs-3ym"/>
                             <constraint firstItem="iQU-og-CLT" firstAttribute="leading" secondItem="Zad-Jr-ELn" secondAttribute="leadingMargin" id="Bpg-AP-3ib"/>
                             <constraint firstAttribute="trailingMargin" secondItem="iQU-og-CLT" secondAttribute="trailing" id="DYc-jE-fO3"/>
                             <constraint firstItem="RsD-QE-AbH" firstAttribute="centerX" secondItem="Zad-Jr-ELn" secondAttribute="centerX" id="Jfu-H9-ouR"/>
                             <constraint firstItem="RsD-QE-AbH" firstAttribute="width" secondItem="Zad-Jr-ELn" secondAttribute="width" id="MO6-RZ-Jyl"/>
                             <constraint firstItem="eBz-Gm-VMy" firstAttribute="top" secondItem="iQU-og-CLT" secondAttribute="bottom" id="f6Z-Es-GHe"/>
-                            <constraint firstItem="iQU-og-CLT" firstAttribute="top" secondItem="3Ta-f7-gVJ" secondAttribute="bottom" constant="80" id="lxV-R9-wzV"/>
+                            <constraint firstItem="wGp-Ia-1Ct" firstAttribute="top" secondItem="3Ta-f7-gVJ" secondAttribute="bottom" id="hMJ-BT-bQK"/>
+                            <constraint firstItem="wGp-Ia-1Ct" firstAttribute="centerX" secondItem="Zad-Jr-ELn" secondAttribute="centerX" id="lsC-Em-oTb"/>
+                            <constraint firstItem="iQU-og-CLT" firstAttribute="top" secondItem="RsD-QE-AbH" secondAttribute="bottom" constant="15" id="mgC-gZ-Uk7"/>
+                            <constraint firstItem="wGp-Ia-1Ct" firstAttribute="width" secondItem="Zad-Jr-ELn" secondAttribute="width" id="nnG-HK-GHM"/>
                         </constraints>
                     </view>
                     <connections>
@@ -3062,7 +3095,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xda-LK-m3c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-263.30935251798564" y="907.53768844221111"/>
+            <point key="canvasLocation" x="-264.0625" y="907.03124999999989"/>
         </scene>
         <!--Rolls Third View Controller-->
         <scene sceneID="Ozu-Bj-zh9">
