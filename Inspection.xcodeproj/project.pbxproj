@@ -11,6 +11,7 @@
 		0317A03824646B0900554E13 /* SummaryRollDetailsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0317A03724646B0900554E13 /* SummaryRollDetailsCollectionViewCell.swift */; };
 		031D1CF52461C47E0027A17C /* BasicSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031D1CF42461C47E0027A17C /* BasicSecondViewController.swift */; };
 		0363D6B624668C7100B106FE /* SummaryBottomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0363D6B524668C7100B106FE /* SummaryBottomCollectionViewCell.swift */; };
+		0368C58F2466A7A1006533D7 /* ImageListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0368C58E2466A7A1006533D7 /* ImageListCollectionViewCell.swift */; };
 		29C4D29792A12430C4BEBEF3 /* Pods_Inspection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78E6E270F8806E26B74FD2B1 /* Pods_Inspection.framework */; };
 		4713BC652421F2B400BD2BC7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4713BC642421F2B400BD2BC7 /* HomeViewController.swift */; };
 		4713BC6824221F5B00BD2BC7 /* XLPagerTabStrip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4713BC6724221F5B00BD2BC7 /* XLPagerTabStrip.framework */; };
@@ -43,6 +44,7 @@
 		0317A03724646B0900554E13 /* SummaryRollDetailsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryRollDetailsCollectionViewCell.swift; sourceTree = "<group>"; };
 		031D1CF42461C47E0027A17C /* BasicSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicSecondViewController.swift; sourceTree = "<group>"; };
 		0363D6B524668C7100B106FE /* SummaryBottomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryBottomCollectionViewCell.swift; sourceTree = "<group>"; };
+		0368C58E2466A7A1006533D7 /* ImageListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListCollectionViewCell.swift; sourceTree = "<group>"; };
 		4713BC642421F2B400BD2BC7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4713BC6724221F5B00BD2BC7 /* XLPagerTabStrip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = XLPagerTabStrip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4713BC69242228A500BD2BC7 /* BasicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 		0317A03124631F4600554E13 /* Rolls */ = {
 			isa = PBXGroup;
 			children = (
+				0368C58B2466A753006533D7 /* Cell */,
 				8C43D8E324643C5A00B7CDED /* RollsFirstCollectionViewCell.swift */,
 				8C43D8E424643C5B00B7CDED /* RollsFirstViewController.swift */,
 				0317A03224631F5E00554E13 /* RollsThirdViewController.swift */,
@@ -118,6 +121,14 @@
 				031D1CF42461C47E0027A17C /* BasicSecondViewController.swift */,
 			);
 			path = Basic;
+			sourceTree = "<group>";
+		};
+		0368C58B2466A753006533D7 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0368C58E2466A7A1006533D7 /* ImageListCollectionViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		471B2BB5241F901E000A902C = {
@@ -349,6 +360,7 @@
 				8C43D8F124643D4200B7CDED /* LoginViewController.swift in Sources */,
 				471B2BC2241F901E000A902C /* AppDelegate.swift in Sources */,
 				8CAD912A2461D28900968CB1 /* RollStruct.swift in Sources */,
+				0368C58F2466A7A1006533D7 /* ImageListCollectionViewCell.swift in Sources */,
 				8C43D8E224643C2900B7CDED /* BasicFirstViewController.swift in Sources */,
 				8C43D8E524643C5B00B7CDED /* RollsFirstCollectionViewCell.swift in Sources */,
 				8C43D8F724646AA200B7CDED /* InspectionDataModel.xcdatamodeld in Sources */,
