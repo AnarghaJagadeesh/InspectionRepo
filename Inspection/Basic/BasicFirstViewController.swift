@@ -173,8 +173,11 @@ class BasicFirstViewController: UIViewController {
     }
     
     @IBAction func onTapNext(_ sender: UIButton) {
-        
-        
+        if  self.txtPO.text == "" || self.txtContent.text == "" || self.txtConstruction.text ==  "" || self.txtPOCutWidth.text == "" || self.txtFactoryName.text == "" || self.txtOrderQty.text == "" || self.txtTotalQtyOffered.text == "" || self.txtWeightGSM.text == "" || self.txtColorName.text == "" || self.txtFinish.text  == ""{
+            Helper.showAlert(message: "Please fill all the fields")
+        }
+        else{
+            
         if editType == .NEW {
             basicDict["fabricCategory"] = "Group 1"
             basicDict["fabricType"] = "Woven"
@@ -188,8 +191,7 @@ class BasicFirstViewController: UIViewController {
         let basicSecondVC = storyBoard.instantiateViewController(withIdentifier: "basicSecondVC") as! BasicSecondViewController
         basicSecondVC.basicFirstStruct = self.basicStruct
         self.navigationController?.pushViewController(basicSecondVC, animated: true)
-
-    }
+        }
 }
 
 extension BasicFirstViewController : UITextFieldDelegate {
