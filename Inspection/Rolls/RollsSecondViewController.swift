@@ -23,14 +23,14 @@ class RollsSecondViewController: UIViewController {
         self.imageCol.dataSource = self
 //        self.testImage.image = self.pickedImages[0]
 //        self.saveToCoreData()
-//        if editType == .UPDATE {
-//            self.fetchImage()
-//        }
+        if editType == .UPDATE {
+            self.fetchImage()
+        }
         // Do any additional setup after loading the view.
     }
     
-    func saveToCoreData(){
-        if let imageData = pickedImages[0].pngData() {
+    func saveToCoreData(img : UIImage){
+        if let imageData = img.pngData() {
         DataBaseHelper.shareInstance.saveImage(data: imageData)
         }
     }
@@ -60,6 +60,11 @@ class RollsSecondViewController: UIViewController {
     }
     */
     @IBAction func onTapNext(_ sender: UIButton) {
+        if editType == .NEW {
+            _ = self.pickedImages.map({ (img) in
+                self.saveToCoreData(img: img)
+            })
+        }
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let rollsThirdVC = storyBoard.instantiateViewController(withIdentifier: "rollThirdVC") as! RollsThirdViewController
         self.navigationController?.pushViewController(rollsThirdVC, animated: true)
@@ -72,18 +77,18 @@ extension RollsSecondViewController : UICollectionViewDelegate, UICollectionView
         return 1
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return self.pickedImages.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imageCell", for: indexPath) as! ImageListCollectionViewCell
-//        cell.imgView.contentMode = .scaleAspectFit
-        cell.backgroundColor = .red
-//        cell.imgView.image = self.pickedImages[0]
+        cell.imgView.contentMode = .scaleToFill
+        cell.imgView.image = self.pickedImages[indexPath.item]
+        cell.txtLbl.text = "\(indexPath.item + 1)"
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let ht = 500
+        let ht = 200
         return CGSize(width: ht, height: ht)
     }
     
