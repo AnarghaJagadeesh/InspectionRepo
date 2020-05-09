@@ -22,6 +22,11 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func onTapLogin(_ sender: UIButton) {
+        if let inspectionNo = UserDefaults.standard.value(forKey: "inspectionNo") as? Int {
+            UserDefaults.standard.set(inspectionNo + 1, forKey: "inspectionNo")
+        } else {
+            UserDefaults.standard.set(1, forKey: "inspectionNo")
+        }
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let basicFirstVC = storyBoard.instantiateViewController(withIdentifier: "basicFirstVC") as! BasicFirstViewController
         self.navigationController?.pushViewController(basicFirstVC, animated: true)

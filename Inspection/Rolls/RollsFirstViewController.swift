@@ -21,6 +21,10 @@ class RollsFirstViewController: UIViewController {
     var pickedImages = [UIImage]()
     
     var editType : EditType = .UPDATE
+    
+    var basicFirstModel : BasicFirstStruct?
+    var basicSecondModel : BasicSecondStruct?
+    var rollCount : Int = 0
 
     @IBOutlet weak var rollCollectionView: UICollectionView!
     override func viewDidLoad() {
@@ -114,6 +118,7 @@ class RollsFirstViewController: UIViewController {
         rollFirstVal.points2 = self.point2Array as NSObject
         rollFirstVal.points3 = self.point3Array as NSObject
         rollFirstVal.points4 = self.point4Array as NSObject
+        rollFirstVal.inspectionNo = Int32(UserDefaults.standard.value(forKey: "inspectionNo") as! Int)
 //        rollFirstVal.setValue(point1Value, forKeyPath: "points1")
 //        rollFirstVal.setValue(point2Value, forKeyPath: "points2")
 //        rollFirstVal.setValue(point3Value, forKeyPath: "points3")
@@ -158,10 +163,6 @@ class RollsFirstViewController: UIViewController {
                 self.point3Array = (data.value(forKey: "points3") as! [Int])
                 self.point4Array = (data.value(forKey: "points4") as! [Int])
             }
-            print(point1Array)
-            print(point2Array)
-            print(point3Array)
-            print(point4Array)
             
         } catch let error as NSError {
             print("Could not fetch. \(error), \(error.userInfo)")
@@ -192,7 +193,7 @@ class RollsFirstViewController: UIViewController {
         rollFirstVal.setValue(subTotalStruct.twoPoint, forKeyPath: "total2")
         rollFirstVal.setValue(subTotalStruct.threePoint, forKeyPath: "total3")
         rollFirstVal.setValue(subTotalStruct.fourPoint, forKeyPath: "total4")
-        
+        rollFirstVal.setValue(UserDefaults.standard.value(forKey: "inspectionNo") as! Int, forKey: "inspectionNo")
     
         
         // 4
@@ -257,7 +258,11 @@ class RollsFirstViewController: UIViewController {
         }
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let rollsSecondVC = storyBoard.instantiateViewController(withIdentifier: "rollsSecondVC") as! RollsSecondViewController
+        rollsSecondVC.basicFirstModel = self.basicFirstModel
+        rollsSecondVC.basicSecondModel = self.basicSecondModel
+        rollsSecondVC.rollFirstModel = self.subTotalStruct
         rollsSecondVC.pickedImages = self.pickedImages
+        rollsSecondVC.rollCount = rollCount
         self.navigationController?.pushViewController(rollsSecondVC, animated: true)
 
         
