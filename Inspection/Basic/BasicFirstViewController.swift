@@ -91,6 +91,7 @@ class BasicFirstViewController: UIViewController {
             basicFirstVal.setValue(model.colorName, forKeyPath: "colorName")
             basicFirstVal.setValue(model.finish, forKeyPath: "finish")
             basicFirstVal.setValue(model.reportToName, forKeyPath: "reportToName")
+            basicFirstVal.setValue(model.inspectionNo, forKey: "inspectionNo")
         }
         
         
@@ -135,6 +136,7 @@ class BasicFirstViewController: UIViewController {
                 basicDict["colorName"] = data.value(forKey: "colorName") as! String
                 basicDict["finish"] = data.value(forKey: "finish") as! String
                 basicDict["reportToName"] = data.value(forKey: "reportToName") as! String
+                basicDict["inspectionNo"] = data.value(forKey: "inspectionNo") as! Int
                 self.basicStruct = BasicFirstStruct(dict: basicDict)
                 
                 print(data.value(forKey: "fabricCategory") as! String)
@@ -171,30 +173,25 @@ class BasicFirstViewController: UIViewController {
     }
     
     @IBAction func onTapNext(_ sender: UIButton) {
-        
-        
         if  self.txtPO.text == "" || self.txtContent.text == "" || self.txtConstruction.text ==  "" || self.txtPOCutWidth.text == "" || self.txtFactoryName.text == "" || self.txtOrderQty.text == "" || self.txtTotalQtyOffered.text == "" || self.txtWeightGSM.text == "" || self.txtColorName.text == "" || self.txtFinish.text  == ""{
             Helper.showAlert(message: "Please fill all the fields")
         }
         else{
             
-                   if editType == .NEW {
-                       basicDict["fabricCategory"] = "Group 1"
-                       basicDict["fabricType"] = "Woven"
-                       basicDict["reportToName"] = "Name Test"
-                       self.basicStruct = BasicFirstStruct(dict: basicDict)
-                       self.saveToCoreData()
-                   }
-                   let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                   let basicSecondVC = storyBoard.instantiateViewController(withIdentifier: "basicSecondVC") as! BasicSecondViewController
-                   self.navigationController?.pushViewController(basicSecondVC, animated: true)
+        if editType == .NEW {
+            basicDict["fabricCategory"] = "Group 1"
+            basicDict["fabricType"] = "Woven"
+            basicDict["reportToName"] = "Name Test"
+            let inspectionNo = UserDefaults.standard.value(forKey: "inspectionNo") as! Int
+            basicDict["inspectionNo"] = inspectionNo
+            self.basicStruct = BasicFirstStruct(dict: basicDict)
+            self.saveToCoreData()
         }
-        
-        
-        
-       
-
-    }
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let basicSecondVC = storyBoard.instantiateViewController(withIdentifier: "basicSecondVC") as! BasicSecondViewController
+        basicSecondVC.basicFirstStruct = self.basicStruct
+        self.navigationController?.pushViewController(basicSecondVC, animated: true)
+        }
 }
 
 extension BasicFirstViewController : UITextFieldDelegate {

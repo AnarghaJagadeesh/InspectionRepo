@@ -23,6 +23,7 @@ struct BasicFirstStruct {
     var colorName : String = ""
     var finish : String = ""
     var reportToName : String = ""
+    var inspectionNo : Int = 0
     
     init(dict:[String : Any]) {
         self.fabricCategory = dict["fabricCategory"] as! String
@@ -38,6 +39,7 @@ struct BasicFirstStruct {
         self.colorName = dict["colorName"] as! String
         self.finish = dict["finish"] as! String
         self.reportToName = dict["reportToName"] as! String
+        self.inspectionNo = dict["inspectionNo"] as! Int
     }
 }
 
@@ -55,6 +57,7 @@ struct BasicSecondStruct {
     var pattern : Bool = true
     var actualWeightGSM : Float = 0.0
     var handFeel : Bool = false
+    var inspectionNo : Int = 0
     
     init(dict : [String : Any]) {
         self.rollNumber = dict["rollNumber"] as! String
@@ -70,6 +73,7 @@ struct BasicSecondStruct {
         self.pattern = dict["pattern"] as! Bool
         self.actualWeightGSM = dict["actualWeightGSM"] as! Float
         self.handFeel = dict["handFeel"] as! Bool
+        self.inspectionNo = dict["inspectionNo"] as! Int
     }
     
 }

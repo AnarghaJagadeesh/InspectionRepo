@@ -11,6 +11,7 @@ import UIKit
 class SummaryFirstViewController: UIViewController {
     
     var subjectArray = [SubjectStruct]()
+    var basicFirstModel : BasicFirstStruct?
 
     @IBOutlet weak var summaryCollectionView: UICollectionView!
     override func viewDidLoad() {
@@ -23,18 +24,33 @@ class SummaryFirstViewController: UIViewController {
     
     func populateSubject(){
         self.subjectArray = []
-        self.subjectArray.append(SubjectStruct(dict: ["title" : "PO Number:", "value" : "123456"]))
-        self.subjectArray.append(SubjectStruct(dict: ["title" : "Fabric Type:", "value" : "Knit"]))
-        self.subjectArray.append(SubjectStruct(dict: ["title" : "Content:", "value" : "Test"]))
-        self.subjectArray.append(SubjectStruct(dict: ["title" : "Construction:", "value" : "Test"]))
-        self.subjectArray.append(SubjectStruct(dict: ["title" : "Cuttable Width:", "value" : "56"]))
-        self.subjectArray.append(SubjectStruct(dict: ["title" : "Color Name:", "value" : "Blue"]))
-        self.subjectArray.append(SubjectStruct(dict: ["title" : "Weight in GSM:", "value" : "20"]))
-        self.subjectArray.append(SubjectStruct(dict: ["title" : "Total QTY Inspected", "value" : "900"]))
-        self.subjectArray.append(SubjectStruct(dict: ["title" : "Percentage Inspected:", "value" : "100%"]))
-        self.subjectArray.append(SubjectStruct(dict: ["title" : "No. of rolls accepted:", "value" : "800"]))
-        self.subjectArray.append(SubjectStruct(dict: ["title" : "No. of rolls rejected:", "value" : "100"]))
-        self.subjectArray.append(SubjectStruct(dict: ["title" : "Average Points/100 Sq Yard", "value" : "11.55"]))
+        if let model = basicFirstModel {
+            self.subjectArray.append(SubjectStruct(dict: ["title" : "PO Number:", "value" : "\(model.PONo )"]))
+            self.subjectArray.append(SubjectStruct(dict: ["title" : "Fabric Type:", "value" : "\(model.fabricType )"]))
+            self.subjectArray.append(SubjectStruct(dict: ["title" : "Content:", "value" : "\(model.content )"]))
+            self.subjectArray.append(SubjectStruct(dict: ["title" : "Construction:", "value" : "\(model.content )"]))
+            self.subjectArray.append(SubjectStruct(dict: ["title" : "Cuttable Width:", "value" : "\(model.POCutWidth )"]))
+            self.subjectArray.append(SubjectStruct(dict: ["title" : "Color Name:", "value" : "\(model.colorName )"]))
+            self.subjectArray.append(SubjectStruct(dict: ["title" : "Weight in GSM:", "value" : "\(model.weightGSM )"]))
+            self.subjectArray.append(SubjectStruct(dict: ["title" : "Total QTY Inspected", "value" : "\(model.totalQtyOffered )"]))
+//            self.subjectArray.append(SubjectStruct(dict: ["title" : "Percentage Inspected:", "value" : "100%"]))
+//            self.subjectArray.append(SubjectStruct(dict: ["title" : "No. of rolls accepted:", "value" : "800"]))
+//            self.subjectArray.append(SubjectStruct(dict: ["title" : "No. of rolls rejected:", "value" : "100"]))
+//            self.subjectArray.append(SubjectStruct(dict: ["title" : "Average Points/100 Sq Yard", "value" : "11.55"]))
+
+        }
+//        self.subjectArray.append(SubjectStruct(dict: ["title" : "PO Number:", "value" : "123456"]))
+//        self.subjectArray.append(SubjectStruct(dict: ["title" : "Fabric Type:", "value" : "Knit"]))
+//        self.subjectArray.append(SubjectStruct(dict: ["title" : "Content:", "value" : "Test"]))
+//        self.subjectArray.append(SubjectStruct(dict: ["title" : "Construction:", "value" : "Test"]))
+//        self.subjectArray.append(SubjectStruct(dict: ["title" : "Cuttable Width:", "value" : "56"]))
+//        self.subjectArray.append(SubjectStruct(dict: ["title" : "Color Name:", "value" : "Blue"]))
+//        self.subjectArray.append(SubjectStruct(dict: ["title" : "Weight in GSM:", "value" : "20"]))
+//        self.subjectArray.append(SubjectStruct(dict: ["title" : "Total QTY Inspected", "value" : "900"]))
+//        self.subjectArray.append(SubjectStruct(dict: ["title" : "Percentage Inspected:", "value" : "100%"]))
+//        self.subjectArray.append(SubjectStruct(dict: ["title" : "No. of rolls accepted:", "value" : "800"]))
+//        self.subjectArray.append(SubjectStruct(dict: ["title" : "No. of rolls rejected:", "value" : "100"]))
+//        self.subjectArray.append(SubjectStruct(dict: ["title" : "Average Points/100 Sq Yard", "value" : "11.55"]))
     }
 
     /*

@@ -26,13 +26,72 @@ class RollsThirdViewController: UIViewController {
     
     
     @IBOutlet weak var mainView: UIView!
+    
+    var basicFirstModel : BasicFirstStruct?
+    var basicSecondModel : BasicSecondStruct?
+    var rollFirstModel : RollStruct?
+    var isValid = [false]
+    var remarkText = ""
+    var rollCount : Int = 0
+
     override func viewDidLoad() {
         super.viewDidLoad()
    initialSetup()
+        self.populatingPoints()
+        self.validation()
         // Do any additional setup after loading the view.
     }
     func initialSetup(){
         mainView.layer.cornerRadius = 15
+    }
+    
+    func validation() {
+        if let basicFirst = basicFirstModel {
+            if let basicSecond = basicSecondModel {
+                if (basicSecond.actualWeightGSM >= basicFirst.weightGSM + 5.0) && (basicSecond.actualWeightGSM <= basicFirst.weightGSM + 5.0) {
+                    isValid.append(true)
+                } else {
+                    isValid.append(false)
+                    remarkText = "Failed for Actual Weight"
+                }
+                if basicSecond.endToEnd == Quality.NO.rawValue {
+                    isValid.append(false)
+                    remarkText = remarkText == "" ? "Failed for End to End Shading" : "\nFailed for End to End Shading"
+                } else {
+                    isValid.append(true)
+                }
+                if basicSecond.sideToSide == Quality.NO.rawValue {
+                    isValid.append(false)
+                    remarkText = remarkText == "" ? "Failed for Side to Side Shading" : "\nFailed for Side to Side Shading"
+                } else {
+                    isValid.append(true)
+                }
+                if basicSecond.sideToCenter == Quality.NO.rawValue {
+                    isValid.append(false)
+                    remarkText = remarkText == "" ? "Failed for Side to Center Shading" : "\nFailed for Side to Center Shading"
+                } else {
+                    isValid.append(true)
+                }
+            }
+        }
+        if isValid.contains(false) {
+            self.resultLbl.text = "FAILED"
+        } else {
+            self.resultLbl.text = "PASS"
+        }
+        
+    }
+    
+    func populatingPoints(){
+        self.rollLbl.text = "\(rollCount)"
+        if let rollModel = self.rollFirstModel {
+            self.fourPointsLbl.text = "\(rollModel.fourPoint)"
+            self.threePointsLbl.text = "\(rollModel.threePoint)"
+            self.twoPointsLbl.text = "\(rollModel.twoPoint)"
+            self.onePointsLbl.text = "\(rollModel.onePoint)"
+            let total = rollModel.fourPoint + rollModel.threePoint + rollModel.twoPoint + rollModel.onePoint
+            self.totalPointsLbl.text = "\(total)"
+        }
     }
 
     /*
@@ -60,6 +119,7 @@ class RollsThirdViewController: UIViewController {
     @IBAction func nextPressed(_ sender: Any) {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let summaryFirstVC = storyBoard.instantiateViewController(withIdentifier: "summaryFirstVC") as! SummaryFirstViewController
+        summaryFirstVC.basicFirstModel = self.basicFirstModel
         self.navigationController?.pushViewController(summaryFirstVC, animated: true)
 
     }
