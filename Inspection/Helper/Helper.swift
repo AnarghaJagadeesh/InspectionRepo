@@ -37,3 +37,16 @@ extension UIView {
     layer.rasterizationScale = scale ? UIScreen.main.scale : 1
   }
 }
+
+class Helper {
+static var kAppName = "Inspection"
+    
+static func showAlert(message: String) {
+       let alert = UIAlertController(title: Helper.kAppName, message: message as String, preferredStyle: UIAlertController.Style.alert)
+       
+       
+       alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+       
+       UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
+   }
+}
