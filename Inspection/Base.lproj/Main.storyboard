@@ -744,7 +744,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="uUB-mk-Nhb">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="uUB-mk-Nhb" customClass="ImageListCollectionViewCell" customModule="Inspection" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="247" height="234"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="DPQ-kA-jQg">
@@ -760,7 +760,11 @@
                                                                 <constraint firstAttribute="width" constant="44" id="FnG-wm-rP7"/>
                                                                 <constraint firstAttribute="height" constant="44" id="veV-u8-8RN"/>
                                                             </constraints>
+                                                            <inset key="imageEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
                                                             <state key="normal" image="Delete"/>
+                                                            <connections>
+                                                                <action selector="deletePressed:" destination="uUB-mk-Nhb" eventType="touchUpInside" id="OZD-D6-xyt"/>
+                                                            </connections>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qzz-ib-c4o">
                                                             <rect key="frame" x="10" y="181" width="170" height="26.5"/>
@@ -794,6 +798,12 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="247" height="234"/>
+                                        <connections>
+                                            <outlet property="deleteBtn" destination="2B9-gP-Hc3" id="2zK-kI-cOA"/>
+                                            <outlet property="deletePressed" destination="2B9-gP-Hc3" id="0FG-H8-ccU"/>
+                                            <outlet property="imgView" destination="S8l-ew-pft" id="ufp-7r-dso"/>
+                                            <outlet property="txtLbl" destination="Qzz-ib-c4o" id="g5a-hX-1X2"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
