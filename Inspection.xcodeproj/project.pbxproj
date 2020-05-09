@@ -10,6 +10,7 @@
 		0317A03324631F5E00554E13 /* RollsThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0317A03224631F5E00554E13 /* RollsThirdViewController.swift */; };
 		0317A03824646B0900554E13 /* SummaryRollDetailsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0317A03724646B0900554E13 /* SummaryRollDetailsCollectionViewCell.swift */; };
 		031D1CF52461C47E0027A17C /* BasicSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031D1CF42461C47E0027A17C /* BasicSecondViewController.swift */; };
+		03B978272465BDE7006F9AA9 /* SummaryBottomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B978262465BDE7006F9AA9 /* SummaryBottomCollectionViewCell.swift */; };
 		29C4D29792A12430C4BEBEF3 /* Pods_Inspection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78E6E270F8806E26B74FD2B1 /* Pods_Inspection.framework */; };
 		4713BC652421F2B400BD2BC7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4713BC642421F2B400BD2BC7 /* HomeViewController.swift */; };
 		4713BC6824221F5B00BD2BC7 /* XLPagerTabStrip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4713BC6724221F5B00BD2BC7 /* XLPagerTabStrip.framework */; };
@@ -39,6 +40,7 @@
 		0317A03224631F5E00554E13 /* RollsThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollsThirdViewController.swift; sourceTree = "<group>"; };
 		0317A03724646B0900554E13 /* SummaryRollDetailsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryRollDetailsCollectionViewCell.swift; sourceTree = "<group>"; };
 		031D1CF42461C47E0027A17C /* BasicSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicSecondViewController.swift; sourceTree = "<group>"; };
+		03B978262465BDE7006F9AA9 /* SummaryBottomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryBottomCollectionViewCell.swift; sourceTree = "<group>"; };
 		4713BC642421F2B400BD2BC7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4713BC6724221F5B00BD2BC7 /* XLPagerTabStrip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = XLPagerTabStrip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4713BC69242228A500BD2BC7 /* BasicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				0317A03724646B0900554E13 /* SummaryRollDetailsCollectionViewCell.swift */,
+				03B978262465BDE7006F9AA9 /* SummaryBottomCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				471A7EF824231171000169F0 /* SummaryViewController.swift in Sources */,
 				0317A03824646B0900554E13 /* SummaryRollDetailsCollectionViewCell.swift in Sources */,
 				031D1CF52461C47E0027A17C /* BasicSecondViewController.swift in Sources */,
+				03B978272465BDE7006F9AA9 /* SummaryBottomCollectionViewCell.swift in Sources */,
 				8C43D8F32464454600B7CDED /* SummarySecondViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
