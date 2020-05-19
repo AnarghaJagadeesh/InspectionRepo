@@ -9,17 +9,14 @@
 import UIKit
 
 class SummaryRollDetailsCollectionViewCell: UICollectionViewCell {
+    @IBOutlet weak var rollNumberTitle: UILabel!
+    @IBOutlet weak var shrinkageTitle: UILabel!
     
-    @IBOutlet weak var addNewMainView: UIView!
+    @IBOutlet weak var torqueTitle: UILabel!
     
-    @IBOutlet weak var shrinkageResultTxt: UITextField!
-    @IBOutlet weak var rollNumberTxt: UITextField!
+    @IBOutlet weak var lblRollNumber: UILabel!
     
-    @IBOutlet weak var torqueTxt: UITextField!
+    @IBOutlet weak var lblShrinkage: UILabel!
     
-    func initialSetUp(){
-        addNewMainView.layer.cornerRadius = 17
-        
-    }
-    
+    @IBOutlet weak var lblTorque: UILabel!
 }

@@ -51,11 +51,17 @@
         <attribute name="inspectionNo" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="rollImage" optional="YES" attributeType="Transformable"/>
     </entity>
+    <entity name="RollThird" representedClassName="RollThird" syncable="YES" codeGenerationType="class">
+        <attribute name="inspectionNo" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="status" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="totalPoints" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
     <elements>
         <element name="BasicFirst" positionX="-45" positionY="0" width="128" height="268"/>
         <element name="BasicSecond" positionX="-45" positionY="99" width="128" height="253"/>
         <element name="RollFirst" positionX="-36" positionY="153" width="128" height="118"/>
         <element name="RollFirstSubTotal" positionX="-18" positionY="162" width="128" height="118"/>
         <element name="RollImages" positionX="-27" positionY="144" width="128" height="73"/>
+        <element name="RollThird" positionX="-18" positionY="162" width="128" height="88"/>
     </elements>
 </model>

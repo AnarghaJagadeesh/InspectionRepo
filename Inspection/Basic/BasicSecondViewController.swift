@@ -125,17 +125,26 @@ class BasicSecondViewController: UIViewController {
     }
     
     @IBAction func nextBtnPressed(_ sender: Any) {
-        if editType == .NEW {
-            self.basicSecondDict["inspectionNo"] = UserDefaults.standard.value(forKey: "inspectionNo") as! Int
-            self.basicStruct = BasicSecondStruct(dict: basicSecondDict)
-            self.saveToCoreData()
+        if ticketLengthYdsTxt.text == "" || actualLengthtxt.text == "" || actualCutWidthFirstTxt.text == "" || actualCutWidthSecondTxt.text == "" || actualCutWidthThirdTxt.text == "" || skewTxt.text == "" || self.weightTxt.text == "" || basicSecondDict["sideToSide"] as! String == "" || basicSecondDict["endToEnd"] as! String == "" || basicSecondDict["sideToCenter"] as! String == "" || basicSecondDict["pattern"] as? Bool == nil || basicSecondDict["handFeel"] as? Bool == nil {
+            Helper.showAlert(message: "Please fill all fields")
+            
+        } else {
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let rollsFirstVC = storyBoard.instantiateViewController(withIdentifier: "rollFirstVC") as! RollsFirstViewController
+            if editType == .NEW {
+                self.basicSecondDict["inspectionNo"] = UserDefaults.standard.value(forKey: "inspectionNo") as! Int
+                self.basicStruct = BasicSecondStruct(dict: basicSecondDict)
+                self.saveToCoreData()
+            } else {
+                self.basicStruct = BasicSecondStruct(dict: basicSecondDict)
+                rollsFirstVC.editType = .UPDATE
+                self.updateToCoreData()
+            }
+            rollsFirstVC.basicFirstModel = self.basicFirstStruct
+            rollsFirstVC.basicSecondModel = self.basicStruct
+            rollsFirstVC.rollCount = self.rollCount
+            self.navigationController?.pushViewController(rollsFirstVC, animated: true)
         }
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let rollsFirstVC = storyBoard.instantiateViewController(withIdentifier: "rollFirstVC") as! RollsFirstViewController
-        rollsFirstVC.basicFirstModel = self.basicFirstStruct
-        rollsFirstVC.basicSecondModel = self.basicStruct
-        rollsFirstVC.rollCount = self.rollCount
-        self.navigationController?.pushViewController(rollsFirstVC, animated: true)
     }
     
     @IBAction func end2EndShadingPressed(_ sender: UIButton) {
@@ -224,7 +233,12 @@ class BasicSecondViewController: UIViewController {
         }
     }
     @IBAction func bkPressed(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+        for controller in self.navigationController!.viewControllers as Array {
+                    if controller.isKind(of: HomeViewController.self) {
+                        self.navigationController!.popToViewController(controller, animated: true)
+                        break
+                    }
+                }
     }
     
     @IBAction func handFeelPressed(_ sender: UIButton) {
@@ -284,6 +298,38 @@ class BasicSecondViewController: UIViewController {
         } catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
         }
+    }
+    
+    func updateToCoreData(){
+        guard let appDelegate =
+            UIApplication.shared.delegate as? AppDelegate else {
+                return
+        }
+        
+        // 1
+        let managedContext =
+            appDelegate.persistentContainer.viewContext
+        
+        // 2
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "BasicSecond")
+        fetchRequest.predicate = NSPredicate(format: "inspectionNo = %i", basicStruct?.inspectionNo ?? 0)
+        
+        // 3
+        do {
+            let basicDict = try managedContext.fetch(fetchRequest)
+            let objectToUpdate =  basicDict[0]
+            objectToUpdate.setValue(basicStruct?.endToEnd, forKey: "endToEnd")
+            do {
+                try managedContext.save()
+            } catch let error as NSError {
+                print("Could not save. \(error), \(error.userInfo)")
+            }
+        }
+        catch {
+            
+        }
+        
+        // 4
     }
     
     func fetchFromCoreData(){

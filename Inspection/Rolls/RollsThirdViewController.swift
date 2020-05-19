@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class RollsThirdViewController: UIViewController {
     @IBOutlet weak var rollLbl: UILabel!
@@ -36,7 +37,7 @@ class RollsThirdViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-   initialSetup()
+        initialSetup()
         self.populatingPoints()
         self.validation()
         // Do any additional setup after loading the view.
@@ -76,14 +77,87 @@ class RollsThirdViewController: UIViewController {
         }
         if isValid.contains(false) {
             self.resultLbl.text = "FAILED"
+            self.txtView.text = self.remarkText
         } else {
             self.resultLbl.text = "PASS"
         }
         
     }
+    func saveToCoreData(){
+        guard let appDelegate =
+            UIApplication.shared.delegate as? AppDelegate else {
+                return
+        }
+
+        // 1
+        let managedContext =
+            appDelegate.persistentContainer.viewContext
+
+        // 2
+        //        let rollFirstVal = NSManagedObject(entity: rollEntity,
+        //                                            insertInto: managedContext)
+
+        // 3
+
+        let rollVal = RollThird(context: managedContext)
+        rollVal.inspectionNo = Int32(self.basicSecondModel?.inspectionNo ?? 0)
+        rollVal.totalPoints = Int16(Int(self.totalPointsLbl.text ?? "") ?? 0)
+        rollVal.status = self.resultLbl.text == "PASS" ? true : false
+
+        //        rollFirstVal.setValue(point1Value, forKeyPath: "points1")
+        //        rollFirstVal.setValue(point2Value, forKeyPath: "points2")
+        //        rollFirstVal.setValue(point3Value, forKeyPath: "points3")
+        //        rollFirstVal.setValue(point4Value, forKeyPath: "points4")
+
+
+
+        // 4
+        do {
+            try managedContext.save()
+            //          basicFirst.append(basicFirstVal)
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
+    }
+//
+//    func fetchFromCoreData(){
+//        guard let appDelegate =
+//            UIApplication.shared.delegate as? AppDelegate else {
+//                return
+//        }
+//
+//        // 1
+//        let managedContext =
+//            appDelegate.persistentContainer.viewContext
+//
+//        // 2
+//
+//        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "RollFirst")
+//        //        let fetchRequest = NSFetchRequest<NSFetchRequestResult>.init(entityName: "BasicFirst")
+//
+//        //3
+//        do {
+//            let result = try managedContext.fetch(fetchRequest)
+//            self.point1Array = []
+//            self.point2Array = []
+//            self.point3Array = []
+//            self.point4Array = []
+//            for data in result {
+//                self.point1Array = (data.value(forKey: "points1") as! [Int])
+//                self.point2Array = (data.value(forKey: "points2") as! [Int])
+//                self.point3Array = (data.value(forKey: "points3") as! [Int])
+//                self.point4Array = (data.value(forKey: "points4") as! [Int])
+//            }
+//
+//        } catch let error as NSError {
+//            print("Could not fetch. \(error), \(error.userInfo)")
+//        }
+//
+//    }
+    
     
     func populatingPoints(){
-        self.rollLbl.text = "\(rollCount)"
+        self.rollLbl.text = "\(self.basicSecondModel?.rollNumber ?? "")"
         if let rollModel = self.rollFirstModel {
             self.fourPointsLbl.text = "\(rollModel.fourPoint)"
             self.threePointsLbl.text = "\(rollModel.threePoint)"
@@ -105,19 +179,34 @@ class RollsThirdViewController: UIViewController {
     */
 // MARK: - Button Action
     @IBAction func editPressed(_ sender: Any) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let basicSecondVC = storyBoard.instantiateViewController(withIdentifier: "basicSecondVC") as! BasicSecondViewController
+        basicSecondVC.editType = .UPDATE
+        self.navigationController?.pushViewController(basicSecondVC, animated: true)
     }
     
     @IBAction func finisheRollPressed(_ sender: Any) {
+        self.saveToCoreData()
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let summaryFirstVC = storyBoard.instantiateViewController(withIdentifier: "summaryFirstVC") as! SummaryFirstViewController
+        summaryFirstVC.basicFirstModel = self.basicFirstModel
+        self.navigationController?.pushViewController(summaryFirstVC, animated: true)
     }
     
     @IBAction func AddMorePressed(_ sender: Any) {
+        self.saveToCoreData()
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let basicSecondVC = storyBoard.instantiateViewController(withIdentifier: "basicSecondVC") as! BasicSecondViewController
         self.rollCount = self.rollCount + 1
         self.navigationController?.pushViewController(basicSecondVC, animated: true)
     }
     @IBAction func bkPressed(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+        for controller in self.navigationController!.viewControllers as Array {
+            if controller.isKind(of: HomeViewController.self) {
+                self.navigationController!.popToViewController(controller, animated: true)
+                break
+            }
+        }
     }
     
     @IBAction func nextPressed(_ sender: Any) {
