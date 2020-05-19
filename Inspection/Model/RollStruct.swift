@@ -34,3 +34,14 @@ struct SubjectStruct {
     }
 }
 
+struct RollSummaryStruct {
+    var totalPoints : Int = 0
+    var status : Bool = false
+    var inspectionNo : Int = 0
+    
+    init(dict: [String : Any]) {
+        inspectionNo = dict["inspectionNo"] as! Int
+        totalPoints = dict["totalPoints"] as! Int
+        status = dict["status"] as! Bool
+    }
+}

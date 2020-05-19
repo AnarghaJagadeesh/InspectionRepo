@@ -25,6 +25,9 @@ class RollsSecondViewController: UIViewController {
     @IBOutlet weak var imageCol: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        if editType == .UPDATE {
+            self.fetchImage()
+        }
         if self.pickedImages.count == 0 {
             self.imageCol.isHidden = true
             self.lblNoImages.isHidden = false
@@ -36,17 +39,36 @@ class RollsSecondViewController: UIViewController {
         self.imageCol.dataSource = self
 //        self.testImage.image = self.pickedImages[0]
 //        self.saveToCoreData()
-        if editType == .UPDATE {
-            self.fetchImage()
-        }
         // Do any additional setup after loading the view.
     }
     
-    func saveToCoreData(img : UIImage){
-        if let imageData = img.pngData() {
-            self.pickedimgData.append(imageData)
+    func saveToCoreData(){
+//        DataBaseHelper.shareInstance.saveImage(data: pickedimgData)
+        guard let appDelegate =
+            UIApplication.shared.delegate as? AppDelegate else {
+                return
         }
-        DataBaseHelper.shareInstance.saveImage(data: pickedimgData)
+        
+        // 1
+        let managedContext =
+            appDelegate.persistentContainer.viewContext
+        
+       let rollVal = RollImages(context: managedContext)
+        
+        // 3
+        
+        rollVal.rollImage = self.pickedimgData as NSObject
+        rollVal.inspectionNo = Int32(self.basicSecondModel?.inspectionNo ?? 0)
+        
+        
+        // 4
+        do {
+            try managedContext.save()
+            //          basicFirst.append(basicFirstVal)
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
+
     }
     func fetchImage() {
         var fetchingImage = [RollImages]()
@@ -61,13 +83,43 @@ class RollsSecondViewController: UIViewController {
         } catch {
             print("Error while fetching the image")
         }
-        self.pickedImages = []
+//        self.pickedImages = []
         _ = self.pickedimgData.map({ (imgData) in
             self.pickedImages.append(UIImage(data: imgData) ?? UIImage())
         })
 //        return fetchingImage
     }
-
+    func updateToCoreData(){
+        guard let appDelegate =
+            UIApplication.shared.delegate as? AppDelegate else {
+                return
+        }
+        
+        // 1
+        let managedContext =
+            appDelegate.persistentContainer.viewContext
+        
+        // 2
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "RollImages")
+        fetchRequest.predicate = NSPredicate(format: "inspectionNo = %i", basicSecondModel?.inspectionNo ?? 0)
+        
+        // 3
+        do {
+            let rollsDictArray = try managedContext.fetch(fetchRequest)
+            let objectToUpdate =  rollsDictArray.last
+            objectToUpdate?.setValue(self.pickedimgData, forKey: "rollImage")
+            do {
+                try managedContext.save()
+            } catch let error as NSError {
+                print("Could not save. \(error), \(error.userInfo)")
+            }
+        }
+        catch {
+            
+        }
+        
+        // 4
+    }
     /*
     // MARK: - Navigation
 
@@ -78,14 +130,27 @@ class RollsSecondViewController: UIViewController {
     }
     */
     @IBAction func bkPressed(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+         for controller in self.navigationController!.viewControllers as Array {
+                           if controller.isKind(of: HomeViewController.self) {
+                               self.navigationController!.popToViewController(controller, animated: true)
+                               break
+                           }
+                       }
     }
     @IBAction func onTapNext(_ sender: UIButton) {
+        self.pickedimgData = []
+        _ = self.pickedImages.map({ (img) in
+            if let imageData = img.pngData() {
+                self.pickedimgData.append(imageData)
+            }
+        })
+
         if editType == .NEW {
-            _ = self.pickedImages.map({ (img) in
-                self.saveToCoreData(img: img)
-            })
+             self.saveToCoreData()
+        } else {
+            self.updateToCoreData()
         }
+        
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let rollsThirdVC = storyBoard.instantiateViewController(withIdentifier: "rollThirdVC") as! RollsThirdViewController
         rollsThirdVC.basicFirstModel = self.basicFirstModel

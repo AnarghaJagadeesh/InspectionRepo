@@ -14,8 +14,22 @@ class HomeCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var dateTxt: UILabel!
     @IBOutlet weak var actionBtn: UIButton!
     
+    var basicStruct : BasicFirstStruct? {
+        didSet {
+            if let model = basicStruct {
+                customerTxt.text = model.reportToName
+                dateTxt.text = model.date
+                poNumberTxt.text = model.PONo
+            }
+        }
+    }
+    
+    var didTapAction : ((BasicFirstStruct)->Void)?
+    
     @IBAction func actionBtnPressed(_ sender: Any) {
-        
+        if let model = basicStruct {
+            self.didTapAction?(model)
+        }
     }
     
     

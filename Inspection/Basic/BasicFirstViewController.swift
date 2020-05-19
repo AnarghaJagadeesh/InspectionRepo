@@ -31,15 +31,15 @@ class BasicFirstViewController: UIViewController {
     @IBOutlet weak var txtColorName: UITextField!
     @IBOutlet weak var txtFinish: UITextField!
     @IBOutlet weak var dropDownName: DropDown!
-//    var basicFirst: [NSManagedObject] = []
+    //    var basicFirst: [NSManagedObject] = []
     var basicStruct : BasicFirstStruct?
     var basicDict = [String:Any]()
-    var editType : EditType = .NEW
+    var editType : EditType = .UPDATE
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureTextField()
-//        self.saveToCoreData()
+        //        self.saveToCoreData()
         if editType == .UPDATE {
             self.fetchFromCoreData()
         }
@@ -61,20 +61,20 @@ class BasicFirstViewController: UIViewController {
     
     func saveToCoreData(){
         guard let appDelegate =
-          UIApplication.shared.delegate as? AppDelegate else {
-          return
+            UIApplication.shared.delegate as? AppDelegate else {
+                return
         }
         
         // 1
         let managedContext =
-          appDelegate.persistentContainer.viewContext
+            appDelegate.persistentContainer.viewContext
         
         // 2
         let basicEntity =
-          NSEntityDescription.entity(forEntityName: "BasicFirst",
-                                     in: managedContext)!
+            NSEntityDescription.entity(forEntityName: "BasicFirst",
+                                       in: managedContext)!
         let basicFirstVal = NSManagedObject(entity: basicEntity,
-                                     insertInto: managedContext)
+                                            insertInto: managedContext)
         
         // 3
         if let model = basicStruct {
@@ -98,10 +98,10 @@ class BasicFirstViewController: UIViewController {
         
         // 4
         do {
-          try managedContext.save()
-//          basicFirst.append(basicFirstVal)
+            try managedContext.save()
+            //          basicFirst.append(basicFirstVal)
         } catch let error as NSError {
-          print("Could not save. \(error), \(error.userInfo)")
+            print("Could not save. \(error), \(error.userInfo)")
         }
     }
     func dateToDayMonthYearDate(rawDate: Date) -> String {
@@ -173,16 +173,16 @@ class BasicFirstViewController: UIViewController {
             self.txtFinish.text = "\(model.finish)"
         }
     }
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
     @IBAction func bkPressed(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
@@ -192,23 +192,26 @@ class BasicFirstViewController: UIViewController {
             Helper.showAlert(message: "Please fill all the fields")
         }
         else{
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let basicSecondVC = storyBoard.instantiateViewController(withIdentifier: "basicSecondVC") as! BasicSecondViewController
+            if editType == .NEW {
+                basicDict["fabricCategory"] = "Group 1"
+                basicDict["fabricType"] = "Woven"
+                basicDict["reportToName"] = "Name Test"
+                basicDict["date"] = self.dateToDayMonthYearDate(rawDate: Date())
+                
+                let inspectionNo = UserDefaults.standard.value(forKey: "inspectionNo") as! Int
+                basicDict["inspectionNo"] = inspectionNo
+                self.basicStruct = BasicFirstStruct(dict: basicDict)
+                self.saveToCoreData()
+            } else {
+                basicSecondVC.editType = .UPDATE
+            }
             
-        if editType == .NEW {
-            basicDict["fabricCategory"] = "Group 1"
-            basicDict["fabricType"] = "Woven"
-            basicDict["reportToName"] = "Name Test"
-            basicDict["date"] = self.dateToDayMonthYearDate(rawDate: Date())
-
-            let inspectionNo = UserDefaults.standard.value(forKey: "inspectionNo") as! Int
-            basicDict["inspectionNo"] = inspectionNo
-            self.basicStruct = BasicFirstStruct(dict: basicDict)
-            self.saveToCoreData()
+            basicSecondVC.basicFirstStruct = self.basicStruct
+            self.navigationController?.pushViewController(basicSecondVC, animated: true)
         }
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let basicSecondVC = storyBoard.instantiateViewController(withIdentifier: "basicSecondVC") as! BasicSecondViewController
-        basicSecondVC.basicFirstStruct = self.basicStruct
-        self.navigationController?.pushViewController(basicSecondVC, animated: true)
-        }
+    }
 }
 
 extension BasicFirstViewController : UITextFieldDelegate {

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import XLPagerTabStrip
 import CoreData
 
 class HomeViewController: UIViewController {
@@ -97,8 +96,14 @@ class HomeViewController: UIViewController {
         let basicFirstVC = storyBoard.instantiateViewController(withIdentifier: "basicFirstVC") as! BasicFirstViewController
         self.navigationController?.pushViewController(basicFirstVC, animated: true)
     }
-    
+    func goToSummary(basicStruct : BasicFirstStruct) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let summaryFirstVC = storyBoard.instantiateViewController(withIdentifier: "summaryFirstVC") as! SummaryFirstViewController
+        summaryFirstVC.basicFirstModel = basicStruct
+        self.navigationController?.pushViewController(summaryFirstVC, animated: true)
+    }
 }
+
 
 extension HomeViewController : UICollectionViewDelegate , UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -107,9 +112,10 @@ extension HomeViewController : UICollectionViewDelegate , UICollectionViewDataSo
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCell", for: indexPath) as! HomeCollectionViewCell
-        cell.customerTxt.text = self.basicStruct[indexPath.item].reportToName
-        cell.dateTxt.text = self.basicStruct[indexPath.item].date
-        cell.poNumberTxt.text = self.basicStruct[indexPath.item].PONo
+        cell.basicStruct = self.basicStruct[indexPath.item]
+        cell.didTapAction = { [weak self] (basicStruct) in
+            self?.goToSummary(basicStruct: basicStruct)
+        }
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

@@ -23,7 +23,6 @@
 		4717CFCF242076F000635AF7 /* iOSDropDown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4717CFCE242076F000635AF7 /* iOSDropDown.framework */; };
 		4719EC622424DD4500A5508B /* ChecklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4719EC612424DD4500A5508B /* ChecklistViewController.swift */; };
 		4719EC642424F49800A5508B /* M13Checkbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4719EC632424F49800A5508B /* M13Checkbox.framework */; };
-		471A7EF824231171000169F0 /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471A7EF724231171000169F0 /* SummaryViewController.swift */; };
 		471B2BC2241F901E000A902C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471B2BC1241F901E000A902C /* AppDelegate.swift */; };
 		471B2BC7241F901E000A902C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 471B2BC5241F901E000A902C /* Main.storyboard */; };
 		471B2BC9241F901F000A902C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 471B2BC8241F901F000A902C /* Assets.xcassets */; };
@@ -39,6 +38,7 @@
 		8C4596962466895A00D357E1 /* RollDetailsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4596952466895A00D357E1 /* RollDetailsCollectionViewCell.swift */; };
 		8C4596982466961200D357E1 /* RollsSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4596972466961200D357E1 /* RollsSecondViewController.swift */; };
 		8C45969A24669C9600D357E1 /* DataBaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C45969924669C9600D357E1 /* DataBaseHelper.swift */; };
+		8C87A8DB2472E86300682CE2 /* SummaryStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C87A8DA2472E86300682CE2 /* SummaryStruct.swift */; };
 		8CAD912A2461D28900968CB1 /* RollStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD91292461D28900968CB1 /* RollStruct.swift */; };
 		8CF1F8FF24648B25001661F9 /* BasicFirstStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF1F8FE24648B25001661F9 /* BasicFirstStruct.swift */; };
 /* End PBXBuildFile section */
@@ -60,7 +60,6 @@
 		4717CFCE242076F000635AF7 /* iOSDropDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = iOSDropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4719EC612424DD4500A5508B /* ChecklistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistViewController.swift; sourceTree = "<group>"; };
 		4719EC632424F49800A5508B /* M13Checkbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = M13Checkbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		471A7EF724231171000169F0 /* SummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
 		471B2BBE241F901E000A902C /* Inspection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Inspection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		471B2BC1241F901E000A902C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		471B2BC6241F901E000A902C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -79,6 +78,7 @@
 		8C4596952466895A00D357E1 /* RollDetailsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollDetailsCollectionViewCell.swift; sourceTree = "<group>"; };
 		8C4596972466961200D357E1 /* RollsSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollsSecondViewController.swift; sourceTree = "<group>"; };
 		8C45969924669C9600D357E1 /* DataBaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseHelper.swift; sourceTree = "<group>"; };
+		8C87A8DA2472E86300682CE2 /* SummaryStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryStruct.swift; sourceTree = "<group>"; };
 		8CAD91292461D28900968CB1 /* RollStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollStruct.swift; sourceTree = "<group>"; };
 		8CF1F8FE24648B25001661F9 /* BasicFirstStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicFirstStruct.swift; sourceTree = "<group>"; };
 		A5BA398F8F3B401D4F739B1C /* Pods-Inspection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Inspection.debug.xcconfig"; path = "Target Support Files/Pods-Inspection/Pods-Inspection.debug.xcconfig"; sourceTree = "<group>"; };
@@ -189,7 +189,6 @@
 				8C43D8F024643D4200B7CDED /* LoginViewController.swift */,
 				4713BC69242228A500BD2BC7 /* BasicViewController.swift */,
 				4713BC6B2422291E00BD2BC7 /* RollsViewController.swift */,
-				471A7EF724231171000169F0 /* SummaryViewController.swift */,
 				4713BC642421F2B400BD2BC7 /* HomeViewController.swift */,
 				4719EC612424DD4500A5508B /* ChecklistViewController.swift */,
 				471B2BC5241F901E000A902C /* Main.storyboard */,
@@ -245,6 +244,7 @@
 			children = (
 				8CAD91292461D28900968CB1 /* RollStruct.swift */,
 				8CF1F8FE24648B25001661F9 /* BasicFirstStruct.swift */,
+				8C87A8DA2472E86300682CE2 /* SummaryStruct.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -392,6 +392,7 @@
 				0368C58F2466A7A1006533D7 /* ImageListCollectionViewCell.swift in Sources */,
 				8C43D8E224643C2900B7CDED /* BasicFirstViewController.swift in Sources */,
 				8C43D8E524643C5B00B7CDED /* RollsFirstCollectionViewCell.swift in Sources */,
+				8C87A8DB2472E86300682CE2 /* SummaryStruct.swift in Sources */,
 				8C43D8F724646AA200B7CDED /* InspectionDataModel.xcdatamodeld in Sources */,
 				0317A03324631F5E00554E13 /* RollsThirdViewController.swift in Sources */,
 				0363D6B624668C7100B106FE /* SummaryBottomCollectionViewCell.swift in Sources */,
@@ -403,7 +404,6 @@
 				8CF1F8FF24648B25001661F9 /* BasicFirstStruct.swift in Sources */,
 				8C4596982466961200D357E1 /* RollsSecondViewController.swift in Sources */,
 				8C43D8E624643C5B00B7CDED /* RollsFirstViewController.swift in Sources */,
-				471A7EF824231171000169F0 /* SummaryViewController.swift in Sources */,
 				0368C5942466DF80006533D7 /* HomeCollectionViewCell.swift in Sources */,
 				8C4596962466895A00D357E1 /* RollDetailsCollectionViewCell.swift in Sources */,
 				0317A03824646B0900554E13 /* SummaryRollDetailsCollectionViewCell.swift in Sources */,
@@ -485,7 +485,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -540,7 +540,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -557,14 +557,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HDARUYZGR2;
+				DEVELOPMENT_TEAM = 8QXP3K9MLP;
 				INFOPLIST_FILE = Inspection/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.CastWield.Inspection;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CastWield.InspectionApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -579,14 +579,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HDARUYZGR2;
+				DEVELOPMENT_TEAM = 8QXP3K9MLP;
 				INFOPLIST_FILE = Inspection/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.CastWield.Inspection;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CastWield.InspectionApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;

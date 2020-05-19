@@ -235,7 +235,74 @@ class RollsFirstViewController: UIViewController {
         }
 
     }
-    
+    func updateTotalToCoreData(){
+        guard let appDelegate =
+            UIApplication.shared.delegate as? AppDelegate else {
+                return
+        }
+        
+        // 1
+        let managedContext =
+            appDelegate.persistentContainer.viewContext
+        
+        // 2
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "RollFirstSubTotal")
+        fetchRequest.predicate = NSPredicate(format: "inspectionNo = %i", basicSecondModel?.inspectionNo ?? 0)
+        
+        // 3
+        do {
+            let rollsDictArray = try managedContext.fetch(fetchRequest)
+            let objectToUpdate =  rollsDictArray.last
+            objectToUpdate?.setValue(subTotalStruct.onePoint, forKey: "total1")
+            objectToUpdate?.setValue(subTotalStruct.twoPoint, forKey: "total2")
+            objectToUpdate?.setValue(subTotalStruct.threePoint, forKey: "total3")
+            objectToUpdate?.setValue(subTotalStruct.fourPoint, forKey: "total4")
+            do {
+                try managedContext.save()
+            } catch let error as NSError {
+                print("Could not save. \(error), \(error.userInfo)")
+            }
+        }
+        catch {
+            
+        }
+        
+        // 4
+    }
+    func updateToCoreData(){
+        guard let appDelegate =
+            UIApplication.shared.delegate as? AppDelegate else {
+                return
+        }
+        
+        // 1
+        let managedContext =
+            appDelegate.persistentContainer.viewContext
+        
+        // 2
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "RollFirst")
+        fetchRequest.predicate = NSPredicate(format: "inspectionNo = %i", basicSecondModel?.inspectionNo ?? 0)
+        
+        // 3
+        do {
+            let rollsDictArray = try managedContext.fetch(fetchRequest)
+            let objectToUpdate =  rollsDictArray.last
+            objectToUpdate?.setValue(self.point1Array, forKey: "points1")
+            objectToUpdate?.setValue(self.point2Array, forKey: "points2")
+            objectToUpdate?.setValue(self.point3Array, forKey: "points3")
+            objectToUpdate?.setValue(self.point4Array, forKey: "points4")
+            do {
+                try managedContext.save()
+            } catch let error as NSError {
+                print("Could not save. \(error), \(error.userInfo)")
+            }
+        }
+        catch {
+            
+        }
+        
+        // 4
+    }
     
     /*
      // MARK: - Navigation
@@ -248,9 +315,17 @@ class RollsFirstViewController: UIViewController {
      */
     
     @IBAction func bkPressed(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+        for controller in self.navigationController!.viewControllers as Array {
+            if controller.isKind(of: HomeViewController.self) {
+                self.navigationController!.popToViewController(controller, animated: true)
+                break
+            }
+        }
     }
     @IBAction func onTapNext(_ sender: UIButton) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let rollsSecondVC = storyBoard.instantiateViewController(withIdentifier: "rollsSecondVC") as! RollsSecondViewController
+
         if self.editType == .NEW {
             self.createCoreDataPointArray()
 //            for i in 0 ..< 20 {
@@ -258,9 +333,12 @@ class RollsFirstViewController: UIViewController {
 //            }
             self.saveToCoreData()
             self.saveTotalToCoreData()
+        } else {
+            self.createCoreDataPointArray()
+            self.updateToCoreData()
+            self.updateTotalToCoreData()
+            rollsSecondVC.editType = .UPDATE
         }
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let rollsSecondVC = storyBoard.instantiateViewController(withIdentifier: "rollsSecondVC") as! RollsSecondViewController
         rollsSecondVC.basicFirstModel = self.basicFirstModel
         rollsSecondVC.basicSecondModel = self.basicSecondModel
         rollsSecondVC.rollFirstModel = self.subTotalStruct

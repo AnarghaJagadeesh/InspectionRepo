@@ -53,9 +53,17 @@ class ChecklistViewController: UIViewController {
       @IBAction func noPressed(_ sender: Any) {
            yesCheckbox.checkState = .unchecked
       }
-      
+    @IBAction func bkPressed(_ sender: UIButton) {
+        for controller in self.navigationController!.viewControllers as Array {
+            if controller.isKind(of: HomeViewController.self) {
+                self.navigationController!.popToViewController(controller, animated: true)
+                break
+            }
+        }
+    }
+    
       @IBAction func saveBtnPressed(_ sender: Any) {
-        
+//         Helper.showAlert(message: "Saved successfully")
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let homeVC = storyBoard.instantiateViewController(withIdentifier: "HomeVC") as! HomeViewController
         self.navigationController?.pushViewController(homeVC, animated: true)
