@@ -13,5 +13,7 @@ pod 'GoogleMaps'
 pod 'GooglePlaces'
 pod 'DropDown'
 pod 'IQKeyboardManager'
-
+pod 'IHProgressHUD'
+pod 'Alamofire'
+pod 'LanguageManager-iOS'
 end

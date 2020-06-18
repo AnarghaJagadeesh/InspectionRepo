@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import IQKeyboardManager
+import LanguageManager_iOS
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,6 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         IQKeyboardManager.shared().isEnabled = true
+        LanguageManager.shared.defaultLanguage = .deviceLanguage
+        LanguageManager.shared.setLanguage(language: .en)
         // Override point for customization after application launch.
         return true
     }

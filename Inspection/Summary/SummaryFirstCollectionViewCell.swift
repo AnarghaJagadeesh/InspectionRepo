@@ -16,7 +16,7 @@ class SummaryFirstCollectionViewCell: UICollectionViewCell {
     var subjectModel : SubjectStruct? {
         didSet {
             if let model = subjectModel {
-                self.lblSubject.text = model.titleText
+                self.lblSubject.text = model.titleText.localiz()
                 self.lblValue.text = model.value
             }
         }

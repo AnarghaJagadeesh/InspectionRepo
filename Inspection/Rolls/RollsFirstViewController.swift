@@ -12,15 +12,17 @@ import CoreData
 class RollsFirstViewController: UIViewController {
     
     var rollsArray = [RollStruct]()
-    var subTotalStruct = RollStruct(dict: ["title" : "Sub Total", "1 point" : 0, "2 point" : 0, "3 point" : 0, "4 point" : 0])
+    var subTotalStruct = RollStruct(dict: ["title" : "Sub Total", "1 point" : 0, "2 point" : 0, "3 point" : 0, "4 point" : 0, "id" : 0])
     var point4Array = [Int]()
     var point3Array = [Int]()
     var point2Array = [Int]()
     var point1Array = [Int]()
-    
+    var basicStructApi = [BasicFirstStruct]()
+
     var pickedImages = [UIImage]()
     
     var editType : EditType = .NEW
+    
     
     var basicFirstModel : BasicFirstStruct?
     var basicSecondModel : BasicSecondStruct?
@@ -34,34 +36,18 @@ class RollsFirstViewController: UIViewController {
             self.fetchFromCoreData()
             self.fetchTotalFromCoreData()
         }
+        self.populateRollsArray()
         rollCollectionView.dataSource = self
         rollCollectionView.delegate = self
-        self.populateRollsArray()
+
         // Do any additional setup after loading the view.
     }
     
     func populateRollsArray() {
         rollsArray = []
-        rollsArray.append(RollStruct(dict: ["title" : "PO Number", "1 point" : 0, "2 point" : 0, "3 point" : 0, "4 point" : 0]))
-        rollsArray.append(RollStruct(dict: ["title" : "Inspection Check List", "1 point" : 0, "2 point" : 0, "3 point" : 0, "4 point" : 0]))
-        rollsArray.append(RollStruct(dict: ["title" : "Packing List Available?", "1 point" : 0, "2 point" : 0, "3 point" : 0, "4 point" : 0]))
-        rollsArray.append(RollStruct(dict: ["title" : "Inspect roll # Qty Match to PL?", "1 point" : 0, "2 point" : 0, "3 point" : 0, "4 point" : 0]))
-        rollsArray.append(RollStruct(dict: ["title" : "SNS face Stamp on Both End?", "1 point" : 0, "2 point" : 0, "3 point" : 0, "4 point" : 0]))
-        rollsArray.append(RollStruct(dict: ["title" : "Roll Marking?", "1 point" : 0, "2 point" : 0, "3 point" : 0, "4 point" : 0]))
-        rollsArray.append(RollStruct(dict: ["title" : "Shipping Mark Mentioned on top of the Bale?", "1 point" : 0, "2 point" : 0, "3 point" : 0, "4 point" : 0]))
-        rollsArray.append(RollStruct(dict: ["title" : "Shrinkage SMPL Taken for every 3000 Yds?", "1 point" : 0, "2 point" : 0, "3 point" : 0, "4 point" : 0]))
-        rollsArray.append(RollStruct(dict: ["title" : "Shrinkage / Torque Measured yourself after washing?", "1 point" : 0, "2 point" : 0, "3 point" : 0, "4 point" : 0]))
-        rollsArray.append(RollStruct(dict: ["title" : "Width / GSM Checked by yourself?", "1 point" : 0, "2 point" : 0, "3 point" : 0, "4 point" : 0]))
-        rollsArray.append(RollStruct(dict: ["title" : "Skewing / Bowing Checked By yourself?", "1 point" : 0, "2 point" : 0, "3 point" : 0, "4 point" : 0]))
-        rollsArray.append(RollStruct(dict: ["title" : "Color checked With Appd Sample?", "1 point" : 0, "2 point" : 0, "3 point" : 0, "4 point" : 0]))
-        rollsArray.append(RollStruct(dict: ["title" : "Checked Color Shading Btw Head end and Tail end?", "1 point" : 0, "2 point" : 0, "3 point" : 0, "4 point" : 0]))
-        rollsArray.append(RollStruct(dict: ["title" : "Checked Shading in inspected rolls?", "1 point" : 0, "2 point" : 0, "3 point" : 0, "4 point" : 0]))
-        rollsArray.append(RollStruct(dict: ["title" : "Handfeel Checked against Samples?", "1 point" : 0, "2 point" : 0, "3 point" : 0, "4 point" : 0]))
-        rollsArray.append(RollStruct(dict: ["title" : "Solid White - Part Inspection on Table?", "1 point" : 0, "2 point" : 0, "3 point" : 0, "4 point" : 0]))
-        rollsArray.append(RollStruct(dict: ["title" : "Length Cross Checked on Table?", "1 point" : 0, "2 point" : 0, "3 point" : 0, "4 point" : 0]))
-        rollsArray.append(RollStruct(dict: ["title" : "Roll Shortage Observed?", "1 point" : 0, "2 point" : 0, "3 point" : 0, "4 point" : 0]))
-        rollsArray.append(RollStruct(dict: ["title" : "Any marks Other Than SNS Face Stamp?", "1 point" : 0, "2 point" : 0, "3 point" : 0, "4 point" : 0]))
-        rollsArray.append(RollStruct(dict: ["title" : "Did Inspection report Signed by Mill?", "1 point" : 0, "2 point" : 0, "3 point" : 0, "4 point" : 0]))
+        _ = AppSettings.getRollList().map({ (model) in
+            rollsArray.append(RollStruct(dict: ["title" : model.title, "1 point" : 0, "2 point" : 0, "3 point" : 0, "4 point" : 0, "id" : Int(model.id)]))
+        })
         if editType == .UPDATE {
             _ = self.point1Array.enumerated().map({ (index, value) in
                 self.rollsArray[index].onePoint = value
@@ -112,20 +98,20 @@ class RollsFirstViewController: UIViewController {
 //                                            insertInto: managedContext)
         
         // 3
-        
+        let rankArray = self.rollsArray.map { (rollModel) -> [String:Any] in
+            var dict = [String:Any]()
+            dict["id"] = rollModel.id
+            dict["title"] = rollModel.titleText
+            dict["1 point"] = rollModel.onePoint
+            dict["2 point"] = rollModel.twoPoint
+            dict["3 point"] = rollModel.threePoint
+            dict["4 point"] = rollModel.fourPoint
+            return dict
+        }
         let rollFirstVal = RollFirst(context: managedContext)
-        rollFirstVal.points1 = self.point1Array as NSObject
-        rollFirstVal.points2 = self.point2Array as NSObject
-        rollFirstVal.points3 = self.point3Array as NSObject
-        rollFirstVal.points4 = self.point4Array as NSObject
+        rollFirstVal.rankDict = rankArray as NSObject
+        rollFirstVal.rollNo = Int32(Int(self.basicSecondModel?.rollNumber ?? "") ?? 0)
         rollFirstVal.inspectionNo = Int32(UserDefaults.standard.value(forKey: "inspectionNo") as! Int)
-//        rollFirstVal.setValue(point1Value, forKeyPath: "points1")
-//        rollFirstVal.setValue(point2Value, forKeyPath: "points2")
-//        rollFirstVal.setValue(point3Value, forKeyPath: "points3")
-//        rollFirstVal.setValue(point4Value, forKeyPath: "points4")
-        
-    
-        
         // 4
         do {
             try managedContext.save()
@@ -153,15 +139,12 @@ class RollsFirstViewController: UIViewController {
         //3
         do {
             let result = try managedContext.fetch(fetchRequest)
-            self.point1Array = []
-            self.point2Array = []
-            self.point3Array = []
-            self.point4Array = []
+            self.rollsArray = []
             for data in result {
-                self.point1Array = (data.value(forKey: "points1") as! [Int])
-                self.point2Array = (data.value(forKey: "points2") as! [Int])
-                self.point3Array = (data.value(forKey: "points3") as! [Int])
-                self.point4Array = (data.value(forKey: "points4") as! [Int])
+                let dataArray = (data.value(forKey: "rankDict")) as! [[String:Any]]
+                self.rollsArray = dataArray.map({ (dict) -> RollStruct in
+                    return RollStruct(dict: dict)
+                })
             }
             
         } catch let error as NSError {
@@ -194,6 +177,7 @@ class RollsFirstViewController: UIViewController {
         rollFirstVal.setValue(subTotalStruct.threePoint, forKeyPath: "total3")
         rollFirstVal.setValue(subTotalStruct.fourPoint, forKeyPath: "total4")
         rollFirstVal.setValue(UserDefaults.standard.value(forKey: "inspectionNo") as! Int, forKey: "inspectionNo")
+        rollFirstVal.setValue(Int32(Int(self.basicSecondModel?.rollNumber ?? "") ?? 0), forKey: "rollNo")
     
         
         // 4
@@ -287,10 +271,19 @@ class RollsFirstViewController: UIViewController {
         do {
             let rollsDictArray = try managedContext.fetch(fetchRequest)
             let objectToUpdate =  rollsDictArray.last
-            objectToUpdate?.setValue(self.point1Array, forKey: "points1")
-            objectToUpdate?.setValue(self.point2Array, forKey: "points2")
-            objectToUpdate?.setValue(self.point3Array, forKey: "points3")
-            objectToUpdate?.setValue(self.point4Array, forKey: "points4")
+            let rankArray = self.rollsArray.map { (rollModel) -> [String:Any] in
+                var dict = [String:Any]()
+                dict["id"] = rollModel.id
+                dict["title"] = rollModel.titleText
+                dict["1 point"] = rollModel.onePoint
+                dict["2 point"] = rollModel.twoPoint
+                dict["3 point"] = rollModel.threePoint
+                dict["4 point"] = rollModel.fourPoint
+                return dict
+            }
+            objectToUpdate?.setValue(rankArray, forKey: "rankDict")
+            objectToUpdate?.setValue(Int32(Int(self.basicSecondModel?.rollNumber ?? "") ?? 0), forKey: "rollNo")
+            objectToUpdate?.setValue(Int32(UserDefaults.standard.value(forKey: "inspectionNo") as! Int), forKey: "inspectionNo")
             do {
                 try managedContext.save()
             } catch let error as NSError {
@@ -344,6 +337,7 @@ class RollsFirstViewController: UIViewController {
         rollsSecondVC.rollFirstModel = self.subTotalStruct
         rollsSecondVC.pickedImages = self.pickedImages
         rollsSecondVC.rollCount = rollCount
+        rollsSecondVC.basicStructApi = self.basicStructApi
         self.navigationController?.pushViewController(rollsSecondVC, animated: true)
 
         
@@ -386,13 +380,13 @@ extension RollsFirstViewController : UICollectionViewDelegate, UICollectionViewD
                     self?.subTotalStruct.onePoint = (self?.subTotalStruct.onePoint ?? 0) + 1
                     self?.rollsArray[index].onePoint = value
                 case .TWOPOINT:
-                    self?.subTotalStruct.twoPoint = (self?.subTotalStruct.twoPoint ?? 0) + 1
+                    self?.subTotalStruct.twoPoint = (self?.subTotalStruct.twoPoint ?? 0) + 2
                     self?.rollsArray[index].twoPoint = value
                 case .THREEPOINT:
-                    self?.subTotalStruct.threePoint = (self?.subTotalStruct.threePoint ?? 0) + 1
+                    self?.subTotalStruct.threePoint = (self?.subTotalStruct.threePoint ?? 0) + 3
                     self?.rollsArray[index].threePoint = value
                 default:
-                    self?.subTotalStruct.fourPoint = (self?.subTotalStruct.fourPoint ?? 0) + 1
+                    self?.subTotalStruct.fourPoint = (self?.subTotalStruct.fourPoint ?? 0) + 4
                     self?.rollsArray[index].fourPoint = value
                 }
             } else {
@@ -401,13 +395,13 @@ extension RollsFirstViewController : UICollectionViewDelegate, UICollectionViewD
                     self?.subTotalStruct.onePoint = self?.subTotalStruct.onePoint ?? 0 != 0 ? (self?.subTotalStruct.onePoint ?? 0) - 1 : 0
                     self?.rollsArray[index].onePoint = value
                 case .TWOPOINT:
-                    self?.subTotalStruct.twoPoint = self?.subTotalStruct.twoPoint ?? 0 != 0 ? (self?.subTotalStruct.twoPoint ?? 0) - 1 : 0
+                    self?.subTotalStruct.twoPoint = self?.subTotalStruct.twoPoint ?? 0 != 0 ? (self?.subTotalStruct.twoPoint ?? 0) - 2 : 0
                     self?.rollsArray[index].twoPoint = value
                 case .THREEPOINT:
-                    self?.subTotalStruct.threePoint = (self?.subTotalStruct.threePoint ?? 0) - 1
+                    self?.subTotalStruct.threePoint = (self?.subTotalStruct.threePoint ?? 0) - 3
                     self?.rollsArray[index].threePoint = value
                 default:
-                    self?.subTotalStruct.fourPoint = (self?.subTotalStruct.fourPoint ?? 0) - 1
+                    self?.subTotalStruct.fourPoint = (self?.subTotalStruct.fourPoint ?? 0) - 4
                     self?.rollsArray[index].fourPoint = value
                 }
             }

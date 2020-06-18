@@ -1,6 +1,9 @@
 ${PODS_ROOT}/Target Support Files/Pods-Inspection/Pods-Inspection-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
 ${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework
+${BUILT_PRODUCTS_DIR}/IHProgressHUD/IHProgressHUD.framework
 ${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework
+${BUILT_PRODUCTS_DIR}/LanguageManager-iOS/LanguageManager_iOS.framework
 ${BUILT_PRODUCTS_DIR}/M13Checkbox/M13Checkbox.framework
 ${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework
 ${BUILT_PRODUCTS_DIR}/iOSDropDown/iOSDropDown.framework

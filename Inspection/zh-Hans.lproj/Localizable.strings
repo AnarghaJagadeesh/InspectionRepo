@@ -1,0 +1,81 @@
+/* 
+  Localizable.strings
+  Inspection
+
+  Created by Beegins on 10/06/20.
+  Copyright © 2020 CodeGreen. All rights reserved.
+*/
+"Employee Id" = "员工编号";
+"Password" = "密码";
+
+"Fabric Category" = "面料类别";
+"PO No" = "PO No";
+"Enter PO No" = "Enter PO No";
+"Content" = "内容";
+"Enter Content" = "内容";
+"Construction" = "施工";
+"Enter Construction" = "施工";
+"PO Cut Width in Inch" = "PO Cut Width in Inch";
+"Enter Width" = "Enter Width";
+"Factory Name" = "工厂名称";
+"Enter Factory Name" = "工厂名称";
+"Fabric Type" = "面料类型";
+"Order Qty" = "订货量";
+"Total Qty Offered" = "提供的总量";
+"Weight in GSM" = "重量（gsm)";
+"Color Name" = "颜色名称";
+"Enter Color" = "颜色名称";
+"Finish" = "完";
+"Enter Finish" = "完";
+"Report To" = "报告给";
+
+"Roll Number" = "卷号";
+"Ticket Length in YDS" = "Ticket Length in YDS";
+"Actual Length" = "实际长度";
+"Actual Cut width in Inch" = "实际切割宽度（英寸";
+"End to End Shading" = "End to End Shading";
+"Side to Side Shading" = "Side to Side Shading";
+"Side to Center Shading" = "Side to Center Shading";
+"Light" = "小";
+"Medium" = "介质";
+"Heavy" = "重";
+"NO" = "没有";
+"Skew / Bowing" = "Skew / Bowing";
+"Pattern" = "图案";
+"Ok" = "好";
+"Not Ok" = "不好";
+"Actual Weight in Gsm" = "Actual Weight in GSM";
+"Handfeel" = "手感";
+
+"Broken End" = "断头";
+"Broken Picks" = "破碎的照片";
+"Reed Mark" = "芦苇标记";
+"Mending Mark" = "修补标记";
+"Fold Mark" = "折痕";
+"Shade Bar" = "阴影条";
+"Streaks" = "条纹";
+"Stop Mark" = "停止标记";
+"Others" = "其他";
+"Sub Total" = "小计";
+
+
+"Roll" = "滚";
+"Total Points" = "总分";
+"Grade" = "年级";
+"Result" = "结果";
+"EDIT" = "编辑";
+"ADD MORE ROLLS" = "添加更多卷";
+"FINISH ROLLS" = "精加工卷";
+"Remark" = "备注";
+
+
+"Subject" = "学科";
+"Status" = "状态";
+"Comment" = "注释";
+"Cuttable Width" = "可切割宽度";
+"Percentage Inspected" = "检验百分比";
+
+"Remarks" = "备注";
+"Yes" = "是";
+"No" = "没有";
+"SAVE" = "救";

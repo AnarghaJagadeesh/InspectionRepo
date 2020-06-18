@@ -27,6 +27,9 @@
 		471B2BC7241F901E000A902C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 471B2BC5241F901E000A902C /* Main.storyboard */; };
 		471B2BC9241F901F000A902C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 471B2BC8241F901F000A902C /* Assets.xcassets */; };
 		471B2BCC241F901F000A902C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 471B2BCA241F901F000A902C /* LaunchScreen.storyboard */; };
+		8C11D8602484C0F300998DBB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C11D85F2484C0F300998DBB /* SettingsViewController.swift */; };
+		8C3D5AFC2474356F00868934 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3D5AFB2474356F00868934 /* LoginViewModel.swift */; };
+		8C3D5AFE2474397B00868934 /* AppConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3D5AFD2474397B00868934 /* AppConst.swift */; };
 		8C43D8E224643C2900B7CDED /* BasicFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C43D8E124643C2900B7CDED /* BasicFirstViewController.swift */; };
 		8C43D8E524643C5B00B7CDED /* RollsFirstCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C43D8E324643C5A00B7CDED /* RollsFirstCollectionViewCell.swift */; };
 		8C43D8E624643C5B00B7CDED /* RollsFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C43D8E424643C5B00B7CDED /* RollsFirstViewController.swift */; };
@@ -38,7 +41,14 @@
 		8C4596962466895A00D357E1 /* RollDetailsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4596952466895A00D357E1 /* RollDetailsCollectionViewCell.swift */; };
 		8C4596982466961200D357E1 /* RollsSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4596972466961200D357E1 /* RollsSecondViewController.swift */; };
 		8C45969A24669C9600D357E1 /* DataBaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C45969924669C9600D357E1 /* DataBaseHelper.swift */; };
+		8C495C212490DBE10015F2DB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8C495C1F2490DBE10015F2DB /* Localizable.strings */; };
+		8C5CFB452474343A00E230AD /* WebServiceApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5CFB442474343A00E230AD /* WebServiceApi.swift */; };
+		8C6AAA22247924DC00EE2961 /* CheckListStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6AAA21247924DC00EE2961 /* CheckListStruct.swift */; };
+		8C734F4A247A519A001B9A13 /* CheckListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C734F49247A519A001B9A13 /* CheckListViewModel.swift */; };
 		8C87A8DB2472E86300682CE2 /* SummaryStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C87A8DA2472E86300682CE2 /* SummaryStruct.swift */; };
+		8C8AEC65247587D70072A029 /* AppUserStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8AEC64247587D70072A029 /* AppUserStruct.swift */; };
+		8C8AEC67247588FA0072A029 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8AEC66247588FA0072A029 /* AppSettings.swift */; };
+		8CA977832479221B005DF36E /* CheckListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA977822479221B005DF36E /* CheckListCollectionViewCell.swift */; };
 		8CAD912A2461D28900968CB1 /* RollStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD91292461D28900968CB1 /* RollStruct.swift */; };
 		8CF1F8FF24648B25001661F9 /* BasicFirstStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF1F8FE24648B25001661F9 /* BasicFirstStruct.swift */; };
 /* End PBXBuildFile section */
@@ -67,6 +77,10 @@
 		471B2BCB241F901F000A902C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		471B2BCD241F901F000A902C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		78E6E270F8806E26B74FD2B1 /* Pods_Inspection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Inspection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C11D85F2484C0F300998DBB /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		8C3D5AFB2474356F00868934 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		8C3D5AFD2474397B00868934 /* AppConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConst.swift; sourceTree = "<group>"; };
+		8C3D5AFF2474408E00868934 /* InspectionHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InspectionHeader.h; sourceTree = "<group>"; };
 		8C43D8E124643C2900B7CDED /* BasicFirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicFirstViewController.swift; sourceTree = "<group>"; };
 		8C43D8E324643C5A00B7CDED /* RollsFirstCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RollsFirstCollectionViewCell.swift; sourceTree = "<group>"; };
 		8C43D8E424643C5B00B7CDED /* RollsFirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RollsFirstViewController.swift; sourceTree = "<group>"; };
@@ -78,7 +92,16 @@
 		8C4596952466895A00D357E1 /* RollDetailsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollDetailsCollectionViewCell.swift; sourceTree = "<group>"; };
 		8C4596972466961200D357E1 /* RollsSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollsSecondViewController.swift; sourceTree = "<group>"; };
 		8C45969924669C9600D357E1 /* DataBaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseHelper.swift; sourceTree = "<group>"; };
+		8C495C202490DBE10015F2DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8C495C222490DBF50015F2DB /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		8C495C232490DBF60015F2DB /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		8C5CFB442474343A00E230AD /* WebServiceApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceApi.swift; sourceTree = "<group>"; };
+		8C6AAA21247924DC00EE2961 /* CheckListStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListStruct.swift; sourceTree = "<group>"; };
+		8C734F49247A519A001B9A13 /* CheckListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListViewModel.swift; sourceTree = "<group>"; };
 		8C87A8DA2472E86300682CE2 /* SummaryStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryStruct.swift; sourceTree = "<group>"; };
+		8C8AEC64247587D70072A029 /* AppUserStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUserStruct.swift; sourceTree = "<group>"; };
+		8C8AEC66247588FA0072A029 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		8CA977822479221B005DF36E /* CheckListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListCollectionViewCell.swift; sourceTree = "<group>"; };
 		8CAD91292461D28900968CB1 /* RollStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollStruct.swift; sourceTree = "<group>"; };
 		8CF1F8FE24648B25001661F9 /* BasicFirstStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicFirstStruct.swift; sourceTree = "<group>"; };
 		A5BA398F8F3B401D4F739B1C /* Pods-Inspection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Inspection.debug.xcconfig"; path = "Target Support Files/Pods-Inspection/Pods-Inspection.debug.xcconfig"; sourceTree = "<group>"; };
@@ -119,6 +142,7 @@
 				0317A03724646B0900554E13 /* SummaryRollDetailsCollectionViewCell.swift */,
 				8C4596952466895A00D357E1 /* RollDetailsCollectionViewCell.swift */,
 				0363D6B524668C7100B106FE /* SummaryBottomCollectionViewCell.swift */,
+				8CA977822479221B005DF36E /* CheckListCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -178,6 +202,8 @@
 		471B2BC0241F901E000A902C /* Inspection */ = {
 			isa = PBXGroup;
 			children = (
+				8C3D5AFA2474355A00868934 /* View Model */,
+				8C5CFB432474341F00E230AD /* Services */,
 				0368C5972466E0CD006533D7 /* Helper */,
 				0368C5922466DF6C006533D7 /* Cell */,
 				8C43D8F424646A4D00B7CDED /* Core Data */,
@@ -190,11 +216,15 @@
 				4713BC69242228A500BD2BC7 /* BasicViewController.swift */,
 				4713BC6B2422291E00BD2BC7 /* RollsViewController.swift */,
 				4713BC642421F2B400BD2BC7 /* HomeViewController.swift */,
-				4719EC612424DD4500A5508B /* ChecklistViewController.swift */,
 				471B2BC5241F901E000A902C /* Main.storyboard */,
 				471B2BC8241F901F000A902C /* Assets.xcassets */,
 				471B2BCA241F901F000A902C /* LaunchScreen.storyboard */,
 				471B2BCD241F901F000A902C /* Info.plist */,
+				8C3D5AFD2474397B00868934 /* AppConst.swift */,
+				8C3D5AFF2474408E00868934 /* InspectionHeader.h */,
+				8C8AEC66247588FA0072A029 /* AppSettings.swift */,
+				8C11D85F2484C0F300998DBB /* SettingsViewController.swift */,
+				8C495C1F2490DBE10015F2DB /* Localizable.strings */,
 			);
 			path = Inspection;
 			sourceTree = "<group>";
@@ -220,10 +250,20 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		8C3D5AFA2474355A00868934 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				8C3D5AFB2474356F00868934 /* LoginViewModel.swift */,
+				8C734F49247A519A001B9A13 /* CheckListViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
 		8C43D8E724643C6C00B7CDED /* Summary */ = {
 			isa = PBXGroup;
 			children = (
 				0317A03424646A6F00554E13 /* Cell */,
+				4719EC612424DD4500A5508B /* ChecklistViewController.swift */,
 				8C43D8EC24643CD200B7CDED /* SummaryFirstCollectionViewCell.swift */,
 				8C43D8ED24643CD300B7CDED /* SummaryFirstViewController.swift */,
 				8C43D8F22464454600B7CDED /* SummarySecondViewController.swift */,
@@ -239,12 +279,22 @@
 			path = "Core Data";
 			sourceTree = "<group>";
 		};
+		8C5CFB432474341F00E230AD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8C5CFB442474343A00E230AD /* WebServiceApi.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		8CAD91282461D27300968CB1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				8CAD91292461D28900968CB1 /* RollStruct.swift */,
 				8CF1F8FE24648B25001661F9 /* BasicFirstStruct.swift */,
 				8C87A8DA2472E86300682CE2 /* SummaryStruct.swift */,
+				8C8AEC64247587D70072A029 /* AppUserStruct.swift */,
+				8C6AAA21247924DC00EE2961 /* CheckListStruct.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -294,6 +344,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 471B2BB5241F901E000A902C;
 			productRefGroup = 471B2BBF241F901E000A902C /* Products */;
@@ -311,6 +362,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				471B2BCC241F901F000A902C /* LaunchScreen.storyboard in Resources */,
+				8C495C212490DBE10015F2DB /* Localizable.strings in Resources */,
 				471B2BC9241F901F000A902C /* Assets.xcassets in Resources */,
 				471B2BC7241F901E000A902C /* Main.storyboard in Resources */,
 			);
@@ -385,30 +437,39 @@
 				8C43D8EF24643CD300B7CDED /* SummaryFirstViewController.swift in Sources */,
 				4719EC622424DD4500A5508B /* ChecklistViewController.swift in Sources */,
 				4713BC6A242228A500BD2BC7 /* BasicViewController.swift in Sources */,
+				8C6AAA22247924DC00EE2961 /* CheckListStruct.swift in Sources */,
 				8C43D8F124643D4200B7CDED /* LoginViewController.swift in Sources */,
 				471B2BC2241F901E000A902C /* AppDelegate.swift in Sources */,
 				0368C5992466E0E7006533D7 /* Helper.swift in Sources */,
 				8CAD912A2461D28900968CB1 /* RollStruct.swift in Sources */,
 				0368C58F2466A7A1006533D7 /* ImageListCollectionViewCell.swift in Sources */,
 				8C43D8E224643C2900B7CDED /* BasicFirstViewController.swift in Sources */,
+				8C3D5AFE2474397B00868934 /* AppConst.swift in Sources */,
 				8C43D8E524643C5B00B7CDED /* RollsFirstCollectionViewCell.swift in Sources */,
 				8C87A8DB2472E86300682CE2 /* SummaryStruct.swift in Sources */,
 				8C43D8F724646AA200B7CDED /* InspectionDataModel.xcdatamodeld in Sources */,
 				0317A03324631F5E00554E13 /* RollsThirdViewController.swift in Sources */,
+				8C734F4A247A519A001B9A13 /* CheckListViewModel.swift in Sources */,
 				0363D6B624668C7100B106FE /* SummaryBottomCollectionViewCell.swift in Sources */,
 				0368C5962466DF9C006533D7 /* HomeHeaderCollectionViewCell.swift in Sources */,
+				8CA977832479221B005DF36E /* CheckListCollectionViewCell.swift in Sources */,
 				4713BC6C2422291E00BD2BC7 /* RollsViewController.swift in Sources */,
 				4713BC652421F2B400BD2BC7 /* HomeViewController.swift in Sources */,
 				8C45969A24669C9600D357E1 /* DataBaseHelper.swift in Sources */,
 				8C43D8EE24643CD300B7CDED /* SummaryFirstCollectionViewCell.swift in Sources */,
+				8C5CFB452474343A00E230AD /* WebServiceApi.swift in Sources */,
 				8CF1F8FF24648B25001661F9 /* BasicFirstStruct.swift in Sources */,
+				8C3D5AFC2474356F00868934 /* LoginViewModel.swift in Sources */,
 				8C4596982466961200D357E1 /* RollsSecondViewController.swift in Sources */,
+				8C8AEC65247587D70072A029 /* AppUserStruct.swift in Sources */,
 				8C43D8E624643C5B00B7CDED /* RollsFirstViewController.swift in Sources */,
 				0368C5942466DF80006533D7 /* HomeCollectionViewCell.swift in Sources */,
 				8C4596962466895A00D357E1 /* RollDetailsCollectionViewCell.swift in Sources */,
 				0317A03824646B0900554E13 /* SummaryRollDetailsCollectionViewCell.swift in Sources */,
 				031D1CF52461C47E0027A17C /* BasicSecondViewController.swift in Sources */,
+				8C8AEC67247588FA0072A029 /* AppSettings.swift in Sources */,
 				8C43D8F32464454600B7CDED /* SummarySecondViewController.swift in Sources */,
+				8C11D8602484C0F300998DBB /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +480,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				471B2BC6241F901E000A902C /* Base */,
+				8C495C222490DBF50015F2DB /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -431,6 +493,15 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		8C495C1F2490DBE10015F2DB /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C495C202490DBE10015F2DB /* Base */,
+				8C495C232490DBF60015F2DB /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -438,6 +509,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -499,6 +571,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -555,8 +628,8 @@
 			baseConfigurationReference = A5BA398F8F3B401D4F739B1C /* Pods-Inspection.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 8QXP3K9MLP;
 				INFOPLIST_FILE = Inspection/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
@@ -566,7 +639,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.CastWield.InspectionApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = Inspection_Adhoc;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -577,8 +650,8 @@
 			baseConfigurationReference = D76B5DF36B9A605AAE4855E8 /* Pods-Inspection.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 8QXP3K9MLP;
 				INFOPLIST_FILE = Inspection/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
@@ -588,7 +661,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.CastWield.InspectionApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = Inspection_Adhoc;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

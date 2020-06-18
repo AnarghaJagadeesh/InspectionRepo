@@ -14,7 +14,8 @@ class RollsSecondViewController: UIViewController {
     var pickedImages = [UIImage]()
     var editType : EditType = .NEW
     var pickedimgData = [Data]()
- 
+ var basicStructApi = [BasicFirstStruct]()
+
     var basicFirstModel : BasicFirstStruct?
     var basicSecondModel : BasicSecondStruct?
     var rollFirstModel : RollStruct?
@@ -59,6 +60,7 @@ class RollsSecondViewController: UIViewController {
         
         rollVal.rollImage = self.pickedimgData as NSObject
         rollVal.inspectionNo = Int32(self.basicSecondModel?.inspectionNo ?? 0)
+        rollVal.rollNo = Int32(Int(self.basicSecondModel?.rollNumber ?? "") ?? 0)
         
         
         // 4
@@ -157,6 +159,8 @@ class RollsSecondViewController: UIViewController {
         rollsThirdVC.basicSecondModel = self.basicSecondModel
         rollsThirdVC.rollFirstModel = self.rollFirstModel
         rollsThirdVC.rollCount = rollCount
+        rollsThirdVC.editType = self.editType
+        rollsThirdVC.basicStructApi = self.basicStructApi
         self.navigationController?.pushViewController(rollsThirdVC, animated: true)
         
     }

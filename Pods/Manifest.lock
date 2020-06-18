@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (4.8.2)
   - DropDown (2.3.13)
   - GoogleMaps (3.8.0):
     - GoogleMaps/Maps (= 3.8.0)
@@ -7,39 +8,50 @@ PODS:
     - GoogleMaps/Base
   - GooglePlaces (3.8.0):
     - GoogleMaps/Base (= 3.8.0)
+  - IHProgressHUD (0.1.4)
   - iOSDropDown (0.3.3)
   - IQKeyboardManager (6.5.5)
+  - LanguageManager-iOS (1.2.0)
   - M13Checkbox (3.4.0)
   - XLPagerTabStrip (9.0.0)
 
 DEPENDENCIES:
+  - Alamofire
   - DropDown
   - GoogleMaps
   - GooglePlaces
+  - IHProgressHUD
   - iOSDropDown
   - IQKeyboardManager
+  - LanguageManager-iOS
   - M13Checkbox
   - XLPagerTabStrip (~> 9.0)
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - DropDown
     - GoogleMaps
     - GooglePlaces
+    - IHProgressHUD
     - iOSDropDown
     - IQKeyboardManager
+    - LanguageManager-iOS
     - M13Checkbox
     - XLPagerTabStrip
 
 SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   GoogleMaps: 7c8d66d70e4e8c300f43a7219d8fdaad7b325a9a
   GooglePlaces: d5f70c3e9e427964fdeca1301a665d276ccd8754
+  IHProgressHUD: a01846bfbb581c761c79747c67b08387c3bdfae3
   iOSDropDown: ae675451f6b91cec00531c953372e09c54dbd818
   IQKeyboardManager: 3a8b9e603f8b0eeaf5f096a1f2b2cfcf121992ef
+  LanguageManager-iOS: 516c4f088435c83cbdbddfc5179f88e4e0d39eb4
   M13Checkbox: 6f59404540ac98ba83a3d1afac335895a40c6a5d
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: 7652886f403586bcb2477d416bf1792c39589427
+PODFILE CHECKSUM: 9c5f92190b9814d50215c16fb03bce38cd9615c3
 
 COCOAPODS: 1.9.0

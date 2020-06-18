@@ -20,3 +20,21 @@ struct SummaryFirstStruct {
         torque = dict["torque"] as! Double
     }
 }
+
+struct SummaryDataStruct {
+    var isAccepted : Bool
+    var comments : String
+    var inspectionNo : Int
+    var acceptedRolls : Int
+    var rejectedRolls : Int
+    var avgPoints : Int
+    
+    init(status : Bool , comm : String, inspectionNo : Int, accepRolls : Int, rejRolls : Int,avgPoints : Int) {
+        self.isAccepted = status
+        self.comments = comm
+        self.inspectionNo = inspectionNo
+        self.acceptedRolls = accepRolls
+        self.rejectedRolls = rejRolls
+        self.avgPoints = avgPoints
+    }
+}
