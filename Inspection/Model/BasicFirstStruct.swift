@@ -8,7 +8,10 @@
 
 import UIKit
 
-struct BasicFirstStruct {
+struct BasicFirstStruct : Equatable {
+    static func ==(lhs: BasicFirstStruct, rhs: BasicFirstStruct) -> Bool {
+        return lhs.PONo == rhs.PONo
+    }
     
     var fabricCategory : String = "Group 1"
     var PONo : String = ""
@@ -25,23 +28,36 @@ struct BasicFirstStruct {
     var reportToName : String = ""
     var date : String = ""
     var inspectionNo : Int = 0
+    var id  : Int = 0
     
-    init(dict:[String : Any]) {
-        self.fabricCategory = dict["fabricCategory"] as! String
-        self.PONo = dict["poNo"] as! String
-        self.content = dict["content"] as! String
-        self.construction = dict["construction"] as! String
-        self.POCutWidth = dict["poCutWidth"] as! Float
-        self.factoryName = dict["factoryName"] as! String
-        self.fabricType = dict["fabricType"] as! String
-        self.orderQty = dict["orderQty"] as! Int
-        self.totalQtyOffered = dict["totalQtyOffered"] as! Int
-        self.weightGSM = dict["weightGSM"] as! Float
-        self.colorName = dict["colorName"] as! String
-        self.finish = dict["finish"] as! String
-        self.reportToName = dict["reportToName"] as! String
-        self.inspectionNo = dict["inspectionNo"] as! Int
-        self.date = dict["date"] as! String
+    init(dict:[String : Any], isApi : Bool = false) {
+        if !isApi {
+            self.fabricCategory = dict["fabricCategory"] as! String
+            self.PONo = dict["poNo"] as! String
+            self.content = dict["content"] as! String
+            self.construction = dict["construction"] as! String
+            self.POCutWidth = dict["poCutWidth"] as! Float
+            self.factoryName = dict["factoryName"] as! String
+            self.fabricType = dict["fabricType"] as! String
+            self.orderQty = dict["orderQty"] as! Int
+            self.totalQtyOffered = dict["totalQtyOffered"] as! Int
+            self.weightGSM = dict["weightGSM"] as! Float
+            self.colorName = dict["colorName"] as! String
+            self.finish = dict["finish"] as! String
+            self.reportToName = dict["reportToName"] as! String
+            self.inspectionNo = dict["inspectionNo"] as! Int
+            self.date = dict["date"] as! String
+        } else {
+            if let poNumber = dict["po_number"] as? String {
+                self.PONo = poNumber
+            }
+            if let id = dict["id"] as? Int {
+                self.id = id
+            }
+            if let date = dict["added_on"] as? String {
+                self.date = date
+            }
+        }
     }
 }
 
@@ -78,4 +94,14 @@ struct BasicSecondStruct {
         self.inspectionNo = dict["inspectionNo"] as! Int
     }
     
+}
+
+struct GeneralStruct {
+    var id : Int
+    var title : String
+    
+    init(dict : [String : Any]) {
+        self.id = dict["id"] as! Int
+        self.title = dict["title"] as! String
+    }
 }

@@ -1,0 +1,81 @@
+/* 
+  Localizable.strings
+  Inspection
+
+  Created by Beegins on 10/06/20.
+  Copyright © 2020 CodeGreen. All rights reserved.
+*/
+
+"Employee Id" = "Employee Id";
+"Password" = "Password";
+
+"Fabric Category" = "Fabric Category";
+"PO No" = "PO No";
+"Enter PO No" = "Enter PO No";
+"Content" = "Content";
+"Enter Content" = "Enter Content";
+"Construction" = "Construction";
+"Enter Construction" = "Enter Construction";
+"PO Cut Width in Inch" = "PO Cut Width in Inch";
+"Enter Width" = "Enter Width";
+"Factory Name" = "Factory Name";
+"Enter Factory Name" = "Enter Factory Name";
+"Fabric Type" = "Fabric Type";
+"Order Qty" = "Order Qty";
+"Total Qty Offered" = "Total Qty Offered";
+"Weight in GSM" = "Weight in GSM";
+"Color Name" = "Color Name";
+"Enter Color" = "Enter Color";
+"Finish" = "Finish";
+"Enter Finish" = "Enter Finish";
+"Report To" = "Report To";
+
+"Roll Number" = "Roll Number";
+"Ticket Length in YDS" = "Ticket Length in YDS";
+"Actual Length" = "Actual Length";
+"Actual Cut width in Inch" = "Actual Cut width in Inch";
+"End to End Shading" = "End to End Shading";
+"Side to Side Shading" = "Side to Side Shading";
+"Side to Center Shading" = "Side to Center Shading";
+"Light" = "Light";
+"Medium" = "Medium";
+"Heavy" = "Heavy";
+"NO" = "NO";
+"Skew / Bowing" = "Skew / Bowing";
+"Pattern" = "Pattern";
+"Ok" = "Ok";
+"Not Ok" = "Not Ok";
+"Actual Weight in Gsm" = "Actual Weight in GSM";
+"Handfeel" = "Handfeel";
+
+"Broken End" = "Broken End";
+"Broken Picks" = "Broken Picks";
+"Reed Mark" = "Read Mark";
+"Mending Mark" = "Mending Mark";
+"Fold Mark" = "Fold Mark";
+"Shade Bar" = "Shade Bar";
+"Streaks" = "Streaks";
+"Stop Mark" = "Stop Mark";
+"Others" = "Others";
+"Sub Total" = "Sub Total";
+
+"Roll" = "Roll";
+"Total Points" = "Total Points";
+"Grade" = "Grade";
+"Result" = "Result";
+"EDIT" = "EDIT";
+"ADD MORE ROLLS" = "ADD MORE ROLLS";
+"FINISH ROLLS" = "FINISH ROLLS";
+"Remark" = "Remark";
+
+
+"Subject" = "Subject";
+"Status" = "Status";
+"Comment" = "Comment";
+"Cuttable Width" = "Cuttable Width";
+"Percentage Inspected" = "Percentage Inspected";
+
+"Remarks" = "Remarks";
+"Yes" = "Yes";
+"No" = "Yes";
+"SAVE" = "SAVE";

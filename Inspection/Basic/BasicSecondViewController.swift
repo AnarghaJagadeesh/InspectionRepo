@@ -69,6 +69,8 @@ class BasicSecondViewController: UIViewController {
     var basicSecond = [NSManagedObject]()
     var basicStruct : BasicSecondStruct?
     var basicFirstStruct : BasicFirstStruct?
+    var basicStructApi = [BasicFirstStruct]()
+
     
     var editType : EditType = .NEW
     
@@ -143,6 +145,7 @@ class BasicSecondViewController: UIViewController {
             rollsFirstVC.basicFirstModel = self.basicFirstStruct
             rollsFirstVC.basicSecondModel = self.basicStruct
             rollsFirstVC.rollCount = self.rollCount
+            rollsFirstVC.basicStructApi = self.basicStructApi
             self.navigationController?.pushViewController(rollsFirstVC, animated: true)
         }
     }

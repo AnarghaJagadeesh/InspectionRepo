@@ -31,15 +31,22 @@ class RollsThirdViewController: UIViewController {
     var basicFirstModel : BasicFirstStruct?
     var basicSecondModel : BasicSecondStruct?
     var rollFirstModel : RollStruct?
-    var isValid = [false]
+    var isValid = [Bool]()
     var remarkText = ""
     var rollCount : Int = 0
+    var basicStructApi = [BasicFirstStruct]()
+
+    
+    var editType : EditType = .NEW
 
     override func viewDidLoad() {
         super.viewDidLoad()
         initialSetup()
         self.populatingPoints()
         self.validation()
+        if editType == .UPDATE {
+            self.fetchFromCoreData()
+        }
         // Do any additional setup after loading the view.
     }
     func initialSetup(){
@@ -49,7 +56,7 @@ class RollsThirdViewController: UIViewController {
     func validation() {
         if let basicFirst = basicFirstModel {
             if let basicSecond = basicSecondModel {
-                if (basicSecond.actualWeightGSM >= basicFirst.weightGSM + 5.0) && (basicSecond.actualWeightGSM <= basicFirst.weightGSM + 5.0) {
+                if (basicSecond.actualWeightGSM >= basicFirst.weightGSM - 5.0) && (basicSecond.actualWeightGSM <= basicFirst.weightGSM + 5.0) {
                     isValid.append(true)
                 } else {
                     isValid.append(false)
@@ -57,19 +64,19 @@ class RollsThirdViewController: UIViewController {
                 }
                 if basicSecond.endToEnd == Quality.NO.rawValue {
                     isValid.append(false)
-                    remarkText = remarkText == "" ? "Failed for End to End Shading" : "\nFailed for End to End Shading"
+                    remarkText = remarkText == "" ? "Failed for End to End Shading" : "\(remarkText)\nFailed for End to End Shading"
                 } else {
                     isValid.append(true)
                 }
                 if basicSecond.sideToSide == Quality.NO.rawValue {
                     isValid.append(false)
-                    remarkText = remarkText == "" ? "Failed for Side to Side Shading" : "\nFailed for Side to Side Shading"
+                    remarkText = remarkText == "" ? "Failed for Side to Side Shading" : "\(remarkText)\nFailed for Side to Side Shading"
                 } else {
                     isValid.append(true)
                 }
                 if basicSecond.sideToCenter == Quality.NO.rawValue {
                     isValid.append(false)
-                    remarkText = remarkText == "" ? "Failed for Side to Center Shading" : "\nFailed for Side to Center Shading"
+                    remarkText = remarkText == "" ? "Failed for Side to Center Shading" : "\(remarkText)\nFailed for Side to Center Shading"
                 } else {
                     isValid.append(true)
                 }
@@ -80,6 +87,7 @@ class RollsThirdViewController: UIViewController {
             self.txtView.text = self.remarkText
         } else {
             self.resultLbl.text = "PASS"
+            self.txtView.text = ""
         }
         
     }
@@ -103,6 +111,21 @@ class RollsThirdViewController: UIViewController {
         rollVal.inspectionNo = Int32(self.basicSecondModel?.inspectionNo ?? 0)
         rollVal.totalPoints = Int16(Int(self.totalPointsLbl.text ?? "") ?? 0)
         rollVal.status = self.resultLbl.text == "PASS" ? true : false
+        rollVal.rollNo = Int32(self.basicSecondModel?.rollNumber ?? "") ?? 0
+        rollVal.remarks = self.remarkText
+        rollVal.grade = self.gradeLbl.text
+        rollVal.yardValue = Double(self.yardLbl.text ?? "")!
+        if let rollModel = self.rollFirstModel {
+            var dict = [String:Any]()
+            dict["1 point"] = rollModel.onePoint
+            dict["2 point"] = rollModel.twoPoint
+            dict["3 point"] = rollModel.threePoint
+            dict["4 point"] = rollModel.fourPoint
+            dict["title"] = rollModel.titleText
+            dict["id"] = rollModel.id
+            rollVal.pointsDict = dict as NSObject
+        }
+        
 
         //        rollFirstVal.setValue(point1Value, forKeyPath: "points1")
         //        rollFirstVal.setValue(point2Value, forKeyPath: "points2")
@@ -120,40 +143,43 @@ class RollsThirdViewController: UIViewController {
         }
     }
 //
-//    func fetchFromCoreData(){
-//        guard let appDelegate =
-//            UIApplication.shared.delegate as? AppDelegate else {
-//                return
-//        }
-//
-//        // 1
-//        let managedContext =
-//            appDelegate.persistentContainer.viewContext
-//
-//        // 2
-//
-//        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "RollFirst")
-//        //        let fetchRequest = NSFetchRequest<NSFetchRequestResult>.init(entityName: "BasicFirst")
-//
-//        //3
-//        do {
-//            let result = try managedContext.fetch(fetchRequest)
-//            self.point1Array = []
-//            self.point2Array = []
-//            self.point3Array = []
-//            self.point4Array = []
-//            for data in result {
-//                self.point1Array = (data.value(forKey: "points1") as! [Int])
-//                self.point2Array = (data.value(forKey: "points2") as! [Int])
-//                self.point3Array = (data.value(forKey: "points3") as! [Int])
-//                self.point4Array = (data.value(forKey: "points4") as! [Int])
-//            }
-//
-//        } catch let error as NSError {
-//            print("Could not fetch. \(error), \(error.userInfo)")
-//        }
-//
-//    }
+    func fetchFromCoreData(){
+        guard let appDelegate =
+            UIApplication.shared.delegate as? AppDelegate else {
+                return
+        }
+
+        // 1
+        let managedContext =
+            appDelegate.persistentContainer.viewContext
+
+        // 2
+
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "RollThird")
+        //        let fetchRequest = NSFetchRequest<NSFetchRequestResult>.init(entityName: "BasicFirst")
+
+        //3
+        do {
+            let result = try managedContext.fetch(fetchRequest)
+            for data in result {
+                if data.value(forKey: "inspectionNo") as? Int == self.basicSecondModel?.inspectionNo && data.value(forKey: "rollNo") as? Int == Int(self.basicSecondModel?.rollNumber ?? "") {
+                    let pointDict = data.value(forKey: "pointsDict") as! [String:Any]
+                    self.fourPointsLbl.text = "\(pointDict["4 point"] as! Int)"
+                    self.threePointsLbl.text = "\(pointDict["3 point"] as! Int)"
+                    self.twoPointsLbl.text = "\(pointDict["2 point"] as! Int)"
+                    self.onePointsLbl.text = "\(pointDict["1 point"] as! Int)"
+                    self.totalPointsLbl.text = "\(data.value(forKey: "totalPoints") as! Int)"
+                    self.txtView.text = data.value(forKey: "remarks") as? String
+                    self.yardLbl.text = "\(data.value(forKey: "yardValue") as! Double)"
+                    self.gradeLbl.text = data.value(forKey: "grade") as? String
+                }
+            }
+
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+        }
+
+    }
     
     
     func populatingPoints(){
@@ -165,6 +191,7 @@ class RollsThirdViewController: UIViewController {
             self.onePointsLbl.text = "\(rollModel.onePoint)"
             let total = rollModel.fourPoint + rollModel.threePoint + rollModel.twoPoint + rollModel.onePoint
             self.totalPointsLbl.text = "\(total)"
+            self.yardLbl.text = "\(total*25)"
         }
     }
 
@@ -182,22 +209,30 @@ class RollsThirdViewController: UIViewController {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let basicSecondVC = storyBoard.instantiateViewController(withIdentifier: "basicSecondVC") as! BasicSecondViewController
         basicSecondVC.editType = .UPDATE
+        basicSecondVC.basicStructApi = self.basicStructApi
         self.navigationController?.pushViewController(basicSecondVC, animated: true)
     }
     
     @IBAction func finisheRollPressed(_ sender: Any) {
-        self.saveToCoreData()
+        if self.editType == .NEW {
+            self.saveToCoreData()
+        }
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let summaryFirstVC = storyBoard.instantiateViewController(withIdentifier: "summaryFirstVC") as! SummaryFirstViewController
         summaryFirstVC.basicFirstModel = self.basicFirstModel
+        summaryFirstVC.editType = self.editType
+        summaryFirstVC.basicStructApi = self.basicStructApi
         self.navigationController?.pushViewController(summaryFirstVC, animated: true)
     }
     
     @IBAction func AddMorePressed(_ sender: Any) {
-        self.saveToCoreData()
+        if self.editType == .NEW {
+            self.saveToCoreData()
+        }
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let basicSecondVC = storyBoard.instantiateViewController(withIdentifier: "basicSecondVC") as! BasicSecondViewController
         self.rollCount = self.rollCount + 1
+        basicSecondVC.basicStructApi = self.basicStructApi
         self.navigationController?.pushViewController(basicSecondVC, animated: true)
     }
     @IBAction func bkPressed(_ sender: Any) {
@@ -210,9 +245,14 @@ class RollsThirdViewController: UIViewController {
     }
     
     @IBAction func nextPressed(_ sender: Any) {
+        if self.editType == .NEW {
+            self.saveToCoreData()
+        }
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let summaryFirstVC = storyBoard.instantiateViewController(withIdentifier: "summaryFirstVC") as! SummaryFirstViewController
         summaryFirstVC.basicFirstModel = self.basicFirstModel
+        summaryFirstVC.editType = self.editType
+        summaryFirstVC.basicStructApi = self.basicStructApi
         self.navigationController?.pushViewController(summaryFirstVC, animated: true)
 
     }

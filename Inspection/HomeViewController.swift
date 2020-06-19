@@ -14,12 +14,22 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var homeCol: UICollectionView!
     var basicStruct = [BasicFirstStruct]()
+    var basicStructApi = [BasicFirstStruct]()
     var basicDict = [String:Any]()
+    var editType : EditType = .NEW
+    
+    @IBAction func btnSettings(_ sender: UIButton) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let settingsVC = storyBoard.instantiateViewController(withIdentifier: "Settings") as! SettingsViewController
+        self.navigationController?.pushViewController(settingsVC, animated: true)
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         homeCol.delegate = self
         homeCol.dataSource = self
         self.fetchFromCoreData()
+        
        initialSetup()
         // Do any additional setup after loading the view.
     }
@@ -28,6 +38,23 @@ class HomeViewController: UIViewController {
         bottomView.layer.cornerRadius = 20
         bottomView.layer.borderWidth = 0.5
         bottomView.layer.borderColor = UIColor.lightGray.cgColor
+        
+        _ = self.basicStructApi.map({ (basicDict) in
+            var basicIndex = 0
+            if self.basicStruct.contains(basicDict) {
+                _ = self.basicStruct.enumerated().map({ (index, basicFirstStruct)  in
+                    if basicFirstStruct == basicDict {
+                        basicIndex = index
+                    }
+                })
+                self.basicStruct.remove(at: basicIndex)
+            }
+        })
+        _ = self.basicStructApi.map({ (basicDict) in
+            self.basicStruct.append(basicDict)
+        })
+        print(self.basicStruct)
+        
        // bottomView.dropShadow()
     }
  
@@ -87,19 +114,26 @@ class HomeViewController: UIViewController {
     }
     */
     @IBAction func addButtonPressed(_ sender: Any) {
-        if let inspectionNo = UserDefaults.standard.value(forKey: "inspectionNo") as? Int {
-            UserDefaults.standard.set(inspectionNo + 1, forKey: "inspectionNo")
-        } else {
-            UserDefaults.standard.set(1, forKey: "inspectionNo")
+        if editType == .NEW {
+            if let inspectionNo = UserDefaults.standard.value(forKey: "inspectionNo") as? Int {
+                UserDefaults.standard.set(inspectionNo + 1, forKey: "inspectionNo")
+            } else {
+                UserDefaults.standard.set(1, forKey: "inspectionNo")
+            }
         }
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let basicFirstVC = storyBoard.instantiateViewController(withIdentifier: "basicFirstVC") as! BasicFirstViewController
+        basicFirstVC.editType = self.editType
+        basicFirstVC.basicStructApi = self.basicStructApi
         self.navigationController?.pushViewController(basicFirstVC, animated: true)
     }
     func goToSummary(basicStruct : BasicFirstStruct) {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let summaryFirstVC = storyBoard.instantiateViewController(withIdentifier: "summaryFirstVC") as! SummaryFirstViewController
         summaryFirstVC.basicFirstModel = basicStruct
+        summaryFirstVC.basicStructApi = basicStructApi
+        summaryFirstVC.editType = self.editType
+        summaryFirstVC.isAction = true
         self.navigationController?.pushViewController(summaryFirstVC, animated: true)
     }
 }
@@ -114,7 +148,10 @@ extension HomeViewController : UICollectionViewDelegate , UICollectionViewDataSo
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCell", for: indexPath) as! HomeCollectionViewCell
         cell.basicStruct = self.basicStruct[indexPath.item]
         cell.didTapAction = { [weak self] (basicStruct) in
-            self?.goToSummary(basicStruct: basicStruct)
+            self?.editType = .UPDATE
+            if basicStruct.id == 0 {
+                self?.goToSummary(basicStruct: basicStruct)
+            }
         }
         return cell
     }

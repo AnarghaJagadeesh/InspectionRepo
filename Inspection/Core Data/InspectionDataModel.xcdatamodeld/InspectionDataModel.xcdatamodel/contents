@@ -33,15 +33,22 @@
         <attribute name="skewBowing" optional="YES" attributeType="String"/>
         <attribute name="ticketLength" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
     </entity>
+    <entity name="CheckList" representedClassName="CheckList" syncable="YES" codeGenerationType="class">
+        <attribute name="comments" optional="YES" attributeType="String"/>
+        <attribute name="inspectionNo" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="remarkDict" optional="YES" attributeType="Transformable"/>
+    </entity>
+    <entity name="ReporterList" representedClassName="ReporterList" syncable="YES" codeGenerationType="class">
+        <attribute name="reporterName" optional="YES" attributeType="String"/>
+    </entity>
     <entity name="RollFirst" representedClassName="RollFirst" syncable="YES" codeGenerationType="class">
         <attribute name="inspectionNo" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="points1" optional="YES" attributeType="Transformable"/>
-        <attribute name="points2" optional="YES" attributeType="Transformable"/>
-        <attribute name="points3" optional="YES" attributeType="Transformable"/>
-        <attribute name="points4" optional="YES" attributeType="Transformable"/>
+        <attribute name="rankDict" optional="YES" attributeType="Transformable"/>
+        <attribute name="rollNo" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
     <entity name="RollFirstSubTotal" representedClassName="RollFirstSubTotal" syncable="YES" codeGenerationType="class">
         <attribute name="inspectionNo" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="rollNo" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="total1" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="total2" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="total3" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
@@ -50,18 +57,35 @@
     <entity name="RollImages" representedClassName="RollImages" syncable="YES" codeGenerationType="class">
         <attribute name="inspectionNo" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="rollImage" optional="YES" attributeType="Transformable"/>
+        <attribute name="rollNo" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
     <entity name="RollThird" representedClassName="RollThird" syncable="YES" codeGenerationType="class">
+        <attribute name="grade" optional="YES" attributeType="String"/>
         <attribute name="inspectionNo" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="pointsDict" optional="YES" attributeType="Transformable"/>
+        <attribute name="remarks" optional="YES" attributeType="String"/>
+        <attribute name="rollNo" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="status" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="totalPoints" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="yardValue" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="SummaryFirst" representedClassName="SummaryFirst" syncable="YES" codeGenerationType="class">
+        <attribute name="acceptedRolls" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="avgPoints" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="comments" optional="YES" attributeType="String"/>
+        <attribute name="factoryAccepted" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="inspectionNo" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="rejectedRolls" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
     <elements>
         <element name="BasicFirst" positionX="-45" positionY="0" width="128" height="268"/>
         <element name="BasicSecond" positionX="-45" positionY="99" width="128" height="253"/>
-        <element name="RollFirst" positionX="-36" positionY="153" width="128" height="118"/>
-        <element name="RollFirstSubTotal" positionX="-18" positionY="162" width="128" height="118"/>
-        <element name="RollImages" positionX="-27" positionY="144" width="128" height="73"/>
-        <element name="RollThird" positionX="-18" positionY="162" width="128" height="88"/>
+        <element name="CheckList" positionX="-27" positionY="153" width="128" height="88"/>
+        <element name="RollFirst" positionX="-36" positionY="153" width="128" height="88"/>
+        <element name="RollFirstSubTotal" positionX="-18" positionY="162" width="128" height="133"/>
+        <element name="RollImages" positionX="-27" positionY="144" width="128" height="88"/>
+        <element name="RollThird" positionX="-18" positionY="162" width="128" height="163"/>
+        <element name="SummaryFirst" positionX="-27" positionY="153" width="128" height="133"/>
+        <element name="ReporterList" positionX="-27" positionY="153" width="128" height="58"/>
     </elements>
 </model>

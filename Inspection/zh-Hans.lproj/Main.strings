@@ -1,0 +1,534 @@
+
+/* Class = "UILabel"; text = "1"; ObjectID = "0d2-pE-bi3"; */
+"0d2-pE-bi3.text" = "1";
+
+/* Class = "UILabel"; text = "Comment"; ObjectID = "0ea-Hv-18G"; */
+"0ea-Hv-18G.text" = "Comment";
+
+/* Class = "UILabel"; text = "Summary"; ObjectID = "0kN-vg-A8b"; */
+"0kN-vg-A8b.text" = "Summary";
+
+/* Class = "UILabel"; text = ":"; ObjectID = "0xU-QT-Rok"; */
+"0xU-QT-Rok.text" = ":";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "1KX-G6-HtN"; */
+"1KX-G6-HtN.text" = "Label";
+
+/* Class = "UILabel"; text = "Summary"; ObjectID = "1Zg-jR-kC3"; */
+"1Zg-jR-kC3.text" = "Summary";
+
+/* Class = "UITextField"; placeholder = "Search by po"; ObjectID = "1nK-B0-Fz0"; */
+"1nK-B0-Fz0.placeholder" = "Search by po";
+
+/* Class = "UILabel"; text = "Roll Number"; ObjectID = "1xQ-sv-RBV"; */
+"1xQ-sv-RBV.text" = "Roll Number";
+
+/* Class = "UILabel"; text = "Customer"; ObjectID = "2Y4-P7-76g"; */
+"2Y4-P7-76g.text" = "Customer";
+
+/* Class = "UILabel"; text = ":"; ObjectID = "2hQ-gK-DRS"; */
+"2hQ-gK-DRS.text" = ":";
+
+/* Class = "UILabel"; text = "Heavy"; ObjectID = "3SB-Jc-1Oo"; */
+"3SB-Jc-1Oo.text" = "Heavy";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "3XS-Rp-HQm"; */
+"3XS-Rp-HQm.text" = "Label";
+
+/* Class = "UILabel"; text = "Content"; ObjectID = "3te-P4-fDn"; */
+"3te-P4-fDn.text" = "Content";
+
+/* Class = "UILabel"; text = "Light"; ObjectID = "45L-a1-6c1"; */
+"45L-a1-6c1.text" = "Light";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "4IL-V4-nai"; */
+"4IL-V4-nai.text" = "Label";
+
+/* Class = "UILabel"; text = "Grade"; ObjectID = "4b5-hA-A1P"; */
+"4b5-hA-A1P.text" = "Grade";
+
+/* Class = "UILabel"; text = "Remarks"; ObjectID = "4iV-4L-o5W"; */
+"4iV-4L-o5W.text" = "Remarks";
+
+/* Class = "UIButton"; normalTitle = "SAVE"; ObjectID = "4jh-Rb-ehL"; */
+"4jh-Rb-ehL.normalTitle" = "SAVE";
+
+/* Class = "UITextField"; text = "Group 1"; ObjectID = "5Rr-BV-DPf"; */
+"5Rr-BV-DPf.text" = "Group 1";
+
+/* Class = "UITextField"; placeholder = "Enter Color"; ObjectID = "5dE-9e-xkj"; */
+"5dE-9e-xkj.placeholder" = "Enter Color";
+
+/* Class = "UILabel"; text = "Basic"; ObjectID = "5eO-SE-vgq"; */
+"5eO-SE-vgq.text" = "Basic";
+
+/* Class = "UITextField"; placeholder = "Choose Language"; ObjectID = "5nL-Mb-u2Z"; */
+"5nL-Mb-u2Z.placeholder" = "Choose Language";
+
+/* Class = "UILabel"; text = "Rolls"; ObjectID = "5oF-Hq-g1i"; */
+"5oF-Hq-g1i.text" = "Rolls";
+
+/* Class = "UITextField"; placeholder = "Enter PO No"; ObjectID = "6G8-mv-T5d"; */
+"6G8-mv-T5d.placeholder" = "Enter PO No";
+
+/* Class = "UILabel"; text = "Add New Inspection"; ObjectID = "6kP-d4-Rc5"; */
+"6kP-d4-Rc5.text" = "Add New Inspection";
+
+/* Class = "UILabel"; text = "Add New Inspection"; ObjectID = "8U0-lR-vuK"; */
+"8U0-lR-vuK.text" = "Add New Inspection";
+
+/* Class = "UILabel"; text = "Total points"; ObjectID = "8Wh-I0-cZA"; */
+"8Wh-I0-cZA.text" = "Total points";
+
+/* Class = "UILabel"; text = "Action"; ObjectID = "8wC-tJ-UK9"; */
+"8wC-tJ-UK9.text" = "Action";
+
+/* Class = "UITextField"; placeholder = "Enter Construction"; ObjectID = "8xC-vf-wy6"; */
+"8xC-vf-wy6.placeholder" = "Enter Construction";
+
+/* Class = "UILabel"; text = ":"; ObjectID = "9Gc-Go-KxA"; */
+"9Gc-Go-KxA.text" = ":";
+
+/* Class = "UILabel"; text = "Basic"; ObjectID = "AIS-sM-ySB"; */
+"AIS-sM-ySB.text" = "Basic";
+
+/* Class = "UITextField"; placeholder = "1000"; ObjectID = "AlH-Ae-EBm"; */
+"AlH-Ae-EBm.placeholder" = "1000";
+
+/* Class = "UILabel"; text = "Add New Inspection"; ObjectID = "BO2-M5-vd1"; */
+"BO2-M5-vd1.text" = "Add New Inspection";
+
+/* Class = "UILabel"; text = "Summary"; ObjectID = "BXs-HK-JDJ"; */
+"BXs-HK-JDJ.text" = "Summary";
+
+/* Class = "UILabel"; text = "Light"; ObjectID = "BYg-qF-720"; */
+"BYg-qF-720.text" = "Light";
+
+/* Class = "UILabel"; text = "Side to Center Shading"; ObjectID = "BiQ-op-Ea4"; */
+"BiQ-op-Ea4.text" = "Side to Center Shading";
+
+/* Class = "UILabel"; text = "Handfeel"; ObjectID = "Bnz-P0-Um6"; */
+"Bnz-P0-Um6.text" = "Handfeel";
+
+/* Class = "UILabel"; text = "Sub Total"; ObjectID = "CMi-KP-aio"; */
+"CMi-KP-aio.text" = "Sub Total";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "CPE-WP-3jK"; */
+"CPE-WP-3jK.text" = "Label";
+
+/* Class = "UILabel"; text = "Torque / Skew"; ObjectID = "Ccz-Gj-ZSZ"; */
+"Ccz-Gj-ZSZ.text" = "Torque / Skew";
+
+/* Class = "UITextField"; placeholder = "Enter Width"; ObjectID = "Cqv-Vj-QBv"; */
+"Cqv-Vj-QBv.placeholder" = "Enter Width";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "CwF-6x-YVc"; */
+"CwF-6x-YVc.text" = "Label";
+
+/* Class = "UILabel"; text = "Heavy"; ObjectID = "CwO-i3-jPt"; */
+"CwO-i3-jPt.text" = "Heavy";
+
+/* Class = "UILabel"; text = "Subject"; ObjectID = "DN4-2Z-AUc"; */
+"DN4-2Z-AUc.text" = "Subject";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "EIZ-Ej-Ofi"; */
+"EIZ-Ej-Ofi.text" = "Label";
+
+/* Class = "UILabel"; text = "6"; ObjectID = "EMc-RM-DUr"; */
+"EMc-RM-DUr.text" = "6";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "EZX-lc-ujc"; */
+"EZX-lc-ujc.normalTitle" = "Login";
+
+/* Class = "UILabel"; text = "Total Qty Offered"; ObjectID = "FWF-I6-52d"; */
+"FWF-I6-52d.text" = "Total Qty Offered";
+
+/* Class = "UIButton"; normalTitle = "FINISH ROLLS"; ObjectID = "FgE-bv-sUj"; */
+"FgE-bv-sUj.normalTitle" = "FINISH ROLLS";
+
+/* Class = "UILabel"; text = "    "; ObjectID = "Fll-72-iEb"; */
+"Fll-72-iEb.text" = "    ";
+
+/* Class = "UILabel"; text = "Color Name "; ObjectID = "GUp-Oa-X26"; */
+"GUp-Oa-X26.text" = "Color Name ";
+
+/* Class = "UILabel"; text = "Ticket Length In YDS"; ObjectID = "HeI-op-tvc"; */
+"HeI-op-tvc.text" = "Ticket Length In YDS";
+
+/* Class = "UILabel"; text = "Shrinkage result LXW"; ObjectID = "Htx-VQ-hUF"; */
+"Htx-VQ-hUF.text" = "Shrinkage result LXW";
+
+/* Class = "UILabel"; text = "Rolls"; ObjectID = "Ibu-Mz-lAT"; */
+"Ibu-Mz-lAT.text" = "Rolls";
+
+/* Class = "UILabel"; text = "Not Ok"; ObjectID = "JGZ-HM-T9l"; */
+"JGZ-HM-T9l.text" = "Not Ok";
+
+/* Class = "UILabel"; text = "Finish"; ObjectID = "JQz-hw-SdA"; */
+"JQz-hw-SdA.text" = "Finish";
+
+/* Class = "UILabel"; text = "Home"; ObjectID = "Jic-bN-4Qp"; */
+"Jic-bN-4Qp.text" = "Home";
+
+/* Class = "UILabel"; text = "No"; ObjectID = "JvF-fC-w2t"; */
+"JvF-fC-w2t.text" = "No";
+
+/* Class = "UITextField"; placeholder = "Enter Skew"; ObjectID = "K35-fz-5Ts"; */
+"K35-fz-5Ts.placeholder" = "Enter Skew";
+
+/* Class = "UILabel"; text = "Pass"; ObjectID = "KCG-r7-jdz"; */
+"KCG-r7-jdz.text" = "Pass";
+
+/* Class = "UITextField"; placeholder = "100"; ObjectID = "MdV-cc-su1"; */
+"MdV-cc-su1.placeholder" = "100";
+
+/* Class = "UILabel"; text = "#2"; ObjectID = "N5W-Jr-MJl"; */
+"N5W-Jr-MJl.text" = "#2";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "NA4-Fn-bRu"; */
+"NA4-Fn-bRu.normalTitle" = "Save";
+
+/* Class = "UILabel"; text = "PO Cut Width in Inch"; ObjectID = "O8C-Ea-ZOa"; */
+"O8C-Ea-ZOa.text" = "PO Cut Width in Inch";
+
+/* Class = "UITextField"; text = "Name_1"; ObjectID = "P74-AX-fHH"; */
+"P74-AX-fHH.text" = "Name_1";
+
+/* Class = "UILabel"; text = "Basic"; ObjectID = "PDi-CW-Lkz"; */
+"PDi-CW-Lkz.text" = "Basic";
+
+/* Class = "UILabel"; text = "Date"; ObjectID = "PQU-Ug-pLu"; */
+"PQU-Ug-pLu.text" = "Date";
+
+/* Class = "UILabel"; text = "Order Qty"; ObjectID = "QRb-RH-U6j"; */
+"QRb-RH-U6j.text" = "Order Qty";
+
+/* Class = "UITextField"; placeholder = "Enter Content"; ObjectID = "QXP-ax-OX6"; */
+"QXP-ax-OX6.placeholder" = "Enter Content";
+
+/* Class = "UILabel"; text = "12"; ObjectID = "Qzz-ib-c4o"; */
+"Qzz-ib-c4o.text" = "12";
+
+/* Class = "UILabel"; text = "No"; ObjectID = "RB6-ab-iaS"; */
+"RB6-ab-iaS.text" = "No";
+
+/* Class = "UILabel"; text = "Rolls"; ObjectID = "Rcv-2d-ktW"; */
+"Rcv-2d-ktW.text" = "Rolls";
+
+/* Class = "UILabel"; text = "Weight in GSM"; ObjectID = "ReC-9a-onn"; */
+"ReC-9a-onn.text" = "Weight in GSM";
+
+/* Class = "UILabel"; text = "NO"; ObjectID = "RoF-hi-ox5"; */
+"RoF-hi-ox5.text" = "NO";
+
+/* Class = "UILabel"; text = "test"; ObjectID = "Rsx-7P-9gT"; */
+"Rsx-7P-9gT.text" = "test";
+
+/* Class = "UILabel"; text = "Ok"; ObjectID = "RwJ-9i-vco"; */
+"RwJ-9i-vco.text" = "Ok";
+
+/* Class = "UILabel"; text = "QC Login"; ObjectID = "S7j-EV-Xf9"; */
+"S7j-EV-Xf9.text" = "QC Login";
+
+/* Class = "UILabel"; text = "Medium"; ObjectID = "SU5-Wz-l9H"; */
+"SU5-Wz-l9H.text" = "Medium";
+
+/* Class = "UINavigationItem"; title = "Home"; ObjectID = "SvU-fM-jlh"; */
+"SvU-fM-jlh.title" = "Home";
+
+/* Class = "UILabel"; text = "Remark"; ObjectID = "TW6-6N-mWH"; */
+"TW6-6N-mWH.text" = "Remark";
+
+/* Class = "UILabel"; text = "Ok"; ObjectID = "Toy-zv-DB7"; */
+"Toy-zv-DB7.text" = "Ok";
+
+/* Class = "UILabel"; text = "A"; ObjectID = "Txd-lz-y0t"; */
+"Txd-lz-y0t.text" = "A";
+
+/* Class = "UILabel"; text = "Add New"; ObjectID = "U26-rs-nCr"; */
+"U26-rs-nCr.text" = "Add New";
+
+/* Class = "UILabel"; text = "Torque / Skew"; ObjectID = "Uez-Un-yba"; */
+"Uez-Un-yba.text" = "Torque / Skew";
+
+/* Class = "UILabel"; text = "Factory Name"; ObjectID = "V3x-7o-cIl"; */
+"V3x-7o-cIl.text" = "Factory Name";
+
+/* Class = "UILabel"; text = "Feb 2020"; ObjectID = "VGs-PX-S3G"; */
+"VGs-PX-S3G.text" = "Feb 2020";
+
+/* Class = "UIButton"; normalTitle = "ADD"; ObjectID = "VHR-Qa-JCm"; */
+"VHR-Qa-JCm.normalTitle" = "ADD";
+
+/* Class = "UILabel"; text = "Summary"; ObjectID = "VJk-7Y-38L"; */
+"VJk-7Y-38L.text" = "Summary";
+
+/* Class = "UILabel"; text = "Medium"; ObjectID = "VJw-NT-tp9"; */
+"VJw-NT-tp9.text" = "Medium";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "VRw-HE-vbp"; */
+"VRw-HE-vbp.text" = "Label";
+
+/* Class = "UILabel"; text = "1"; ObjectID = "VZ7-Qm-dYQ"; */
+"VZ7-Qm-dYQ.text" = "1";
+
+/* Class = "UILabel"; text = "Side to Side Shading"; ObjectID = "WCz-SS-1V1"; */
+"WCz-SS-1V1.text" = "Side to Side Shading";
+
+/* Class = "UITextField"; placeholder = "900"; ObjectID = "WLa-zL-vQY"; */
+"WLa-zL-vQY.placeholder" = "900";
+
+/* Class = "UILabel"; text = "Rolls"; ObjectID = "XF7-6F-j3L"; */
+"XF7-6F-j3L.text" = "Rolls";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "XFY-TJ-Vth"; */
+"XFY-TJ-Vth.text" = "Label";
+
+/* Class = "UILabel"; text = "Not Ok"; ObjectID = "XVL-eZ-54W"; */
+"XVL-eZ-54W.text" = "Not Ok";
+
+/* Class = "UITextField"; text = "Woven"; ObjectID = "YGK-pc-dMt"; */
+"YGK-pc-dMt.text" = "Woven";
+
+/* Class = "UILabel"; text = "Basic"; ObjectID = "YXU-dG-27s"; */
+"YXU-dG-27s.text" = "Basic";
+
+/* Class = "UILabel"; text = "Shrinkage result LXW"; ObjectID = "Ywb-iS-Lfz"; */
+"Ywb-iS-Lfz.text" = "Shrinkage result LXW";
+
+/* Class = "UILabel"; text = ":"; ObjectID = "ZH6-JG-zVS"; */
+"ZH6-JG-zVS.text" = ":";
+
+/* Class = "UILabel"; text = "Add New Inspection"; ObjectID = "ZKo-px-xKN"; */
+"ZKo-px-xKN.text" = "Add New Inspection";
+
+/* Class = "UILabel"; text = "Medium"; ObjectID = "ZaU-oi-2FV"; */
+"ZaU-oi-2FV.text" = "Medium";
+
+/* Class = "UILabel"; text = "Summary"; ObjectID = "ZbI-0k-ZKr"; */
+"ZbI-0k-ZKr.text" = "Summary";
+
+/* Class = "UILabel"; text = "Summary"; ObjectID = "ZsR-PS-gPj"; */
+"ZsR-PS-gPj.text" = "Summary";
+
+/* Class = "UILabel"; text = "Report To"; ObjectID = "a0J-I3-mFp"; */
+"a0J-I3-mFp.text" = "Report To";
+
+/* Class = "UILabel"; text = "Roll Number"; ObjectID = "a32-Tz-lYl"; */
+"a32-Tz-lYl.text" = "Roll Number";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "aSj-eT-mbc"; */
+"aSj-eT-mbc.placeholder" = "Password";
+
+/* Class = "UILabel"; text = "Settings"; ObjectID = "atW-NB-DII"; */
+"atW-NB-DII.text" = "Settings";
+
+/* Class = "UILabel"; text = "15"; ObjectID = "b8M-mO-sc2"; */
+"b8M-mO-sc2.text" = "15";
+
+/* Class = "UITextView"; text = "jsjsjsnxsjhsj sjbcjdhsbcdhjsbcshjcbhjcbhjcbhjbchjscbhjsbchsdbcdhjscbdjshbchd"; ObjectID = "bJB-cs-49r"; */
+"bJB-cs-49r.text" = "jsjsjsnxsjhsj sjbcjdhsbcdhjsbcshjcbhjcbhjcbhjbchjscbhjsbchsdbcdhjscbdjshbchd";
+
+/* Class = "UILabel"; text = "20"; ObjectID = "bTC-m5-ffV"; */
+"bTC-m5-ffV.text" = "20";
+
+/* Class = "UILabel"; text = "Add New Inspection"; ObjectID = "bY3-iv-8tR"; */
+"bY3-iv-8tR.text" = "Add New Inspection";
+
+/* Class = "UILabel"; text = "Rolls"; ObjectID = "cBP-FU-ndr"; */
+"cBP-FU-ndr.text" = "Rolls";
+
+/* Class = "UILabel"; text = "3 Points"; ObjectID = "cP7-pt-RWi"; */
+"cP7-pt-RWi.text" = "3 Points";
+
+/* Class = "UILabel"; text = "Construction"; ObjectID = "cS1-lN-GeY"; */
+"cS1-lN-GeY.text" = "Construction";
+
+/* Class = "UILabel"; text = "Comment"; ObjectID = "cwP-s3-SZU"; */
+"cwP-s3-SZU.text" = "Comment";
+
+/* Class = "UILabel"; text = "4 Points"; ObjectID = "dH1-Rs-7Tp"; */
+"dH1-Rs-7Tp.text" = "4 Points";
+
+/* Class = "UILabel"; text = "Pts / 100 Sq. Yard"; ObjectID = "dW0-0v-k4G"; */
+"dW0-0v-k4G.text" = "Pts / 100 Sq. Yard";
+
+/* Class = "UILabel"; text = "Basic"; ObjectID = "eTf-8i-gxA"; */
+"eTf-8i-gxA.text" = "Basic";
+
+/* Class = "UILabel"; text = "Add New Reporter"; ObjectID = "eVe-4A-Pmq"; */
+"eVe-4A-Pmq.text" = "Add New Reporter";
+
+/* Class = "UILabel"; text = "Actual Weight in Gsm"; ObjectID = "eXo-de-cXb"; */
+"eXo-de-cXb.text" = "Actual Weight in Gsm";
+
+/* Class = "UITextField"; placeholder = "Reporter Name"; ObjectID = "efY-p8-8uM"; */
+"efY-p8-8uM.placeholder" = "Reporter Name";
+
+/* Class = "UILabel"; text = "10"; ObjectID = "f7V-go-fCH"; */
+"f7V-go-fCH.text" = "10";
+
+/* Class = "UILabel"; text = "Rolls"; ObjectID = "fBr-bs-1ym"; */
+"fBr-bs-1ym.text" = "Rolls";
+
+/* Class = "UITextField"; placeholder = "Employee Id"; ObjectID = "fEu-Se-sDV"; */
+"fEu-Se-sDV.placeholder" = "Employee Id";
+
+/* Class = "UILabel"; text = "1 Points"; ObjectID = "fHM-JZ-DIV"; */
+"fHM-JZ-DIV.text" = "1 Points";
+
+/* Class = "UILabel"; text = "3 Points"; ObjectID = "g62-ac-9vR"; */
+"g62-ac-9vR.text" = "3 Points";
+
+/* Class = "UILabel"; text = "Basic"; ObjectID = "gAK-uk-VYp"; */
+"gAK-uk-VYp.text" = "Basic";
+
+/* Class = "UILabel"; text = "Fabric Type"; ObjectID = "gjL-EM-jsX"; */
+"gjL-EM-jsX.text" = "Fabric Type";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "grq-Ia-0MJ"; */
+"grq-Ia-0MJ.text" = "Label";
+
+/* Class = "UILabel"; text = "Pattern"; ObjectID = "hV8-it-oKD"; */
+"hV8-it-oKD.text" = "Pattern";
+
+/* Class = "UILabel"; text = "Rolls"; ObjectID = "hWJ-Bm-PbM"; */
+"hWJ-Bm-PbM.text" = "Rolls";
+
+/* Class = "UILabel"; text = "Basic"; ObjectID = "hby-Te-prz"; */
+"hby-Te-prz.text" = "Basic";
+
+/* Class = "UILabel"; text = "Add New Inspection"; ObjectID = "hoL-uI-Urp"; */
+"hoL-uI-Urp.text" = "Add New Inspection";
+
+/* Class = "UILabel"; text = "#1"; ObjectID = "hxi-qk-Q2V"; */
+"hxi-qk-Q2V.text" = "#1";
+
+/* Class = "UILabel"; text = "(+/- 5% of Po Weight - ok Else FAILED)"; ObjectID = "jYy-TK-Iju"; */
+"jYy-TK-Iju.text" = "(+/- 5% of Po Weight - ok Else FAILED)";
+
+/* Class = "UILabel"; text = "2 Points"; ObjectID = "jYy-wl-93H"; */
+"jYy-wl-93H.text" = "2 Points";
+
+/* Class = "UILabel"; text = "No Image"; ObjectID = "jdi-kO-otZ"; */
+"jdi-kO-otZ.text" = "No Image";
+
+/* Class = "UILabel"; text = "Roll"; ObjectID = "kIe-KJ-lrT"; */
+"kIe-KJ-lrT.text" = "Roll";
+
+/* Class = "UILabel"; text = "Heavy"; ObjectID = "krh-rb-MCF"; */
+"krh-rb-MCF.text" = "Heavy";
+
+/* Class = "UILabel"; text = "Actual Length"; ObjectID = "l7O-hn-XvJ"; */
+"l7O-hn-XvJ.text" = "Actual Length";
+
+/* Class = "UILabel"; text = "Status"; ObjectID = "lAZ-h3-DIw"; */
+"lAZ-h3-DIw.text" = "Status";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "lNJ-15-h2x"; */
+"lNJ-15-h2x.text" = "Label";
+
+/* Class = "UILabel"; text = "Factory Accepted           "; ObjectID = "lo8-36-83q"; */
+"lo8-36-83q.text" = "Factory Accepted           ";
+
+/* Class = "UILabel"; text = "Skew / Bowing"; ObjectID = "mLp-yL-xIv"; */
+"mLp-yL-xIv.text" = "Skew / Bowing";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "mzF-gG-Yir"; */
+"mzF-gG-Yir.text" = "Label";
+
+/* Class = "UILabel"; text = "6"; ObjectID = "n53-0z-MZb"; */
+"n53-0z-MZb.text" = "6";
+
+/* Class = "UILabel"; text = "Result"; ObjectID = "nkL-Qy-KYu"; */
+"nkL-Qy-KYu.text" = "Result";
+
+/* Class = "UILabel"; text = "1 Point"; ObjectID = "nvo-2r-k8d"; */
+"nvo-2r-k8d.text" = "1 Point";
+
+/* Class = "UILabel"; text = "PO No"; ObjectID = "o4I-v1-TA9"; */
+"o4I-v1-TA9.text" = "PO No";
+
+/* Class = "UILabel"; text = "Yes     "; ObjectID = "ofC-zD-HbR"; */
+"ofC-zD-HbR.text" = "Yes     ";
+
+/* Class = "UIButton"; normalTitle = "EDIT"; ObjectID = "ohW-CD-vAX"; */
+"ohW-CD-vAX.normalTitle" = "EDIT";
+
+/* Class = "UITextField"; placeholder = "Enter Factory name"; ObjectID = "pEr-Gw-OQt"; */
+"pEr-Gw-OQt.placeholder" = "Enter Factory name";
+
+/* Class = "UILabel"; text = "Roll Details"; ObjectID = "pnX-EL-w7n"; */
+"pnX-EL-w7n.text" = "Roll Details";
+
+/* Class = "UILabel"; text = "Summary"; ObjectID = "ptE-Pp-tmC"; */
+"ptE-Pp-tmC.text" = "Summary";
+
+/* Class = "UILabel"; text = "4"; ObjectID = "qHv-tC-OnJ"; */
+"qHv-tC-OnJ.text" = "4";
+
+/* Class = "UILabel"; text = "12.05"; ObjectID = "qL6-HY-mFd"; */
+"qL6-HY-mFd.text" = "12.05";
+
+/* Class = "UITextField"; placeholder = "Select Number"; ObjectID = "qOu-nJ-Fxr"; */
+"qOu-nJ-Fxr.placeholder" = "Select Number";
+
+/* Class = "UILabel"; text = "Fabric Category"; ObjectID = "qST-9U-1qu"; */
+"qST-9U-1qu.text" = "Fabric Category";
+
+/* Class = "UIButton"; normalTitle = "SUBMIT QC MANAGER"; ObjectID = "rV5-VX-a52"; */
+"rV5-VX-a52.normalTitle" = "SUBMIT QC MANAGER";
+
+/* Class = "UILabel"; text = "Actual Cut width in Inch"; ObjectID = "sSg-WG-BnC"; */
+"sSg-WG-BnC.text" = "Actual Cut width in Inch";
+
+/* Class = "UILabel"; text = "NO"; ObjectID = "sap-w3-jI7"; */
+"sap-w3-jI7.text" = "NO";
+
+/* Class = "UILabel"; text = "Roll Number"; ObjectID = "t6f-3W-pb6"; */
+"t6f-3W-pb6.text" = "Roll Number";
+
+/* Class = "UILabel"; text = "4 Points"; ObjectID = "tJx-Hc-juC"; */
+"tJx-Hc-juC.text" = "4 Points";
+
+/* Class = "UILabel"; text = "2 Points"; ObjectID = "tRO-nM-8Pr"; */
+"tRO-nM-8Pr.text" = "2 Points";
+
+/* Class = "UILabel"; text = "End to End Shading"; ObjectID = "taO-zU-9c0"; */
+"taO-zU-9c0.text" = "End to End Shading";
+
+/* Class = "UITextField"; placeholder = "Enter Weight"; ObjectID = "teo-B4-FYA"; */
+"teo-B4-FYA.placeholder" = "Enter Weight";
+
+/* Class = "UITextField"; placeholder = "Enter Length"; ObjectID = "ty1-Fg-ZjU"; */
+"ty1-Fg-ZjU.placeholder" = "Enter Length";
+
+/* Class = "UILabel"; text = "PO Number"; ObjectID = "ulz-T0-6OJ"; */
+"ulz-T0-6OJ.text" = "PO Number";
+
+/* Class = "UITextField"; placeholder = "Choose Language"; ObjectID = "v08-HU-Cq7"; */
+"v08-HU-Cq7.placeholder" = "Choose Language";
+
+/* Class = "UILabel"; text = "Packing List Available"; ObjectID = "wl3-hh-Lcq"; */
+"wl3-hh-Lcq.text" = "Packing List Available";
+
+/* Class = "UILabel"; text = "No Images to show"; ObjectID = "xVP-fV-O1w"; */
+"xVP-fV-O1w.text" = "No Images to show";
+
+/* Class = "UILabel"; text = "Add New Inspection"; ObjectID = "xkj-e5-6pg"; */
+"xkj-e5-6pg.text" = "Add New Inspection";
+
+/* Class = "UILabel"; text = "NO"; ObjectID = "yKz-U9-GWP"; */
+"yKz-U9-GWP.text" = "NO";
+
+/* Class = "UITextField"; placeholder = "Enter Finish"; ObjectID = "yNT-bw-yur"; */
+"yNT-bw-yur.placeholder" = "Enter Finish";
+
+/* Class = "UIButton"; normalTitle = "ADD MORE ROLLS"; ObjectID = "yb9-zn-Utp"; */
+"yb9-zn-Utp.normalTitle" = "ADD MORE ROLLS";
+
+/* Class = "UILabel"; text = "Yes"; ObjectID = "yc1-H4-jlK"; */
+"yc1-H4-jlK.text" = "Yes";
+
+/* Class = "UILabel"; text = "Light"; ObjectID = "ym6-RS-ZqN"; */
+"ym6-RS-ZqN.text" = "Light";

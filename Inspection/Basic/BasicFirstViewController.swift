@@ -8,7 +8,7 @@
 
 import UIKit
 import CoreData
-import DropDown
+import iOSDropDown
 
 enum EditType {
     case UPDATE
@@ -31,18 +31,54 @@ class BasicFirstViewController: UIViewController {
     @IBOutlet weak var txtColorName: UITextField!
     @IBOutlet weak var txtFinish: UITextField!
     @IBOutlet weak var dropDownName: DropDown!
+    @IBOutlet weak var addReporterMainView: UIView!
+    
+    @IBAction func btnAddReporterView(_ sender: UIButton) {
+        self.addReporterMainView.isHidden = false
+    }
+    @IBOutlet weak var txtAddReporter: UITextField!
+    @IBAction func btnAddReporter(_ sender: Any) {
+        if self.txtAddReporter.text != "" {
+            self.saveAddReporterToCoreData()
+            self.addReporterMainView.isHidden = true
+        } else {
+            Helper.showAlert(message:"Enter Reporter Name")
+        }
+    }
+    
+    @IBAction func btnCloseReporter(_ sender: UIButton) {
+        self.addReporterMainView.isHidden = true
+    }
     //    var basicFirst: [NSManagedObject] = []
     var basicStruct : BasicFirstStruct?
     var basicDict = [String:Any]()
     var editType : EditType = .UPDATE
+    var fabricCategory = [String]()
+    var fabricTypeArray = [String]()
+    var reporterList = [String]()
+    var basicStructApi = [BasicFirstStruct]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.addReporterMainView.isHidden = true
+        _ = AppSettings.getFabricType().map({ (model) in
+            self.fabricTypeArray.append(model.title)
+        })
+        _ = AppSettings.getFabricCategory().map({ (model) in
+            self.fabricCategory.append(model.title)
+        })
+        basicDict["fabricCategory"] = fabricCategory[0]
+        basicDict["fabricType"] = fabricTypeArray[0]
+        dropDownFabricType.optionArray = self.fabricTypeArray
+        txtFabricCategory.optionArray = self.fabricCategory
+        self.fetchAddReporterFromCoreData()
+        dropDownName.optionArray = self.reporterList.count > 0 ? self.reporterList : []
         self.configureTextField()
         //        self.saveToCoreData()
         if editType == .UPDATE {
             self.fetchFromCoreData()
         }
+        
         // Do any additional setup after loading the view.
     }
     
@@ -117,6 +153,61 @@ class BasicFirstViewController: UIViewController {
         dateFormatter.dateFormat = "MMM \'\'yy"
         newDate = dateFormatter.string(from: rawDate)
         return newDate
+    }
+    func saveAddReporterToCoreData(){
+        guard let appDelegate =
+            UIApplication.shared.delegate as? AppDelegate else {
+                return
+        }
+        
+        // 1
+        let managedContext =
+            appDelegate.persistentContainer.viewContext
+        
+        // 2
+        //        let rollFirstVal = NSManagedObject(entity: rollEntity,
+        //                                            insertInto: managedContext)
+        
+        // 3
+        
+        let reporterDict = ReporterList(context: managedContext)
+        reporterDict.reporterName = self.txtAddReporter.text
+        
+        // 4
+        do {
+            try managedContext.save()
+            //          basicFirst.append(basicFirstVal)
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
+    }
+    
+    func fetchAddReporterFromCoreData(){
+        guard let appDelegate =
+            UIApplication.shared.delegate as? AppDelegate else {
+                return
+        }
+        
+        // 1
+        let managedContext =
+            appDelegate.persistentContainer.viewContext
+        
+        // 2
+        
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "ReporterList")
+        //        let fetchRequest = NSFetchRequest<NSFetchRequestResult>.init(entityName: "BasicFirst")
+        
+        //3
+        do {
+            self.reporterList = []
+            let result = try managedContext.fetch(fetchRequest)
+            for data in result {
+                self.reporterList.append(data.value(forKey: "reporterName") as! String)
+            }
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+        }
+        
     }
     func fetchFromCoreData(){
         guard let appDelegate =
@@ -195,8 +286,22 @@ class BasicFirstViewController: UIViewController {
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let basicSecondVC = storyBoard.instantiateViewController(withIdentifier: "basicSecondVC") as! BasicSecondViewController
             if editType == .NEW {
-                basicDict["fabricCategory"] = "Group 1"
-                basicDict["fabricType"] = "Woven"
+                if fabricCategory.count > 0 {
+                    if txtFabricCategory.selectedIndex == nil {
+                        basicDict["fabricCategory"] = fabricCategory[0]
+                    } else {
+                        basicDict["fabricCategory"] = fabricCategory[txtFabricCategory.selectedIndex ?? 0]
+                    }
+                }
+                if fabricTypeArray.count > 0 {
+                    if dropDownFabricType.selectedIndex == nil {
+                        basicDict["fabricType"] = fabricTypeArray[0]
+                    } else {
+                        basicDict["fabricType"] = fabricTypeArray[dropDownFabricType.selectedIndex ?? 0]
+                    }
+
+                }
+                
                 basicDict["reportToName"] = "Name Test"
                 basicDict["date"] = self.dateToDayMonthYearDate(rawDate: Date())
                 
@@ -209,6 +314,7 @@ class BasicFirstViewController: UIViewController {
             }
             
             basicSecondVC.basicFirstStruct = self.basicStruct
+            basicSecondVC.basicStructApi = self.basicStructApi
             self.navigationController?.pushViewController(basicSecondVC, animated: true)
         }
     }

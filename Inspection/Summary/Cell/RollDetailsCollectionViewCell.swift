@@ -15,6 +15,10 @@ class RollDetailsCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var rollNumberText: UITextField!
     @IBOutlet weak var torqueText: UITextField!
     
+    var heightConst : HeightConst?
+    var didTapExpand : ((HeightConst)->Void)?
+    var didEditContent : ((SummaryFirstStruct,Int,Bool)->Void)?
+    
     var rollsArray : [SummaryFirstStruct]? {
         didSet {
             self.rollCollectionView.dataSource = self
@@ -23,7 +27,34 @@ class RollDetailsCollectionViewCell: UICollectionViewCell {
         }
     }
     
+    @IBAction func onTapExpand(_ sender: UIButton) {
+        if heightConst?.isMax == false {
+            heightConst?.isMax.toggle()
+            if let const = self.heightConst {
+                didTapExpand?(const)
+            }
+        }
+    }
     @IBAction func onTapAdd(_ sender: UIButton) {
+        if heightConst?.isMax == true {
+            heightConst?.isMax.toggle()
+            if let const = self.heightConst {
+                didTapExpand?(const)
+            }
+            var summaryDict = [String : Any]()
+            summaryDict["rollNumber"] = self.rollNumberText.text
+            summaryDict["shrinkage"] = Double(self.shrinkageText.text ?? "")
+            summaryDict["torque"] = Double(self.torqueText.text ?? "")
+            var selectedIndex = 0
+            var isPresent : Bool = false
+            _ = rollsArray?.enumerated().map({ (index, summaryModel) in
+                if summaryModel.rollNumber == self.rollNumberText.text {
+                    selectedIndex = index
+                    isPresent = true
+                }
+            })
+            didEditContent?(SummaryFirstStruct(dict: summaryDict),selectedIndex,isPresent)
+        }
     }
 }
 
@@ -50,12 +81,18 @@ extension RollDetailsCollectionViewCell : UICollectionViewDelegate, UICollection
         }
         return cell
     }
-    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if indexPath.item == 0 {
             return CGSize(width: 316, height: 159)
         } else {
-            return CGSize(width: 100, height: 159)
+            return CGSize(width: 90, height: 159)
         }
     }
     

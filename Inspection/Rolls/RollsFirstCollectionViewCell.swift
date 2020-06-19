@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import LanguageManager_iOS
 
 enum PointType {
     case ONEPOINT
@@ -49,7 +50,7 @@ class RollsFirstCollectionViewCell: UICollectionViewCell {
                 self.lblTwoPoint.text = "\(model.twoPoint)"
                 self.lblThreePoint.text = "\(model.threePoint)"
                 self.lblFourPoint.text = "\(model.fourPoint)"
-                self.lblTitle.text = model.titleText
+                self.lblTitle.text = model.titleText.localiz()
             }
         }
     }
